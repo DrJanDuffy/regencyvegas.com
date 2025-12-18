@@ -39,3 +39,9 @@ realscout-simple-search {
     --rs-ss-widget-width: 500px;
   }
 }
+
+/* RealScout office listings widget theming */
+realscout-office-listings {
+  --rs-listing-divider-color: #0e64c8;
+  width: 100%;
+}
