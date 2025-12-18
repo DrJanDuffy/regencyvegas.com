@@ -116,7 +116,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-linear-to-r from-navy-900/85 via-navy-900/80 to-navy-800/70" />
         <div className="relative z-20">
           <div className="mx-auto flex min-h-[420px] max-w-6xl flex-col items-center gap-10 px-4 py-16 text-center md:min-h-[520px] md:flex-row md:items-center md:justify-between md:py-20 md:text-left">
-            <div className="max-w-xl">
+            <div className="max-w-xl rounded-2xl bg-black/55 px-6 py-6 text-white shadow-soft backdrop-blur-sm">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-300">
                 {COMMUNITY.name} · 55+ Luxury in {COMMUNITY.village}
               </p>
