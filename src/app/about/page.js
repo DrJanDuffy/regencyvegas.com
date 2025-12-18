@@ -5,7 +5,7 @@ export const metadata = generatePageMetadata(PAGE_SEO.about);
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-6xl px4 py-12 md:py-16">
+    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
       <h1 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
         About {AGENT.name}
       </h1>
