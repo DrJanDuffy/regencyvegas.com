@@ -40,3 +40,11 @@ realscout-office-listings {
 .realscout-container {
   min-height: 400px;
 }
+
+/* RealScout simple search styling */
+realscout-simple-search {
+  --rs-ss-font-primary-color: #1a365d;
+  --rs-ss-searchbar-border-color: #d69e2e;
+  --rs-ss-box-shadow: 0 10px 30px rgba(26, 54, 93, 0.12);
+  --rs-ss-widget-width: 100% !important;
+}

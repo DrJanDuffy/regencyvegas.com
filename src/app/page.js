@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import RealScoutListings from "@/components/widgets/RealScoutListings";
+import RealScoutSimpleSearch from "@/components/widgets/RealScoutSimpleSearch";
 import { PHONE, COMMUNITY, COLLECTIONS, AGENT } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -212,27 +213,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Search section */}
+      <section className="bg-white py-12 md:py-16">
+        <div className="mx-auto max-w-4xl px-4 text-center">
+          <h2 className="mb-2 font-playfair text-3xl text-navy-800 md:text-4xl">
+            Search Regency at Summerlin Homes
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-sm text-gray-600 md:text-base">
+            Find resale homes built by Toll Brothers in this guard-gated 55+ community. Use the
+            search below to see what&apos;s currently available in {COMMUNITY.name}.
+          </p>
+        </div>
+        <div className="mx-auto max-w-4xl px-4">
+          <RealScoutSimpleSearch />
+        </div>
+      </section>
+
       {/* Community overview */}
       <section className="bg-white py-12 md:py-16">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:items-start">
           <div>
+            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-amber-600">
+              Homes built by Toll Brothers
+            </span>
             <h2 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
-              Regency at Summerlin Real Estate &amp; Community Overview
+              Where Luxury Meets Lock-and-Leave Living
             </h2>
             <p className="text-base leading-relaxed text-gray-700 md:text-lg">
               {COMMUNITY.name} is a luxury 55+ active adult community by {COMMUNITY.builder} in{" "}
               {COMMUNITY.village} of Summerlin, {COMMUNITY.city}, {COMMUNITY.state}. Spanning
               over {COMMUNITY.acreage} acres of elevated desert terrain, the neighborhood is
               known for its single-story Toll Brothers homes, dramatic Red Rock and city views,
-              and a resort-style clubhouse at the heart of the community.
+              and a 22,000 sq ft resort-style clubhouse at the heart of the community.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-gray-700 md:text-base">
               Homeowners enjoy guard-gated security, front-yard maintenance, indoor and outdoor
               pools, fitness and wellness programming, tennis and pickleball, and a full
               calendar of clubs and events curated by an on-site lifestyle director. With quick
               access to Downtown Summerlin shopping, golf, hiking at Red Rock Canyon, and the
-              dining and entertainment of the Las Vegas Strip, Regency offers a true
-              lock-and-leave lifestyle without sacrificing luxury or convenience.
+              dining and entertainment of the Las Vegas Strip, Regency offers true
+              lock-and-leave living without sacrificing luxury or convenience.
             </p>
           </div>
           <div className="rounded-2xl bg-stone-50 p-6 shadow-soft">
@@ -272,16 +292,129 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Collections */}
-      <section className="bg-stone-50 py-16 md:py-20">
+      {/* Buyer / seller services */}
+      <section className="bg-navy-900 py-16 text-white md:py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-3 text-center font-playfair text-3xl text-navy-800 md:text-4xl">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+              Buying or selling in {COMMUNITY.name}?
+            </p>
+            <h2 className="mb-4 font-playfair text-3xl md:text-4xl">
+              Resale Homes Built by Toll Brothers
+            </h2>
+            <p className="text-sm text-stone-200 md:text-base">
+              Whether you are searching for your ideal Regency at Summerlin home or preparing to
+              sell, {AGENT.name} represents buyers and sellers of resale Toll Brothers homes
+              throughout the community.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <article className="rounded-2xl border border-amber-700/30 bg-white/5 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+                For Buyers
+              </p>
+              <h3 className="mb-3 font-playfair text-2xl font-semibold">
+                Find Your Regency at Summerlin Home
+              </h3>
+              <p className="mb-4 text-sm text-stone-200">
+                Get access to current MLS listings, coming-soon opportunities, and off-market
+                homes in {COMMUNITY.name}. Benefit from detailed knowledge of every floor plan,
+                view lot, and upgrade that adds real value.
+              </p>
+              <ul className="mb-4 grid grid-cols-2 gap-2 text-xs text-stone-200 md:text-sm">
+                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                  MLS &amp; off-market access
+                </li>
+                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                  Floor plan expertise
+                </li>
+                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                  Private showings
+                </li>
+                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                  55+ community guidance
+                </li>
+              </ul>
+              <Link
+                href="/homes-for-sale"
+                className="inline-flex items-center text-sm font-semibold text-amber-300 hover:text-amber-200"
+              >
+                Browse homes for sale
+                <svg
+                  className="ml-2 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            </article>
+
+            <article className="rounded-2xl border border-amber-700/30 bg-white/5 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+                For Sellers
+              </p>
+              <h3 className="mb-3 font-playfair text-2xl font-semibold">
+                Sell Your Regency at Summerlin Home
+              </h3>
+              <p className="mb-4 text-sm text-stone-200">
+                Discover what your Toll Brothers home is worth based on real Regency at Summerlin
+                resale data—not generic online estimates. Position your home to stand out with
+                targeted marketing to qualified 55+ buyers.
+              </p>
+              <ul className="mb-4 grid grid-cols-2 gap-2 text-xs text-stone-200 md:text-sm">
+                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                  Complimentary valuation
+                </li>
+                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                  Data-driven pricing
+                </li>
+                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                  55+ buyer marketing
+                </li>
+                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                  Staging &amp; prep guidance
+                </li>
+              </ul>
+              <Link
+                href="/selling"
+                className="inline-flex items-center text-sm font-semibold text-amber-300 hover:text-amber-200"
+              >
+                Learn about selling in Regency
+                <svg
+                  className="ml-2 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Collections */}
+      <section className="bg-navy-900 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="mb-3 text-center font-playfair text-3xl text-white md:text-4xl">
             Three Distinct Home Collections
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-gray-600 md:text-base">
-            Explore all nine single-story floor plans across the Summit, Palisades, and
-            Pinnacle Collections—each crafted for lock-and-leave 55+ living in{" "}
-            {COMMUNITY.name}.
+          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-stone-200 md:text-base">
+            Explore all nine single-story floor plans across the Summit, Palisades, and Pinnacle
+            Collections—each crafted for lock-and-leave 55+ living in {COMMUNITY.name}.
           </p>
           <div className="grid gap-8 md:grid-cols-3">
             {[
@@ -298,25 +431,22 @@ export default function HomePage() {
                     ? "/palisades-collection"
                     : "/pinnacle-collection"
                 }
-                className="group block rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group block rounded-2xl border border-amber-700/30 bg-white/5 p-6 text-center shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10"
               >
-                <div className="relative h-44 bg-linear-to-br from-stone-200 to-stone-300 overflow-hidden md:h-52">
-                  <div className="absolute inset-0 bg-navy-900/10 transition-all duration-300 group-hover:bg-navy-900/5" />
-                  <span className="absolute right-4 top-4 rounded-full bg-amber-500 px-3 py-1 text-xs font-semibold text-navy-900 shadow">
-                    Collection
-                  </span>
+                <div className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+                  Toll Brothers Collection
                 </div>
-                <div className="p-6">
-                  <h3 className="mb-2 font-playfair text-xl font-semibold text-navy-800 transition-colors group-hover:text-amber-600">
+                <div className="p-1">
+                  <h3 className="mb-2 font-playfair text-xl font-semibold text-amber-400 transition-colors group-hover:text-amber-300">
                     {col.name}
                   </h3>
-                  <p className="mb-1 text-sm text-gray-700">
+                  <p className="mb-1 text-sm text-stone-200">
                     {col.sqftRange} sq ft
                   </p>
-                  <p className="mb-4 text-sm text-gray-500">
+                  <p className="mb-4 text-sm text-stone-300">
                     {col.beds} beds • {col.baths} baths • lots {col.lotSize}
                   </p>
-                  <span className="inline-flex items-center text-sm font-semibold text-amber-600 transition-colors group-hover:text-amber-700">
+                  <span className="inline-flex items-center justify-center text-sm font-semibold text-amber-400 transition-colors group-hover:text-amber-200">
                     View Collection
                     <svg
                       className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -387,32 +517,72 @@ export default function HomePage() {
       </section>
 
       {/* Agent CTA */}
-      <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <h2 className="mb-3 font-playfair text-3xl text-navy-800 md:text-4xl">
-            Work with a Regency at Summerlin Expert
+      <section className="relative overflow-hidden bg-linear-to-br from-navy-900 via-navy-800 to-amber-800/60 py-16 text-white md:py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="mx-auto h-full max-w-6xl bg-[radial-gradient(circle_at_top,rgba(214,158,46,0.35),transparent_55%),radial-gradient(circle_at_bottom,rgba(26,54,93,0.65),transparent_60%)]" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-4 text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-200">
+            Your Regency at Summerlin Expert
+          </p>
+          <h2 className="mb-3 font-playfair text-3xl md:text-4xl">
+            Ready to Buy or Sell in Regency?
           </h2>
-          <p className="mb-2 text-lg text-gray-700">
+          <p className="mb-2 text-lg">
             {AGENT.name} · {AGENT.title}
           </p>
-          <p className="mx-auto mb-8 max-w-2xl text-sm text-gray-600 md:text-base">
-            With a Ph.D. in Market Research, $127M+ in closed sales, and 500+ families
-            served, {AGENT.name} provides data-driven guidance for buying or selling in{" "}
-            {COMMUNITY.name} and across Las Vegas.
+          <p className="mx-auto mb-8 max-w-2xl text-sm text-stone-200 md:text-base">
+            With a Ph.D. in Market Research, $127M+ in closed sales, and 500+ families served,
+            {AGENT.name} provides data-driven guidance for buying or selling in {COMMUNITY.name}{" "}
+            and across Las Vegas.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href={`tel:${PHONE.marketing}`}
-              className="rounded-lg bg-navy-800 px-8 py-3 text-sm font-semibold text-white hover:bg-navy-900 transition"
+              className="inline-flex items-center rounded-full bg-amber-500 px-8 py-3 text-sm font-semibold text-navy-900 shadow-soft transition hover:-translate-y-0.5 hover:bg-amber-400"
             >
               Call/Text {PHONE.marketing}
             </a>
             <Link
               href="/contact"
-              className="rounded-lg border border-navy-800 px-8 py-3 text-sm font-semibold text-navy-800 hover:bg-stone-100 transition"
+              className="inline-flex items-center rounded-full border border-amber-300/70 px-8 py-3 text-sm font-semibold text-amber-100 transition hover:bg-amber-100 hover:text-navy-900"
             >
               Schedule a Private Tour
             </Link>
+          </div>
+          <div className="mt-8 flex flex-col items-center justify-center gap-6 text-xs text-stone-200 sm:flex-row sm:gap-10">
+            <div className="text-center">
+              <div className="mb-1 font-semibold tracking-[0.18em] text-amber-200">
+                Phone
+              </div>
+              <a href={`tel:${PHONE.marketing}`} className="text-sm font-semibold text-white">
+                {PHONE.marketing}
+              </a>
+            </div>
+            <div className="hidden h-10 w-px bg-white/30 sm:block" />
+            <div className="text-center">
+              <div className="mb-1 font-semibold tracking-[0.18em] text-amber-200">
+                Email
+              </div>
+              <a
+                href={`mailto:${AGENT.email}`}
+                className="text-sm font-semibold text-white underline-offset-2 hover:underline"
+              >
+                {AGENT.email}
+              </a>
+            </div>
+            <div className="hidden h-10 w-px bg-white/30 sm:block" />
+            <div className="text-center">
+              <div className="mb-1 font-semibold tracking-[0.18em] text-amber-200">
+                Website
+              </div>
+              <a
+                href="https://regencyvegas.com"
+                className="text-sm font-semibold text-white underline-offset-2 hover:underline"
+              >
+                RegencyVegas.com
+              </a>
+            </div>
           </div>
         </div>
       </section>
