@@ -104,46 +104,76 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative flex min-h-[420px] items-center justify-center md:min-h-[520px]">
+      <section className="relative overflow-hidden">
         <Image
           src="/images/hero-mountain.jpg"
           alt="Regency at Summerlin luxury 55+ homes with Red Rock mountain views in Las Vegas"
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-linear-to-r from-navy-900/85 via-navy-900/80 to-navy-800/70" />
-        <div className="relative z-20 max-w-4xl px-4">
-          <div className="mx-auto rounded-2xl bg-black/55 px-6 py-8 text-center text-white shadow-soft backdrop-blur-sm md:px-10 md:py-10 animate-fade-in">
-            <h1 className="mb-4 font-playfair text-3xl font-bold md:text-5xl lg:text-6xl">
-              Regency at Summerlin Homes for Sale
-            </h1>
-            <p className="mb-8 text-base text-gray-100 md:text-xl">
-              Luxury 55+ guard-gated living in The Cliffs village of Summerlin, Las Vegas &mdash;
-              single-story Toll Brothers homes with resort-style amenities and lock-and-leave
-              convenience.
-            </p>
-            <div className="mt-2 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link
-                href="/homes-for-sale"
-                className="rounded-lg bg-amber-500 px-8 py-4 text-sm font-semibold text-navy-900 shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-600 hover:shadow-xl"
-              >
-                View Available Homes
-              </Link>
-              <a
-                href={`tel:${PHONE.marketing}`}
-                className="rounded-lg border-2 border-white/80 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20"
-              >
-                Call/Text {PHONE.marketing}
-              </a>
+        <div className="relative z-20">
+          <div className="mx-auto flex min-h-[420px] max-w-6xl flex-col items-center gap-10 px-4 py-16 text-center md:min-h-[520px] md:flex-row md:items-center md:justify-between md:py-20 md:text-left">
+            <div className="max-w-xl">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-300">
+                {COMMUNITY.name} · 55+ Luxury in {COMMUNITY.village}
+              </p>
+              <h1 className="mb-4 font-playfair text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+                Regency at Summerlin Homes for Sale
+              </h1>
+              <p className="mb-8 text-base text-gray-100 md:text-lg">
+                Discover low-maintenance, single-story Toll Brothers homes in a guard-gated 55+
+                community with resort-style amenities, sweeping Red Rock and city views, and
+                lock-and-leave convenience in the heart of The Cliffs.
+              </p>
+              <div className="flex flex-col items-center justify-start gap-4 sm:flex-row">
+                <Link
+                  href="/homes-for-sale"
+                  className="rounded-lg bg-amber-500 px-8 py-4 text-sm font-semibold text-navy-900 shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-600 hover:shadow-xl"
+                >
+                  View Available Homes
+                </Link>
+                <a
+                  href={`tel:${PHONE.marketing}`}
+                  className="rounded-lg border-2 border-white/80 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20"
+                >
+                  Call/Text {PHONE.marketing}
+                </a>
+              </div>
+            </div>
+            <div className="w-full max-w-sm rounded-2xl border border-white/15 bg-white/5 p-6 text-left text-sm text-gray-100 shadow-soft backdrop-blur-md">
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-200">
+                Why buyers choose {COMMUNITY.name}
+              </h2>
+              <ul className="space-y-2 text-sm leading-relaxed">
+                <li>• 457 single-story homes across {COMMUNITY.acreage} acres in The Cliffs</li>
+                <li>• 22,000 sq ft private clubhouse with pools, fitness, and pickleball</li>
+                <li>• Desert contemporary architecture and low-maintenance living</li>
+                <li>• Minutes to Downtown Summerlin, Red Rock, and the Las Vegas Strip</li>
+              </ul>
+              <p className="mt-4 text-xs text-gray-200">
+                Call or text{" "}
+                <a
+                  href={`tel:${PHONE.marketing}`}
+                  className="font-semibold text-amber-300 underline-offset-2 hover:underline"
+                >
+                  {PHONE.marketing}
+                </a>{" "}
+                for current off-market and coming-soon opportunities.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Quick stats */}
-      <section className="bg-navy-800 py-6 text-white md:py-8">
+      <section className="bg-navy-800 py-8 text-white md:py-10">
         <div className="mx-auto max-w-6xl px-4">
+          <h2 className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.25em] text-amber-200 md:mb-6">
+            Regency at Summerlin Snapshot
+          </h2>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
             <div className="border-r border-navy-700 text-center last:border-r-0 md:border-r">
               <div className="mb-1 text-3xl font-bold text-amber-400 md:text-4xl">
@@ -178,6 +208,66 @@ export default function HomePage() {
                 All-In HOA
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community overview */}
+      <section className="bg-white py-12 md:py-16">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:items-start">
+          <div>
+            <h2 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
+              Regency at Summerlin Real Estate &amp; Community Overview
+            </h2>
+            <p className="text-base leading-relaxed text-gray-700 md:text-lg">
+              {COMMUNITY.name} is a luxury 55+ active adult community by {COMMUNITY.builder} in{" "}
+              {COMMUNITY.village} of Summerlin, {COMMUNITY.city}, {COMMUNITY.state}. Spanning
+              over {COMMUNITY.acreage} acres of elevated desert terrain, the neighborhood is
+              known for its single-story Toll Brothers homes, dramatic Red Rock and city views,
+              and a resort-style clubhouse at the heart of the community.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-gray-700 md:text-base">
+              Homeowners enjoy guard-gated security, front-yard maintenance, indoor and outdoor
+              pools, fitness and wellness programming, tennis and pickleball, and a full
+              calendar of clubs and events curated by an on-site lifestyle director. With quick
+              access to Downtown Summerlin shopping, golf, hiking at Red Rock Canyon, and the
+              dining and entertainment of the Las Vegas Strip, Regency offers a true
+              lock-and-leave lifestyle without sacrificing luxury or convenience.
+            </p>
+          </div>
+          <div className="rounded-2xl bg-stone-50 p-6 shadow-soft">
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-navy-800">
+              Regency at a Glance
+            </h3>
+            <dl className="space-y-3 text-sm text-gray-700">
+              <div className="flex items-center justify-between">
+                <dt className="font-medium">Total homes</dt>
+                <dd>{COMMUNITY.totalHomes.toLocaleString()}</dd>
+              </div>
+              <div className="flex items-center justify-between">
+                <dt className="font-medium">Year built</dt>
+                <dd>{COMMUNITY.yearBuilt}</dd>
+              </div>
+              <div className="flex items-center justify-between">
+                <dt className="font-medium">Typical price range</dt>
+                <dd>
+                  ${COMMUNITY.price.min.toLocaleString()} – $
+                  {COMMUNITY.price.max.toLocaleString()}+
+                </dd>
+              </div>
+              <div className="flex items-center justify-between">
+                <dt className="font-medium">Estimated median value</dt>
+                <dd>${COMMUNITY.price.median.toLocaleString()}</dd>
+              </div>
+              <div className="flex items-center justify-between">
+                <dt className="font-medium">Total HOA (approx.)</dt>
+                <dd>${COMMUNITY.hoa.total}/mo</dd>
+              </div>
+            </dl>
+            <p className="mt-4 text-xs text-gray-500">
+              Market stats are approximate and change as new homes list and sell. For the most
+              current numbers and a custom market update, call {PHONE.marketing}.
+            </p>
           </div>
         </div>
       </section>
@@ -253,7 +343,7 @@ export default function HomePage() {
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="mb-3 text-center font-playfair text-3xl text-navy-800 md:text-4xl">
-            Current Regency at Summerlin Listings
+            Homes for Sale in Regency at Summerlin
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-gray-600 md:text-base">
             Included below are homes for sale and real estate in {COMMUNITY.name}. Click

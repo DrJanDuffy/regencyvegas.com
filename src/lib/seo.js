@@ -21,12 +21,22 @@ export const baseMetadata = {
   creator: AGENT.name,
   publisher: AGENT.brokerage,
   openGraph: {
+    url: "https://regencyvegas.com",
     type: "website",
     locale: "en_US",
     siteName: "Regency at Summerlin by Dr. Jan Duffy",
+    images: [
+      {
+        url: "/images/hero-mountain.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Regency at Summerlin luxury 55+ homes with Red Rock mountain views in Las Vegas",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/images/hero-mountain.jpg"],
   },
   robots: {
     index: true,
@@ -35,14 +45,33 @@ export const baseMetadata = {
 };
 
 export function generatePageMetadata({ title, description, path, image }) {
+  const imageUrl = image || "/images/hero-mountain.jpg";
+
+  const openGraph = {
+    title: `${title} | Regency at Summerlin`,
+    description,
+    url: `https://regencyvegas.com${path}`,
+    type: "website",
+    siteName: "Regency at Summerlin by Dr. Jan Duffy",
+    images: [
+      {
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+        alt: `${title} - Regency at Summerlin in Las Vegas`,
+      },
+    ],
+  };
+
   return {
     title,
     description,
-    openGraph: {
-      title: `${title} | Regency at Summerlin`,
+    openGraph,
+    twitter: {
+      card: "summary_large_image",
+      title,
       description,
-      url: `https://regencyvegas.com${path}`,
-      images: image ? [{ url: image, width: 1200, height: 630 }] : [],
+      images: [imageUrl],
     },
     alternates: {
       canonical: `https://regencyvegas.com${path}`,
