@@ -143,21 +143,21 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="w-full max-w-sm rounded-2xl border border-white/15 bg-white/5 p-6 text-left text-sm text-gray-100 shadow-soft backdrop-blur-md">
-              <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-200">
+            <div className="w-full max-w-sm rounded-2xl border border-stone-200 bg-white/95 p-7 text-left text-sm text-navy-800 shadow-soft">
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-600">
                 Why buyers choose {COMMUNITY.name}
               </h2>
-              <ul className="space-y-2 text-sm leading-relaxed">
+              <ul className="space-y-2 text-sm leading-relaxed text-gray-700">
                 <li>• 457 single-story homes across {COMMUNITY.acreage} acres in The Cliffs</li>
                 <li>• 22,000 sq ft private clubhouse with pools, fitness, and pickleball</li>
                 <li>• Desert contemporary architecture and low-maintenance living</li>
                 <li>• Minutes to Downtown Summerlin, Red Rock, and the Las Vegas Strip</li>
               </ul>
-              <p className="mt-4 text-xs text-gray-200">
+              <p className="mt-4 text-xs text-gray-600">
                 Call or text{" "}
                 <a
                   href={`tel:${PHONE.marketing}`}
-                  className="font-semibold text-amber-300 underline-offset-2 hover:underline"
+                  className="font-semibold text-amber-700 underline-offset-2 hover:underline"
                 >
                   {PHONE.marketing}
                 </a>{" "}
