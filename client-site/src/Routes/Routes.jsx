@@ -1,5 +1,6 @@
 import {
     createBrowserRouter,
+    Navigate,
 } from "react-router-dom";
 import Dashboard from "../Layout/Dashboard";
 import Mainlayout from "../Layout/Mainlayout";
@@ -39,6 +40,12 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />
+            },
+            {
+                // Handle direct /index.html visits (common with static hosting) by
+                // redirecting to the real SPA home route instead of showing 404.
+                path: '/index.html',
+                element: <Navigate to="/" replace />,
             },
             {
                 path: '/properties',
