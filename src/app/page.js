@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import RealScoutListings from "@/components/widgets/RealScoutListings";
 import RealScoutSimpleSearch from "@/components/widgets/RealScoutSimpleSearch";
 import { PHONE, COMMUNITY, COLLECTIONS, AGENT } from "@/lib/constants";
@@ -104,6 +105,11 @@ const amenities = [
 export default function HomePage() {
   return (
     <main>
+      <Script
+        src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+        type="module"
+        strategy="lazyOnload"
+      />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <Image
@@ -112,6 +118,7 @@ export default function HomePage() {
           fill
           className="object-cover"
           priority
+          quality={60}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-linear-to-r from-navy-900/85 via-navy-900/80 to-navy-800/70" />

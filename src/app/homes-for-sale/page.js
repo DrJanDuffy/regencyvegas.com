@@ -1,3 +1,4 @@
+import Script from "next/script";
 import RealScoutListings from "@/components/widgets/RealScoutListings";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
@@ -7,6 +8,11 @@ export const metadata = generatePageMetadata(PAGE_SEO.homesForSale);
 export default function HomesForSalePage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <Script
+        src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+        type="module"
+        strategy="lazyOnload"
+      />
       <section className="mb-10">
         <h1 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
           Regency at Summerlin Homes &amp; Real Estate for Sale

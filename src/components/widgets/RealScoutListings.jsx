@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import Script from "next/script";
 import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
 
 export default function RealScoutListings({
@@ -17,23 +16,39 @@ export default function RealScoutListings({
   useEffect(() => {
     if (status !== "loading") return;
 
+    if (typeof window === "undefined" || !window.customElements) {
+      const fallbackTimeout = setTimeout(() => {
+        setStatus((current) => (current === "loading" ? "error" : current));
+      }, 10000);
+
+      return () => clearTimeout(fallbackTimeout);
+    }
+
+    if (window.customElements.get("realscout-office-listings")) {
+      setStatus("ready");
+      return;
+    }
+
+    const checkId = setInterval(() => {
+      if (window.customElements.get("realscout-office-listings")) {
+        setStatus("ready");
+        clearInterval(checkId);
+      }
+    }, 250);
+
     const timeoutId = setTimeout(() => {
       setStatus((current) => (current === "loading" ? "error" : current));
+      clearInterval(checkId);
     }, 10000);
 
-    return () => clearTimeout(timeoutId);
+    return () => {
+      clearInterval(checkId);
+      clearTimeout(timeoutId);
+    };
   }, [status]);
 
   return (
     <div className={`realscout-container min-h-[320px] w-full ${className}`}>
-      <Script
-        src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-        type="module"
-        strategy="afterInteractive"
-        onLoad={() => setStatus("ready")}
-        onError={() => setStatus("error")}
-      />
-
       {status === "loading" && (
         <div className="flex flex-col items-center justify-center py-16 text-gray-600">
           <div className="relative mb-4 h-12 w-12">

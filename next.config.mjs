@@ -4,6 +4,8 @@ const nextConfig = {
   images: {
     domains: ["em.realscout.com"],
     formats: ["image/webp", "image/avif"],
+    // Increase cache lifetime for optimized images (seconds)
+    minimumCacheTTL: 2678400, // 31 days
   },
   async redirects() {
     return [
