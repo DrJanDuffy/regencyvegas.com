@@ -169,42 +169,42 @@ export default function HomePage() {
       </section>
 
       {/* Quick stats */}
-      <section className="bg-navy-800 py-8 text-white md:py-10">
+      <section className="bg-stone-50 py-8 md:py-10">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.25em] text-amber-200 md:mb-6">
+          <h2 className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.25em] text-navy-700 md:mb-6">
             Regency at Summerlin Snapshot
           </h2>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
-            <div className="border-r border-navy-700 text-center last:border-r-0 md:border-r">
-              <div className="mb-1 text-3xl font-bold text-amber-400 md:text-4xl">
+            <div className="rounded-2xl bg-white p-4 text-center shadow-soft">
+              <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
                 {COMMUNITY.totalHomes}
               </div>
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 md:text-sm">
                 Luxury Homes
               </div>
             </div>
-            <div className="border-r border-navy-700 text-center last:border-r-0 md:border-r">
-              <div className="mb-1 text-3xl font-bold text-amber-400 md:text-4xl">
+            <div className="rounded-2xl bg-white p-4 text-center shadow-soft">
+              <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
                 {COMMUNITY.acreage}
               </div>
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 md:text-sm">
                 Acres in The Cliffs
               </div>
             </div>
-            <div className="border-r border-navy-700 text-center last:border-r-0 md:border-r">
-              <div className="mb-1 text-2xl font-bold text-amber-400 md:text-3xl">
+            <div className="rounded-2xl bg-white p-4 text-center shadow-soft">
+              <div className="mb-1 text-2xl font-bold text-navy-800 md:text-3xl">
                 ${COMMUNITY.price.min.toLocaleString()} - $
                 {COMMUNITY.price.max.toLocaleString()}+
               </div>
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 md:text-sm">
                 Typical Price Range
               </div>
             </div>
-            <div className="text-center">
-              <div className="mb-1 text-3xl font-bold text-amber-400 md:text-4xl">
+            <div className="rounded-2xl bg-white p-4 text-center shadow-soft">
+              <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
                 ${COMMUNITY.hoa.total}/mo
               </div>
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 md:text-sm">
                 All-In HOA
               </div>
             </div>
