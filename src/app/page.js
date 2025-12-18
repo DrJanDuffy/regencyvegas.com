@@ -10,35 +10,39 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative flex h-[520px] items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-900/80 to-navy-800/60 z-10" />
+      <section className="relative flex min-h-[420px] items-center justify-center md:min-h-[520px]">
         <Image
           src="/images/hero-mountain.jpg"
-          alt="Regency at Summerlin luxury homes with mountain views"
+          alt="Regency at Summerlin luxury 55+ homes with Red Rock mountain views in Las Vegas"
           fill
           className="object-cover"
           priority
         />
-        <div className="relative z-20 max-w-4xl px-4 text-center text-white">
-          <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-4">
-            Regency at Summerlin Homes for Sale
-          </h1>
-          <p className="text-lg md:text-2xl mb-8 text-gray-200">
-            Luxury 55+ guard-gated living in the heart of Summerlin, Las Vegas.
-          </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/homes-for-sale"
-              className="rounded-lg bg-amber-500 px-8 py-3 text-sm font-semibold text-navy-900 shadow hover:bg-amber-600 transition"
-            >
-              View Available Homes
-            </Link>
-            <a
-              href={`tel:${PHONE.marketing}`}
-              className="rounded-lg border border-white/70 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
-            >
-              Call/Text {PHONE.marketing}
-            </a>
+        <div className="absolute inset-0 bg-linear-to-r from-navy-900/85 via-navy-900/80 to-navy-800/70" />
+        <div className="relative z-20 max-w-4xl px-4">
+          <div className="mx-auto rounded-2xl bg-black/55 px-6 py-8 text-center text-white shadow-xl backdrop-blur-sm md:px-10 md:py-10">
+            <h1 className="mb-4 font-playfair text-3xl font-bold md:text-5xl lg:text-6xl">
+              Regency at Summerlin Homes for Sale
+            </h1>
+            <p className="mb-8 text-base text-gray-100 md:text-xl">
+              Luxury 55+ guard-gated living in The Cliffs village of Summerlin, Las Vegas &mdash;
+              single-story Toll Brothers homes with resort-style amenities and lock-and-leave
+              convenience.
+            </p>
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link
+                href="/homes-for-sale"
+                className="rounded-lg bg-amber-500 px-8 py-3 text-sm font-semibold text-navy-900 shadow hover:bg-amber-600 transition"
+              >
+                View Available Homes
+              </Link>
+              <a
+                href={`tel:${PHONE.marketing}`}
+                className="rounded-lg border border-white/70 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >
+                Call/Text {PHONE.marketing}
+              </a>
+            </div>
           </div>
         </div>
       </section>
