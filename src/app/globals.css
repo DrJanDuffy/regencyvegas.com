@@ -29,3 +29,14 @@ h4 {
   font-family: var(--font-playfair), system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
 }
+
+/* RealScout Widget Styling */
+realscout-office-listings {
+  --rs-listing-divider-color: #1a365d;
+  width: 100%;
+  display: block;
+}
+
+.realscout-container {
+  min-height: 400px;
+}

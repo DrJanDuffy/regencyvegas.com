@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Script from "next/script";
 import { AGENT, COMMUNITY } from "@/lib/constants";
 
 export default function RealScoutListings({
@@ -11,37 +12,39 @@ export default function RealScoutListings({
   propertyTypes = ",SFR",
   className = "",
 }) {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const existingScript = document.querySelector(
-      'script[src="https://em.realscout.com/widgets/realscout-web-components.umd.js"]'
-    );
-
-    if (existingScript) return;
-
-    const script = document.createElement("script");
-    script.src =
-      "https://em.realscout.com/widgets/realscout-web-components.umd.js";
-    script.type = "module";
-    script.onload = () => setIsLoaded(true);
-    document.head.appendChild(script);
-    // If a script already existed, we assume widgets are available and skip
-    // updating state to avoid cascading renders in strict mode.
-  }, []);
+  const [isReady, setIsReady] = useState(false);
 
   return (
-    <div className={`min-h-[320px] w-full ${className}`}>
-      {!isLoaded && (
-        <div className="flex items-center justify-center py-12">
-          <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-navy-800" />
-          <span className="ml-3 text-sm text-gray-600">
-            Loading Regency at Summerlin listings...
-          </span>
+    <div className={`realscout-container min-h-[320px] w-full ${className}`}>
+      <Script
+        src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+        type="module"
+        strategy="afterInteractive"
+        onLoad={() => setIsReady(true)}
+      />
+
+      {!isReady && (
+        <div className="flex items-center justify-center py-12 text-gray-600">
+          <svg className="mr-3 h-6 w-6 animate-spin" viewBox="0 0 24 24">
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+              fill="none"
+            />
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+            />
+          </svg>
+          <span className="text-sm">Loading Regency at Summerlin listings...</span>
         </div>
       )}
+
       <realscout-office-listings
         agent-encoded-id={AGENT.realscoutId}
         sort-order={sortOrder}
@@ -49,13 +52,8 @@ export default function RealScoutListings({
         property-types={propertyTypes}
         price-min={priceMin.toString()}
         price-max={priceMax.toString()}
-        style={{
-          "--rs-listing-divider-color": "#1a365d",
-          width: "100%",
-        }}
       />
     </div>
   );
 }
-
 
