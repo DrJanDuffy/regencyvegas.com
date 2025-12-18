@@ -57,3 +57,17 @@ realscout-home-value {
   --rs-hvw-secondary-button-color: #ffffff;
   --rs-hvw-widget-width: auto;
 }
+
+/* RealScout advanced search widget theming */
+realscout-advanced-search {
+  --rs-as-button-text-color: #ffffff;
+  --rs-as-background-color: #000000;
+  --rs-as-button-color: #8b572a;
+  --rs-as-widget-width: 100%;
+}
+
+@media (min-width: 640px) {
+  realscout-advanced-search {
+    --rs-as-widget-width: 500px;
+  }
+}
