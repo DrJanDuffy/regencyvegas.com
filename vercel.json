@@ -1,8 +1,5 @@
 {
-  "framework": "vite",
-  "installCommand": "cd client-site && npm install",
-  "buildCommand": "cd client-site && npm run build",
-  "outputDirectory": "client-site/dist"
+  "framework": "nextjs"
 }
 
 
