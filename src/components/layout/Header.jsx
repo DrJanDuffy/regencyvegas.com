@@ -6,11 +6,11 @@ export default function Header() {
   return (
     <header className="w-full border-b border-stone-200 bg-white/90 backdrop-blur">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
-        <Link href="/" className="flex flex-col">
-          <span className="font-playfair text-2xl font-bold text-navy-800">
+        <Link href="/" className="flex flex-col leading-tight">
+          <span className="font-playfair text-xl md:text-2xl font-bold text-navy-800">
             Regency at Summerlin
           </span>
-          <span className="text-sm text-gray-500">
+          <span className="text-xs md:text-sm text-gray-500">
             by Dr. Jan Duffy, Las Vegas Real Estate Expert
           </span>
         </Link>

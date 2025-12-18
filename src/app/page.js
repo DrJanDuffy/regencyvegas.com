@@ -6,6 +6,100 @@ import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
 export const metadata = generatePageMetadata(PAGE_SEO.home);
 
+const amenities = [
+  {
+    title: "Indoor & Outdoor Pools",
+    icon: (
+      <svg
+        className="h-8 w-8 md:h-10 md:w-10"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M3 18c1.5 0 2.25-1 3-1s1.5 1 3 1 2.25-1 3-1 1.5 1 3 1 2.25-1 3-1 1.5 1 3 1"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M4 6h16v6H4z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Fitness & Wellness",
+    icon: (
+      <svg
+        className="h-8 w-8 md:h-10 md:w-10"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M6.75 6.75h2.5v10.5h-2.5zM14.75 6.75h2.5v10.5h-2.5z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M4 9h3M17 9h3M4 15h3M17 15h3"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Tennis & Pickleball",
+    icon: (
+      <svg
+        className="h-8 w-8 md:h-10 md:w-10"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="9" cy="9" r="4" strokeWidth={1.5} />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M14 14l6 6"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Clubs & Social Events",
+    icon: (
+      <svg
+        className="h-8 w-8 md:h-10 md:w-10"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M5 5h14v7H5z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M5 12l7 4 7-4M9 21h6"
+        />
+      </svg>
+    ),
+  },
+];
+
 export default function HomePage() {
   return (
     <main>
@@ -20,7 +114,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-linear-to-r from-navy-900/85 via-navy-900/80 to-navy-800/70" />
         <div className="relative z-20 max-w-4xl px-4">
-          <div className="mx-auto rounded-2xl bg-black/55 px-6 py-8 text-center text-white shadow-xl backdrop-blur-sm md:px-10 md:py-10">
+          <div className="mx-auto rounded-2xl bg-black/55 px-6 py-8 text-center text-white shadow-soft backdrop-blur-sm md:px-10 md:py-10 animate-fade-in">
             <h1 className="mb-4 font-playfair text-3xl font-bold md:text-5xl lg:text-6xl">
               Regency at Summerlin Homes for Sale
             </h1>
@@ -29,16 +123,16 @@ export default function HomePage() {
               single-story Toll Brothers homes with resort-style amenities and lock-and-leave
               convenience.
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-2 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/homes-for-sale"
-                className="rounded-lg bg-amber-500 px-8 py-3 text-sm font-semibold text-navy-900 shadow hover:bg-amber-600 transition"
+                className="rounded-lg bg-amber-500 px-8 py-4 text-sm font-semibold text-navy-900 shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-600 hover:shadow-xl"
               >
                 View Available Homes
               </Link>
               <a
                 href={`tel:${PHONE.marketing}`}
-                className="rounded-lg border border-white/70 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+                className="rounded-lg border-2 border-white/80 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20"
               >
                 Call/Text {PHONE.marketing}
               </a>
@@ -48,32 +142,42 @@ export default function HomePage() {
       </section>
 
       {/* Quick stats */}
-      <section className="bg-navy-800 text-white py-6">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 text-center md:text-left">
-          <div>
-            <div className="text-2xl font-bold text-amber-400">
-              {COMMUNITY.totalHomes}
+      <section className="bg-navy-800 py-6 text-white md:py-8">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+            <div className="border-r border-navy-700 text-center last:border-r-0 md:border-r">
+              <div className="mb-1 text-3xl font-bold text-amber-400 md:text-4xl">
+                {COMMUNITY.totalHomes}
+              </div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
+                Luxury Homes
+              </div>
             </div>
-            <div className="text-sm text-gray-200">Luxury Homes</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-amber-400">
-              {COMMUNITY.acreage}
+            <div className="border-r border-navy-700 text-center last:border-r-0 md:border-r">
+              <div className="mb-1 text-3xl font-bold text-amber-400 md:text-4xl">
+                {COMMUNITY.acreage}
+              </div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
+                Acres in The Cliffs
+              </div>
             </div>
-            <div className="text-sm text-gray-200">Acres in The Cliffs</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-amber-400">
-              ${COMMUNITY.price.min.toLocaleString()} - $
-              {COMMUNITY.price.max.toLocaleString()}+
+            <div className="border-r border-navy-700 text-center last:border-r-0 md:border-r">
+              <div className="mb-1 text-2xl font-bold text-amber-400 md:text-3xl">
+                ${COMMUNITY.price.min.toLocaleString()} - $
+                {COMMUNITY.price.max.toLocaleString()}+
+              </div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
+                Typical Price Range
+              </div>
             </div>
-            <div className="text-sm text-gray-200">Typical Price Range</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-amber-400">
-              ${COMMUNITY.hoa.total}/mo
+            <div className="text-center">
+              <div className="mb-1 text-3xl font-bold text-amber-400 md:text-4xl">
+                ${COMMUNITY.hoa.total}/mo
+              </div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
+                All-In HOA
+              </div>
             </div>
-            <div className="text-sm text-gray-200">All-In HOA</div>
           </div>
         </div>
       </section>
@@ -104,22 +208,40 @@ export default function HomePage() {
                     ? "/palisades-collection"
                     : "/pinnacle-collection"
                 }
-                className="group block rounded-xl bg-white shadow hover:shadow-lg transition"
+                className="group block rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="h-40 bg-stone-200 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-navy-900/10 group-hover:bg-navy-900/5 transition" />
+                <div className="relative h-44 bg-linear-to-br from-stone-200 to-stone-300 overflow-hidden md:h-52">
+                  <div className="absolute inset-0 bg-navy-900/10 transition-all duration-300 group-hover:bg-navy-900/5" />
+                  <span className="absolute right-4 top-4 rounded-full bg-amber-500 px-3 py-1 text-xs font-semibold text-navy-900 shadow">
+                    Collection
+                  </span>
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-1 font-playfair text-xl font-semibold text-navy-800">
+                  <h3 className="mb-2 font-playfair text-xl font-semibold text-navy-800 transition-colors group-hover:text-amber-600">
                     {col.name}
                   </h3>
-                  <p className="mb-1 text-sm text-gray-600">
-                    {col.sqftRange} • {col.beds} beds • {col.baths} baths
+                  <p className="mb-1 text-sm text-gray-700">
+                    {col.sqftRange} sq ft
                   </p>
-                  <p className="text-xs text-gray-500">Lot size {col.lotSize}</p>
-                  <p className="mt-4 text-sm font-semibold text-amber-600 group-hover:text-amber-700">
-                    View Collection →
+                  <p className="mb-4 text-sm text-gray-500">
+                    {col.beds} beds • {col.baths} baths • lots {col.lotSize}
                   </p>
+                  <span className="inline-flex items-center text-sm font-semibold text-amber-600 transition-colors group-hover:text-amber-700">
+                    View Collection
+                    <svg
+                      className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </span>
                 </div>
               </Link>
             ))}
@@ -153,23 +275,15 @@ export default function HomePage() {
             and pickleball, and a full calendar of social events curated by an on-site
             lifestyle director.
           </p>
-          <div className="mb-10 grid gap-6 text-center sm:grid-cols-2 md:grid-cols-4">
-            <div>
-              <div className="mb-2 text-3xl">🏊</div>
-              <p className="text-sm font-semibold">Indoor & Outdoor Pools</p>
-            </div>
-            <div>
-              <div className="mb-2 text-3xl">💪</div>
-              <p className="text-sm font-semibold">Fitness & Wellness</p>
-            </div>
-            <div>
-              <div className="mb-2 text-3xl">🎾</div>
-              <p className="text-sm font-semibold">Tennis & Pickleball</p>
-            </div>
-            <div>
-              <div className="mb-2 text-3xl">🎯</div>
-              <p className="text-sm font-semibold">Clubs & Social Events</p>
-            </div>
+          <div className="mb-10 grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+            {amenities.map((item) => (
+              <div key={item.title} className="group">
+                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/10 text-amber-400 transition-colors group-hover:bg-white/20">
+                  {item.icon}
+                </div>
+                <p className="text-sm font-semibold">{item.title}</p>
+              </div>
+            ))}
           </div>
           <div className="text-center">
             <Link

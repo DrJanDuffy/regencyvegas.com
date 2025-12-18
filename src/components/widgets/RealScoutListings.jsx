@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Script from "next/script";
-import { AGENT, COMMUNITY } from "@/lib/constants";
+import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
 
 export default function RealScoutListings({
   priceMin = COMMUNITY.price.min,
@@ -12,7 +12,17 @@ export default function RealScoutListings({
   propertyTypes = ",SFR",
   className = "",
 }) {
-  const [isReady, setIsReady] = useState(false);
+  const [status, setStatus] = useState("loading"); // loading | ready | error
+
+  useEffect(() => {
+    if (status !== "loading") return;
+
+    const timeoutId = setTimeout(() => {
+      setStatus((current) => (current === "loading" ? "error" : current));
+    }, 10000);
+
+    return () => clearTimeout(timeoutId);
+  }, [status]);
 
   return (
     <div className={`realscout-container min-h-[320px] w-full ${className}`}>
@@ -20,39 +30,45 @@ export default function RealScoutListings({
         src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
         type="module"
         strategy="afterInteractive"
-        onLoad={() => setIsReady(true)}
+        onLoad={() => setStatus("ready")}
+        onError={() => setStatus("error")}
       />
 
-      {!isReady && (
-        <div className="flex items-center justify-center py-12 text-gray-600">
-          <svg className="mr-3 h-6 w-6 animate-spin" viewBox="0 0 24 24">
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-              fill="none"
-            />
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-            />
-          </svg>
-          <span className="text-sm">Loading Regency at Summerlin listings...</span>
+      {status === "loading" && (
+        <div className="flex flex-col items-center justify-center py-16 text-gray-600">
+          <div className="relative mb-4 h-12 w-12">
+            <div className="absolute inset-0 rounded-full border-4 border-stone-200" />
+            <div className="absolute inset-0 rounded-full border-4 border-amber-500 border-t-transparent animate-spin" />
+          </div>
+          <p className="text-sm">Loading available Regency at Summerlin homes...</p>
         </div>
       )}
 
-      <realscout-office-listings
-        agent-encoded-id={AGENT.realscoutId}
-        sort-order={sortOrder}
-        listing-status={listingStatus}
-        property-types={propertyTypes}
-        price-min={priceMin.toString()}
-        price-max={priceMax.toString()}
-      />
+      {status === "error" && (
+        <div className="flex flex-col items-center justify-center rounded-xl bg-stone-50 px-4 py-16 text-center">
+          <p className="mb-4 text-sm text-gray-600">
+            We&apos;re having trouble loading live listings right now. Please refresh the page
+            or contact us directly for current availability in Regency at Summerlin.
+          </p>
+          <a
+            href={`tel:${PHONE.marketing}`}
+            className="rounded-lg bg-navy-800 px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy-900"
+          >
+            Call {PHONE.marketing}
+          </a>
+        </div>
+      )}
+
+      {status === "ready" && (
+        <realscout-office-listings
+          agent-encoded-id={AGENT.realscoutId}
+          sort-order={sortOrder}
+          listing-status={listingStatus}
+          property-types={propertyTypes}
+          price-min={priceMin.toString()}
+          price-max={priceMax.toString()}
+        />
+      )}
     </div>
   );
 }
