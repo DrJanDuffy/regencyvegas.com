@@ -62,7 +62,11 @@ export const COLLECTIONS = {
 };
 
 export const NAV_LINKS = [
-  { label: "Homes for Sale", href: "/homes-for-sale" },
+  {
+    label: "Homes for Sale",
+    href: "/homes-for-sale",
+    children: [{ label: "Recently Sold", href: "/recently-sold" }],
+  },
   {
     label: "Floor Plans",
     href: "/floor-plans",
@@ -80,10 +84,26 @@ export const NAV_LINKS = [
       { label: "Location", href: "/location" },
       { label: "HOA & Fees", href: "/hoa-fees" },
       { label: "Lifestyle", href: "/lifestyle" },
+      { label: "Nearby Amenities", href: "/nearby-amenities" },
+      {
+        label: "Compare 55+ Communities",
+        href: "/compare-55-communities",
+      },
     ],
   },
   { label: "Buying", href: "/buying-guide" },
   { label: "Selling", href: "/selling" },
+  {
+    label: "Resources",
+    href: "/blog",
+    children: [
+      { label: "Market Report", href: "/market-report" },
+      { label: "Photos", href: "/photos" },
+      { label: "Virtual Tours", href: "/virtual-tours" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Blog", href: "/blog" },
+    ],
+  },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
