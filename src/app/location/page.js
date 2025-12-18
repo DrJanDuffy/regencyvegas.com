@@ -1,0 +1,42 @@
+import { COMMUNITY, PHONE } from "@/lib/constants";
+import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
+
+export const metadata = generatePageMetadata(PAGE_SEO.location);
+
+export default function LocationPage() {
+  return (
+    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <h1 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
+        Regency at Summerlin Location
+      </h1>
+      <h2 className="mb-3 text-xl font-semibold text-navy-800">
+        In the Heart of The Cliffs Village, Summerlin South
+      </h2>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        {COMMUNITY.name} is located in The Cliffs village of Summerlin South, zip{" "}
+        {COMMUNITY.zipCode}. The elevated desert terrain and views of surrounding
+        ridges create a dramatic backdrop, while nearby roadways provide convenient
+        access to Downtown Summerlin, Red Rock Canyon, and the Las Vegas Strip.
+      </p>
+      <h2 className="mb-3 text-xl font-semibold text-navy-800">
+        Nearby Destinations
+      </h2>
+      <ul className="mb-4 list-disc pl-5 text-sm text-gray-700 md:text-base">
+        <li>Downtown Summerlin shopping, dining, and entertainment</li>
+        <li>Red Rock Casino Resort &amp; Spa</li>
+        <li>Red Rock Canyon National Conservation Area</li>
+        <li>Medical centers and professional services in Summerlin</li>
+      </ul>
+      <h3 className="mb-2 text-lg font-semibold text-navy-800">
+        Get Directions or Schedule a Tour
+      </h3>
+      <p className="text-sm text-gray-600 md:text-base">
+        For exact directions, a tour map, or to coordinate a guided visit to{" "}
+        {COMMUNITY.name}, call or text{" "}
+        <span className="font-semibold">{PHONE.marketing}</span>.
+      </p>
+    </main>
+  );
+}
+
+

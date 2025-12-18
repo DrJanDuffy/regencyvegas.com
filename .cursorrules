@@ -1,0 +1,144 @@
+# Project: Regency at Summerlin Real Estate Website
+# Owner: Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
+
+## Tech Stack
+- Framework: Next.js 15 (App Router)
+- Styling: Tailwind CSS 4.0
+- Deployment: Vercel
+- CMS: Headless (or static)
+- IDX Integration: RealScout Office Listings Widget
+- Analytics: Google Analytics 4, Google Search Console
+- Forms: React Hook Form with Zod validation
+
+## RealScout IDX Widget Integration (CRITICAL)
+Agent Encoded ID: QWdlbnQtMjI1MDUw
+
+### Head Script (add to layout.tsx or _document.tsx):
+<script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+
+### Widget Styling (add to globals.css):
+realscout-office-listings {
+  --rs-listing-divider-color: #1a365d;  /* Match our navy primary */
+  width: 100%;
+}
+
+### Default Widget Configuration:
+<realscout-office-listings 
+  agent-encoded-id="QWdlbnQtMjI1MDUw" 
+  sort-order="NEWEST" 
+  listing-status="For Sale" 
+  property-types=",SFR" 
+  price-min="400000" 
+  price-max="1100000">
+</realscout-office-listings>
+
+### Widget Variants by Page:
+- Homepage: price-min="700000" price-max="1100000" (Regency range)
+- General listings: price-min="400000" price-max="1100000"
+- Luxury focus: price-min="900000" (no max)
+
+## Coding Standards
+- Use TypeScript for all components
+- Use functional components with hooks, NO class components
+- Use 'use client' directive only when necessary (prefer Server Components)
+- Keep components under 150 lines; split if larger
+- Use semantic HTML elements (main, section, article, nav, header, footer)
+- All images must have alt text with keyword optimization
+- Implement lazy loading for images below the fold
+
+## File Structure
+/app
+  /page.tsx (homepage)
+  /homes-for-sale/page.tsx
+  /recently-sold/page.tsx
+  /summit-collection/page.tsx
+  /palisades-collection/page.tsx
+  /pinnacle-collection/page.tsx
+  /floor-plans/page.tsx
+  /amenities/page.tsx
+  /lifestyle/page.tsx
+  /hoa-fees/page.tsx
+  /location/page.tsx
+  /nearby-amenities/page.tsx
+  /buying-guide/page.tsx
+  /selling/page.tsx
+  /market-report/page.tsx
+  /compare-55-communities/page.tsx
+  /photos/page.tsx
+  /virtual-tours/page.tsx
+  /faq/page.tsx
+  /about/page.tsx
+  /contact/page.tsx
+  /blog/page.tsx
+  /layout.tsx
+  /globals.css
+/components
+  /ui (reusable UI components)
+  /sections (page sections)
+  /widgets (RealScout, Homebot integrations)
+/lib
+  /utils.ts
+  /seo.ts
+  /schema.ts
+/public
+  /images
+  /icons
+
+## SEO Requirements (CRITICAL)
+- Every page MUST have unique meta title (under 60 chars)
+- Every page MUST have unique meta description (under 160 chars)
+- Every page MUST have ONE H1 tag only
+- Use H2-H6 hierarchy correctly (no skipping levels)
+- Implement JSON-LD schema on every page
+- All internal links must use Next.js Link component
+- Implement canonical URLs
+- Create XML sitemap
+- Create robots.txt
+
+## Design Guidelines
+- Primary Color: Navy Blue (#1a365d) - trust, professionalism
+- Secondary Color: Gold (#d69e2e) - luxury, premium
+- Accent Color: Desert Sand (#e2d5c3) - Las Vegas desert aesthetic
+- Font Family: 
+  - Headings: Playfair Display (serif, luxury feel)
+  - Body: Inter or Source Sans Pro (clean readability)
+- Mobile-first responsive design
+- Minimum touch target: 44x44px
+- Maximum content width: 1280px
+- Section padding: py-16 md:py-24
+
+## Phone Numbers (USE CORRECTLY)
+- Marketing/Client CTA: 702-222-1964
+- Professional correspondence: 702-500-1955
+
+## Schema Markup (REQUIRED ON ALL PAGES)
+- RealEstateAgent schema
+- LocalBusiness schema  
+- BreadcrumbList schema
+- FAQPage schema (on FAQ page only)
+- Product schema (on floor plan pages)
+
+## Performance Targets
+- Lighthouse Performance: >90
+- Lighthouse Accessibility: >95
+- Lighthouse SEO: 100
+- Core Web Vitals: All green
+- First Contentful Paint: <1.5s
+- Largest Contentful Paint: <2.5s
+
+## Error Handling
+- Use try-catch for async operations
+- Display user-friendly error messages
+- Log errors for debugging
+- Implement 404 and 500 error pages
+
+## Don't Do This
+- Don't use inline styles
+- Don't skip heading levels
+- Don't use generic alt text like "image"
+- Don't create pages without meta tags
+- Don't use px for font sizes (use rem)
+- Don't forget mobile responsiveness
+- Don't hardcode phone numbers (use constants)
+
+

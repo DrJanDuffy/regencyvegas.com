@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Regency at Summerlin Homes for Sale in Las Vegas</title>
+  <desc id="desc">Luxury 55+ guard-gated community in The Cliffs village of Summerlin, Las Vegas.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a365d"/>
+      <stop offset="50%" stop-color="#2d4a6f"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="150" width="640" height="330" rx="24" fill="rgba(0,0,0,0.45)" stroke="#d69e2e" stroke-width="2"/>
+  <text x="110" y="230" fill="#f9fafb" font-family="Playfair Display, Georgia, serif" font-size="54" font-weight="700">
+    Regency at Summerlin
+  </text>
+  <text x="110" y="290" fill="#e5e7eb" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26">
+    Luxury 55+ Homes &amp; Real Estate in The Cliffs, Las Vegas
+  </text>
+  <text x="110" y="350" fill="#d1d5db" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22">
+    Guard-gated · Resort clubhouse · Mountain &amp; city views
+  </text>
+  <text x="110" y="410" fill="#fbbf24" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="600">
+    Call/Text 702-222-1964 · Dr. Jan Duffy, Las Vegas Real Estate Expert
+  </text>
+  <circle cx="910" cy="200" r="110" fill="#111827" stroke="#d69e2e" stroke-width="4"/>
+  <text x="910" y="200" text-anchor="middle" fill="#f9fafb" font-family="Playfair Display, Georgia, serif" font-size="22">
+    55+ Guard
+  </text>
+  <text x="910" y="236" text-anchor="middle" fill="#f9fafb" font-family="Playfair Display, Georgia, serif" font-size="22">
+    Gated
+  </text>
+  <text x="910" y="290" text-anchor="middle" fill="#e5e7eb" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">
+    Toll Brothers Luxury
+  </text>
+</svg>
+
