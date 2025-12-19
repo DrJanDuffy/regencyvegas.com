@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
+import { AGENT, BUSINESS, COMMUNITY, PHONE } from "@/lib/constants";
 import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
 import TrackedEmailLink from "@/components/ui/TrackedEmailLink";
 
@@ -49,6 +49,14 @@ export default function Footer() {
               >
                 {AGENT.email}
               </TrackedEmailLink>
+            </div>
+            <div className="pt-2">
+              <p className="text-sm text-gray-300">{BUSINESS.fullAddress}</p>
+            </div>
+            <div className="pt-3">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-white">Hours</p>
+              <p className="text-xs text-gray-300">Mon-Fri: {BUSINESS.hours.monday.display}</p>
+              <p className="text-xs text-gray-300">Sat-Sun: {BUSINESS.hours.saturday.display}</p>
             </div>
           </div>
         </div>

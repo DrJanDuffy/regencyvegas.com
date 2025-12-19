@@ -1,8 +1,10 @@
-import { AGENT, PHONE, COMMUNITY } from "@/lib/constants";
+import { AGENT, BUSINESS, PHONE, COMMUNITY } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 import ContactForm from "@/components/forms/ContactForm";
 import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
 import TrackedEmailLink from "@/components/ui/TrackedEmailLink";
+import GoogleMapEmbed from "@/components/ui/GoogleMapEmbed";
+import GoogleActionButtons from "@/components/ui/GoogleActionButtons";
 
 export const metadata = generatePageMetadata(PAGE_SEO.contact);
 
@@ -62,7 +64,39 @@ export default function ContactPage() {
               </TrackedEmailLink>
             </span>
           </li>
+          <li className="flex items-center">
+            <span className="mr-3 text-amber-400">📍</span>
+            <span>
+              Address: <span className="font-semibold">{BUSINESS.fullAddress}</span>
+            </span>
+          </li>
         </ul>
+
+        {/* Business Hours */}
+        <div className="mt-6 pt-6 border-t border-stone-700">
+          <h3 className="mb-3 text-lg font-semibold text-white">Business Hours</h3>
+          <ul className="space-y-1 text-sm text-gray-200">
+            <li className="flex justify-between">
+              <span>Monday - Friday:</span>
+              <span className="font-semibold">{BUSINESS.hours.monday.display}</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Saturday - Sunday:</span>
+              <span className="font-semibold">{BUSINESS.hours.saturday.display}</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="mt-6 pt-6 border-t border-stone-700">
+          <GoogleActionButtons location="contact_page" />
+        </div>
+      </div>
+
+      {/* Google Map */}
+      <div className="mb-8 rounded-2xl border border-stone-700 bg-luxury-900 p-6 shadow-soft">
+        <h2 className="mb-4 text-xl font-semibold text-white">Our Location</h2>
+        <GoogleMapEmbed />
       </div>
 
       <div className="rounded-2xl border border-stone-700 bg-luxury-900 p-6 shadow-soft">

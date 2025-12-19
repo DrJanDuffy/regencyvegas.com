@@ -1,4 +1,4 @@
-import { AGENT, COMMUNITY, PHONE } from "./constants";
+import { AGENT, BUSINESS, COMMUNITY, PHONE } from "./constants";
 
 export const agentSchema = {
   "@context": "https://schema.org",
@@ -9,9 +9,10 @@ export const agentSchema = {
   url: "https://regencyvegas.com",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    postalCode: COMMUNITY.zipCode,
+    streetAddress: BUSINESS.streetAddress,
+    addressLocality: BUSINESS.city,
+    addressRegion: BUSINESS.state,
+    postalCode: BUSINESS.zipCode,
   },
   areaServed: {
     "@type": "Place",
@@ -28,15 +29,96 @@ export const businessSchema = {
   name: `${AGENT.name} - ${COMMUNITY.name} Specialist`,
   description: `Luxury 55+ real estate specialist for ${COMMUNITY.name} in Las Vegas`,
   telephone: PHONE.marketing,
+  email: AGENT.email,
   url: "https://regencyvegas.com",
   priceRange: "$$$",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    postalCode: COMMUNITY.zipCode,
+    streetAddress: BUSINESS.streetAddress,
+    addressLocality: BUSINESS.city,
+    addressRegion: BUSINESS.state,
+    postalCode: BUSINESS.zipCode,
+    addressCountry: "US",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "36.0681", // Update with actual coordinates
+    longitude: "-115.3044", // Update with actual coordinates
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Monday",
+      opens: BUSINESS.hours.monday.open,
+      closes: BUSINESS.hours.monday.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Tuesday",
+      opens: BUSINESS.hours.tuesday.open,
+      closes: BUSINESS.hours.tuesday.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Wednesday",
+      opens: BUSINESS.hours.wednesday.open,
+      closes: BUSINESS.hours.wednesday.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Thursday",
+      opens: BUSINESS.hours.thursday.open,
+      closes: BUSINESS.hours.thursday.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: BUSINESS.hours.friday.open,
+      closes: BUSINESS.hours.friday.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: BUSINESS.hours.saturday.open,
+      closes: BUSINESS.hours.saturday.close,
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: BUSINESS.hours.sunday.open,
+      closes: BUSINESS.hours.sunday.close,
+    },
+  ],
+  ...(BUSINESS.reviews.count > 0 && {
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: BUSINESS.reviews.rating.toString(),
+      reviewCount: BUSINESS.reviews.count.toString(),
+      bestRating: "5",
+      worstRating: "1",
+    },
+  }),
 };
+
+// Review schema for Google star ratings in search results
+export const reviewSchema = BUSINESS.reviews.count > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "Review",
+  itemReviewed: {
+    "@type": "LocalBusiness",
+    name: `${AGENT.name} - ${COMMUNITY.name} Specialist`,
+  },
+  author: {
+    "@type": "Organization",
+    name: "Google Reviews",
+  },
+  reviewRating: {
+    "@type": "Rating",
+    ratingValue: BUSINESS.reviews.rating.toString(),
+    bestRating: "5",
+    worstRating: "1",
+  },
+} : null;
 
 export function generateFAQSchema(faqs) {
   return {

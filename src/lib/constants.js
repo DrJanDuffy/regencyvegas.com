@@ -12,6 +12,32 @@ export const AGENT = {
   email: "DrDuffySells@RegencyVegas.com",
 };
 
+export const BUSINESS = {
+  streetAddress: "10126 Regency Square Ave",
+  city: "Las Vegas",
+  state: "NV",
+  zipCode: "89148",
+  fullAddress: "10126 Regency Square Ave, Las Vegas, NV 89148",
+  // Google Business Profile URL - update with actual GBP URL
+  googleBusinessUrl: "https://www.google.com/maps/place/10126+Regency+Square+Ave,+Las+Vegas,+NV+89148",
+  // Business hours (24-hour format for schema, display format for UI)
+  hours: {
+    monday: { open: "09:00", close: "18:00", display: "9:00 AM - 6:00 PM" },
+    tuesday: { open: "09:00", close: "18:00", display: "9:00 AM - 6:00 PM" },
+    wednesday: { open: "09:00", close: "18:00", display: "9:00 AM - 6:00 PM" },
+    thursday: { open: "09:00", close: "18:00", display: "9:00 AM - 6:00 PM" },
+    friday: { open: "09:00", close: "18:00", display: "9:00 AM - 6:00 PM" },
+    saturday: { open: "10:00", close: "16:00", display: "10:00 AM - 4:00 PM" },
+    sunday: { open: "10:00", close: "16:00", display: "10:00 AM - 4:00 PM" },
+  },
+  // Google Reviews - update with actual data from GBP
+  reviews: {
+    rating: 5.0,
+    count: 0, // Update with actual review count
+    googleReviewsUrl: "https://www.google.com/maps/place/10126+Regency+Square+Ave,+Las+Vegas,+NV+89148", // Update with actual reviews URL
+  },
+};
+
 export const COMMUNITY = {
   name: "Regency at Summerlin",
   builder: "Toll Brothers",

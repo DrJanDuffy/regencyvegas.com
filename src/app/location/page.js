@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { COMMUNITY, PHONE } from "@/lib/constants";
+import { BUSINESS, COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
+import GoogleMapEmbed from "@/components/ui/GoogleMapEmbed";
+import GoogleActionButtons from "@/components/ui/GoogleActionButtons";
 
 export const metadata = generatePageMetadata(PAGE_SEO.location);
 
@@ -45,11 +47,27 @@ export default function LocationPage() {
         </Link>
         .
       </p>
-      <p className="text-base text-gray-200 md:text-lg">
+      <p className="mb-6 text-base text-gray-200 md:text-lg">
         For exact directions, a tour map, or to coordinate a guided visit to{" "}
         {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
       </p>
+
+      {/* Action Buttons */}
+      <div className="mb-8">
+        <GoogleActionButtons location="location_page" />
+      </div>
+
+      {/* Google Map */}
+      <div className="mb-8 rounded-2xl border border-stone-700 bg-luxury-900 p-6 shadow-soft">
+        <h2 className="mb-4 text-xl font-semibold text-white">
+          {COMMUNITY.name} Location Map
+        </h2>
+        <p className="mb-4 text-base text-gray-200">
+          {COMMUNITY.name} is located at {BUSINESS.fullAddress} in The Cliffs village of Summerlin South.
+        </p>
+        <GoogleMapEmbed />
+      </div>
     </main>
   );
 }
