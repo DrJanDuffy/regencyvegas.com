@@ -448,16 +448,16 @@ export default function HomePage() {
           </p>
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              COLLECTIONS.summit,
-              COLLECTIONS.palisades,
-              COLLECTIONS.pinnacle,
+              { ...COLLECTIONS.summit, image: "/images/photos/regency-summit_370.png" },
+              { ...COLLECTIONS.palisades, image: "/images/photos/regency-palisade_370.png" },
+              { ...COLLECTIONS.pinnacle, image: "/images/photos/regency-pinnacle_370.png" },
             ].map((col) => (
               <Link
                 key={col.name}
                 href={
-                  col === COLLECTIONS.summit
+                  col.name === COLLECTIONS.summit.name
                     ? "/summit-collection"
-                    : col === COLLECTIONS.palisades
+                    : col.name === COLLECTIONS.palisades.name
                     ? "/palisades-collection"
                     : "/pinnacle-collection"
                 }
@@ -468,12 +468,12 @@ export default function HomePage() {
                 </div>
                 <div className="mb-5 overflow-hidden rounded-2xl border border-amber-700/40 bg-black/30">
                   <Image
-                    src="/images/photos/regency-community.jpg"
-                    alt={`${col.name} homes in Regency at Summerlin`}
+                    src={col.image}
+                    alt={`${col.name} model home in Regency at Summerlin`}
                     width={640}
                     height={360}
                     className="h-40 w-full object-cover md:h-48"
-                    quality={75}
+                    quality={85}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
