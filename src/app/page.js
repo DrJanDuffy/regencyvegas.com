@@ -304,13 +304,13 @@ export default function HomePage() {
       <section className="bg-navy-900 py-16 text-white md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mx-auto mb-10 max-w-3xl text-center">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">
               Buying or selling in {COMMUNITY.name}?
             </p>
-            <h2 className="mb-4 font-playfair text-3xl md:text-4xl">
+            <h2 className="mb-5 font-playfair text-3xl text-white md:text-4xl">
               Resale Homes Built by Toll Brothers
             </h2>
-            <p className="text-base text-white md:text-lg">
+            <p className="text-base leading-relaxed text-gray-100 md:text-lg">
               Whether you are searching for your ideal Regency at Summerlin home or preparing to
               sell, {AGENT.name} represents buyers and sellers of resale homes Built by Toll
               Brothers throughout the community.
@@ -439,10 +439,10 @@ export default function HomePage() {
       {/* Collections */}
       <section className="bg-navy-900 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-3 text-center font-playfair text-3xl text-white md:text-4xl">
+          <h2 className="mb-4 text-center font-playfair text-3xl text-white md:text-4xl">
             Three Distinct Home Collections
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-stone-200 md:text-base">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-base leading-relaxed text-gray-100 md:text-lg">
             Explore all nine single-story floor plans across the Summit, Palisades, and Pinnacle
             Collections—each crafted for lock-and-leave 55+ living in {COMMUNITY.name}.
           </p>
