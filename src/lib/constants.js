@@ -63,29 +63,115 @@ export const COMMUNITY = {
 export const COLLECTIONS = {
   summit: {
     name: "Summit Collection",
+    description: "Entry-Level Luxury - The most modest in size, perfect for those seeking quality Toll Brothers craftsmanship in a right-sized package.",
     sqftRange: "1,665 - 1,792",
     beds: "2-3",
     baths: "2.5",
     lotSize: "55'x90'",
-    plans: ["Delmar", "Gilmore", "Stony Ridge"],
+    priceRange: { min: 700000, max: 850000 },
+    plans: [
+      {
+        name: "Sandstone",
+        sqft: 1665,
+        beds: "2",
+        baths: "2",
+        garage: "2-Car",
+        features: "Flex space, open concept",
+      },
+      {
+        name: "Carbondale",
+        sqft: 1724,
+        beds: "2",
+        baths: "2",
+        garage: "2-Car",
+        features: "Den option, covered patio",
+      },
+      {
+        name: "Stony Ridge",
+        sqft: 1792,
+        beds: "2-3",
+        baths: "2.5",
+        garage: "2-Car",
+        features: "Circular entry, sliding glass wall",
+      },
+    ],
   },
   palisades: {
     name: "Palisades Collection",
+    description: "Mid-Range Luxury - The perfect balance of space and sophistication, featuring generous outdoor living areas.",
     sqftRange: "2,003 - 2,223",
     beds: "2-3",
     baths: "2.5",
     lotSize: "65'x90'",
-    plans: ["Bristol Bay", "Clay Hill", "Sun Dance"],
+    priceRange: { min: 825000, max: 950000 },
+    plans: [
+      {
+        name: "Bristol Bay",
+        sqft: 2003,
+        beds: "2",
+        baths: "2.5",
+        garage: "2-Car",
+        features: "Den, generous outdoor living",
+      },
+      {
+        name: "Clay Hill",
+        sqft: 2030,
+        beds: "2",
+        baths: "2.5",
+        garage: "2-Car",
+        features: "Den, extended covered patio",
+      },
+      {
+        name: "Sun Dance",
+        sqft: 2223,
+        beds: "2-3",
+        baths: "2.5",
+        garage: "2-Car",
+        features: "Optional 3rd bed, large great room",
+      },
+    ],
   },
   pinnacle: {
     name: "Pinnacle Collection",
-    sqftRange: "2,235 - 2,659",
+    description: "Premium Luxury - The largest and most luxurious homes with designer appointments and expansive living spaces. Some feature 15-16 ft ceilings and beamed ceilings.",
+    sqftRange: "2,235 - 2,428",
     beds: "2",
     baths: "2.5",
     lotSize: "75'x90'",
-    plans: ["Largest floor plans"],
+    priceRange: { min: 900000, max: 1100000 },
+    plans: [
+      {
+        name: "Marble Bluff",
+        sqft: 2235,
+        beds: "2",
+        baths: "2.5",
+        garage: "2-Car",
+        features: "Designer finishes, expansive great room",
+      },
+      {
+        name: "Marlette",
+        sqft: 2285,
+        beds: "2",
+        baths: "2.5",
+        garage: "3-Car",
+        features: "Only 3-car garage option",
+      },
+      {
+        name: "Wakefield",
+        sqft: 2428,
+        beds: "2",
+        baths: "2.5",
+        garage: "2-Car",
+        features: "Largest floor plan, premium appointments",
+      },
+    ],
   },
 };
+
+// Helper to get plan names as array (for backward compatibility)
+COLLECTIONS.summit.planNames = COLLECTIONS.summit.plans.map(p => p.name);
+COLLECTIONS.palisades.planNames = COLLECTIONS.palisades.plans.map(p => p.name);
+COLLECTIONS.pinnacle.planNames = COLLECTIONS.pinnacle.plans.map(p => p.name);
 
 export const NAV_LINKS = [
   {

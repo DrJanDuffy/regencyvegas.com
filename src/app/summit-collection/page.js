@@ -32,11 +32,28 @@ export default function SummitCollectionPage() {
       <h2 className="mb-3 text-xl font-semibold text-white">
         Summit Collection Floor Plans
       </h2>
-      <ul className="mb-4 list-disc pl-5 text-base text-gray-200 md:text-lg">
+      <p className="mb-4 text-base text-gray-200 md:text-lg">
+        {col.description}
+      </p>
+      <div className="mb-6 grid gap-4 md:grid-cols-3">
         {col.plans.map((plan) => (
-          <li key={plan}>{plan}</li>
+          <div
+            key={plan.name}
+            className="rounded-lg border border-stone-700 bg-luxury-900 p-4"
+          >
+            <h3 className="mb-2 text-lg font-semibold text-white">{plan.name}</h3>
+            <p className="mb-1 text-sm text-gray-300">{plan.sqft.toLocaleString()} sq ft</p>
+            <p className="mb-1 text-sm text-gray-300">{plan.beds} BD / {plan.baths} BA</p>
+            <p className="mb-2 text-sm text-gray-300">{plan.garage}</p>
+            <p className="text-sm text-amber-400">{plan.features}</p>
+          </div>
         ))}
-      </ul>
+      </div>
+      <div className="mb-6 rounded-lg border border-stone-700 bg-luxury-900 p-4">
+        <p className="text-base text-gray-200">
+          <span className="font-semibold text-white">Price Range:</span> ${(col.priceRange.min / 1000).toFixed(0)}K - ${(col.priceRange.max / 1000).toFixed(0)}K (resale)
+        </p>
+      </div>
       <h3 className="mb-2 text-lg font-semibold text-white">
         Learn More or Schedule a Tour
       </h3>

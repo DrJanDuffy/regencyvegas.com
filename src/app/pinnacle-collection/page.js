@@ -30,14 +30,30 @@ export default function PinnacleCollectionPage() {
         lock-and-leave 55+ lifestyle.
       </p>
       <h2 className="mb-3 text-xl font-semibold text-white">
-        Pinnacle Collection Highlights
+        Pinnacle Collection Floor Plans
       </h2>
-      <ul className="mb-4 list-disc pl-5 text-base text-gray-200 md:text-lg">
-        <li>Largest homes in Regency at Summerlin</li>
-        <li>Premium lots, many with mountain or city light views</li>
-        <li>Gourmet kitchens and expanded great rooms</li>
-        <li>Luxury primary suites with spa-inspired baths</li>
-      </ul>
+      <p className="mb-4 text-base text-gray-200 md:text-lg">
+        {col.description}
+      </p>
+      <div className="mb-6 grid gap-4 md:grid-cols-3">
+        {col.plans.map((plan) => (
+          <div
+            key={plan.name}
+            className="rounded-lg border border-stone-700 bg-luxury-900 p-4"
+          >
+            <h3 className="mb-2 text-lg font-semibold text-white">{plan.name}</h3>
+            <p className="mb-1 text-sm text-gray-300">{plan.sqft.toLocaleString()} sq ft</p>
+            <p className="mb-1 text-sm text-gray-300">{plan.beds} BD / {plan.baths} BA</p>
+            <p className="mb-2 text-sm text-gray-300">{plan.garage}</p>
+            <p className="text-sm text-amber-400">{plan.features}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mb-6 rounded-lg border border-stone-700 bg-luxury-900 p-4">
+        <p className="text-base text-gray-200">
+          <span className="font-semibold text-white">Price Range:</span> ${(col.priceRange.min / 1000).toFixed(0)}K - ${(col.priceRange.max / 1000000).toFixed(1)}M+ (resale)
+        </p>
+      </div>
       <h3 className="mb-2 text-lg font-semibold text-white">
         Explore Pinnacle Homes and Pricing
       </h3>

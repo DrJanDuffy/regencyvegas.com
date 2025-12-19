@@ -30,7 +30,10 @@ export default function FloorPlansPage() {
           <p>{COLLECTIONS.summit.sqftRange}</p>
           <p>{COLLECTIONS.summit.beds} beds • {COLLECTIONS.summit.baths} baths</p>
           <p className="mt-2 text-sm text-gray-300">
-            Plans: {COLLECTIONS.summit.plans.join(", ")}
+            Plans: {COLLECTIONS.summit.planNames.join(", ")}
+          </p>
+          <p className="mt-2 text-xs text-amber-400">
+            ${(COLLECTIONS.summit.priceRange.min / 1000).toFixed(0)}K - ${(COLLECTIONS.summit.priceRange.max / 1000).toFixed(0)}K
           </p>
         </div>
         <div className="rounded-lg border border-stone-700 bg-luxury-900 p-4">
@@ -42,7 +45,10 @@ export default function FloorPlansPage() {
             {COLLECTIONS.palisades.beds} beds + den • {COLLECTIONS.palisades.baths} baths
           </p>
           <p className="mt-2 text-sm text-gray-300">
-            Plans: {COLLECTIONS.palisades.plans.join(", ")}
+            Plans: {COLLECTIONS.palisades.planNames.join(", ")}
+          </p>
+          <p className="mt-2 text-xs text-amber-400">
+            ${(COLLECTIONS.palisades.priceRange.min / 1000).toFixed(0)}K - ${(COLLECTIONS.palisades.priceRange.max / 1000).toFixed(0)}K
           </p>
         </div>
         <div className="rounded-lg border border-stone-700 bg-luxury-900 p-4">
@@ -52,7 +58,10 @@ export default function FloorPlansPage() {
           <p>{COLLECTIONS.pinnacle.sqftRange}</p>
           <p>{COLLECTIONS.pinnacle.beds} beds • {COLLECTIONS.pinnacle.baths} baths</p>
           <p className="mt-2 text-sm text-gray-300">
-            Plans: {COLLECTIONS.pinnacle.plans.join(", ")}
+            Plans: {COLLECTIONS.pinnacle.planNames.join(", ")}
+          </p>
+          <p className="mt-2 text-xs text-amber-400">
+            ${(COLLECTIONS.pinnacle.priceRange.min / 1000).toFixed(0)}K - ${(COLLECTIONS.pinnacle.priceRange.max / 1000000).toFixed(1)}M+
           </p>
         </div>
       </div>
