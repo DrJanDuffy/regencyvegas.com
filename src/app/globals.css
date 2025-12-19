@@ -35,6 +35,13 @@ realscout-office-listings {
   --rs-listing-divider-color: #1a365d;
   width: 100%;
   display: block;
+  color: #111827 !important; /* Default dark text for widget */
+}
+
+/* Override any white text colors in RealScout widget for better readability */
+realscout-office-listings {
+  --rs-text-color: #111827;
+  --rs-disclaimer-color: #4b5563;
 }
 
 /* Style GLVAR disclaimer text in RealScout widgets */
@@ -43,14 +50,42 @@ realscout-office-listings * {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
-/* Ensure disclaimer text is readable */
+/* Ensure disclaimer text is readable - target all text nodes that might contain disclaimer */
+realscout-office-listings * {
+  color: inherit;
+}
+
+/* Style any text containing GLVAR or disclaimer information */
 realscout-office-listings .rs-disclaimer,
 realscout-office-listings [class*="disclaimer"],
 realscout-office-listings [class*="mls"],
-realscout-office-listings [class*="GLVAR"] {
-  color: #4b5563 !important; /* gray-600 for readability */
+realscout-office-listings [class*="GLVAR"],
+realscout-office-listings [class*="glvar"],
+realscout-office-listings [class*="copyright"],
+realscout-office-listings [class*="attribution"],
+realscout-office-listings footer,
+realscout-office-listings [role="contentinfo"],
+realscout-office-listings small,
+realscout-office-listings p:last-child,
+realscout-office-listings div:last-child {
+  color: #4b5563 !important; /* gray-600 for readability on light backgrounds */
   font-size: 0.75rem !important; /* text-xs */
   line-height: 1.5 !important;
+  opacity: 0.8 !important;
+}
+
+/* Use JavaScript-friendly approach - style common widget footer patterns */
+realscout-office-listings::part(footer),
+realscout-office-listings::part(disclaimer) {
+  color: #4b5563 !important;
+}
+
+/* Additional fallback: style last paragraph and small text in widget */
+realscout-office-listings p:last-of-type,
+realscout-office-listings small,
+realscout-office-listings [style*="font-size: 12px"],
+realscout-office-listings [style*="font-size: 0.75rem"] {
+  color: #4b5563 !important;
 }
 
 .realscout-container {
