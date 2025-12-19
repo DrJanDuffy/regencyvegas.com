@@ -3,7 +3,7 @@ import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-stone-200 bg-stone-100">
+    <footer className="w-full border-t border-stone-200 bg-cream-100">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 text-base text-gray-700 md:grid-cols-3 md:gap-12 md:py-16">
         <div>
           <h2 className="mb-4 font-playfair text-xl font-semibold text-navy-800">
