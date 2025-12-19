@@ -26,7 +26,7 @@ export const metadata = generatePageMetadata(PAGE_SEO.faq);
 
 export default function FaqPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16 bg-luxury-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
