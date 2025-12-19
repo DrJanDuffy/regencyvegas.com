@@ -47,6 +47,129 @@ export default function RealScoutListings({
     };
   }, [status]);
 
+  // Fix GLVAR disclaimer text color after widget loads
+  useEffect(() => {
+    if (status !== "ready") return;
+
+    const fixDisclaimerText = () => {
+      // Find the widget element
+      const widget = document.querySelector("realscout-office-listings");
+      if (!widget) return;
+
+      // Use a MutationObserver to catch dynamically added content
+      const observer = new MutationObserver(() => {
+        // Find all text nodes containing GLVAR or disclaimer text
+        const walker = document.createTreeWalker(
+          widget.shadowRoot || widget,
+          NodeFilter.SHOW_TEXT,
+          null
+        );
+
+        let node;
+        while ((node = walker.nextNode())) {
+          const text = node.textContent || "";
+          if (
+            text.includes("GLVAR") ||
+            text.includes("Greater Las Vegas Association") ||
+            text.includes("Information Deemed Reliable")
+          ) {
+            // Find parent element and style it
+            let parent = node.parentElement;
+            while (parent && parent !== widget && parent !== document.body) {
+              // Check if text is white
+              const computedStyle = window.getComputedStyle(parent);
+              const color = computedStyle.color;
+              if (
+                color === "rgb(255, 255, 255)" ||
+                color === "#ffffff" ||
+                color === "#fff" ||
+                parent.style.color === "white" ||
+                parent.style.color === "#fff" ||
+                parent.style.color === "#ffffff"
+              ) {
+                parent.style.color = "#4b5563"; // gray-600
+                parent.style.fontSize = "0.75rem";
+              }
+              parent = parent.parentElement;
+            }
+          }
+        }
+
+        // Also try to find and style common disclaimer elements
+        const allElements = (widget.shadowRoot || widget).querySelectorAll("*");
+        allElements.forEach((el) => {
+          const text = el.textContent || "";
+          if (
+            (text.includes("GLVAR") ||
+              text.includes("Greater Las Vegas Association") ||
+              text.includes("Information Deemed Reliable")) &&
+            (el.tagName === "P" ||
+              el.tagName === "SMALL" ||
+              el.tagName === "SPAN" ||
+              el.tagName === "DIV")
+          ) {
+            const computedStyle = window.getComputedStyle(el);
+            const color = computedStyle.color;
+            if (
+              color === "rgb(255, 255, 255)" ||
+              color === "#ffffff" ||
+              color === "#fff"
+            ) {
+              el.style.color = "#4b5563";
+              el.style.fontSize = "0.75rem";
+            }
+          }
+        });
+      });
+
+      // Observe changes to the widget
+      observer.observe(widget.shadowRoot || widget, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+      });
+
+      // Run once immediately
+      observer.disconnect();
+      observer.observe(widget.shadowRoot || widget, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+      });
+      setTimeout(() => {
+        // Give widget time to render, then fix
+        const allElements = (widget.shadowRoot || widget).querySelectorAll("*");
+        allElements.forEach((el) => {
+          const text = el.textContent || "";
+          if (
+            text.includes("GLVAR") ||
+            text.includes("Greater Las Vegas Association") ||
+            text.includes("Information Deemed Reliable")
+          ) {
+            el.style.color = "#4b5563";
+            el.style.fontSize = "0.75rem";
+          }
+        });
+      }, 1000);
+
+      return () => observer.disconnect();
+    };
+
+    // Wait for widget to be in DOM, then fix
+    const timer = setTimeout(fixDisclaimerText, 500);
+    const interval = setInterval(() => {
+      const widget = document.querySelector("realscout-office-listings");
+      if (widget) {
+        fixDisclaimerText();
+      }
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
+  }, [status]);
+
   return (
     <div className={`realscout-container min-h-[320px] w-full ${className}`}>
       {status === "loading" && (
