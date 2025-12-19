@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
+import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
 
 export default function RealScoutListings({
   priceMin = COMMUNITY.price.min,
@@ -121,27 +122,28 @@ export default function RealScoutListings({
   return (
     <div className={`realscout-container min-h-[320px] w-full ${className}`}>
       {status === "loading" && (
-        <div className="flex flex-col items-center justify-center py-16 text-gray-600">
+        <div className="flex flex-col items-center justify-center py-16 text-gray-300">
           <div className="relative mb-4 h-12 w-12">
-            <div className="absolute inset-0 rounded-full border-4 border-stone-200" />
+            <div className="absolute inset-0 rounded-full border-4 border-stone-700" />
             <div className="absolute inset-0 rounded-full border-4 border-amber-500 border-t-transparent animate-spin" />
           </div>
-          <p className="text-sm">Loading available Regency at Summerlin homes...</p>
+          <p className="text-base text-gray-200">Loading available Regency at Summerlin homes...</p>
         </div>
       )}
 
       {status === "error" && (
-        <div className="flex flex-col items-center justify-center rounded-xl bg-stone-50 px-4 py-16 text-center">
-          <p className="mb-4 text-sm text-gray-600">
+        <div className="flex flex-col items-center justify-center rounded-xl bg-luxury-900 border border-stone-700 px-4 py-16 text-center">
+          <p className="mb-4 text-base text-gray-200">
             We&apos;re having trouble loading live listings right now. Please refresh the page
             or contact us directly for current availability in Regency at Summerlin.
           </p>
-          <a
-            href={`tel:${PHONE.marketing}`}
-            className="rounded-lg bg-navy-800 px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy-900"
+          <TrackedPhoneLink
+            phone={PHONE.marketing}
+            location="listings_error"
+            className="rounded-lg bg-amber-500 px-6 py-3 text-base font-semibold text-navy-900 transition hover:bg-amber-600"
           >
             Call {PHONE.marketing}
-          </a>
+          </TrackedPhoneLink>
         </div>
       )}
 

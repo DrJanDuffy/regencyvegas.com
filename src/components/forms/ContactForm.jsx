@@ -6,12 +6,21 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { trackFormSubmit } from '@/lib/analytics';
 import { AGENT, PHONE } from '@/lib/constants';
+import TrackedPhoneLink from '@/components/ui/TrackedPhoneLink';
+import TrackedEmailLink from '@/components/ui/TrackedEmailLink';
 
 // Form validation schema
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
-  phone: z.string().regex(/^[\d\s\-\(\)]+$/, 'Please enter a valid phone number').min(10, 'Phone number must be at least 10 digits'),
+  phone: z
+    .string()
+    .regex(/^[\d\s\-\(\)]+$/, 'Please enter a valid phone number')
+    .refine((val) => {
+      // Count only digits, not formatting characters
+      const digitCount = (val.match(/\d/g) || []).length;
+      return digitCount >= 10;
+    }, 'Phone number must be at least 10 digits'),
   interest: z.enum(['buying', 'selling', 'both', 'general'], {
     required_error: 'Please select an interest',
   }),
@@ -153,7 +162,7 @@ export default function ContactForm() {
         {/* Interest Field */}
         <div>
           <label htmlFor="interest" className="block text-sm font-semibold text-white mb-2">
-            I'm interested in <span className="text-amber-400">*</span>
+            I&apos;m interested in <span className="text-amber-400">*</span>
           </label>
           <select
             id="interest"
@@ -215,13 +224,22 @@ export default function ContactForm() {
               <div className="mt-3 text-sm">
                 <p className="font-semibold">Or contact us directly:</p>
                 <p className="mt-1">
-                  <a href={`tel:${PHONE.marketing}`} className="text-amber-400 hover:text-amber-500 underline">
+                  <TrackedPhoneLink
+                    phone={PHONE.marketing}
+                    location="contact_form_error"
+                    className="text-amber-400 hover:text-amber-500 underline"
+                  >
                     {PHONE.marketing}
-                  </a>{' '}
+                  </TrackedPhoneLink>
+                  {' '}
                   |{' '}
-                  <a href={`mailto:${AGENT.email}`} className="text-amber-400 hover:text-amber-500 underline">
+                  <TrackedEmailLink
+                    email={AGENT.email}
+                    location="contact_form_error"
+                    className="text-amber-400 hover:text-amber-500 underline"
+                  >
                     {AGENT.email}
-                  </a>
+                  </TrackedEmailLink>
                 </p>
               </div>
             )}

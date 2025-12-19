@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
+import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
 
 export const metadata = generatePageMetadata(PAGE_SEO.buyingGuide);
 
@@ -42,12 +43,13 @@ export default function BuyingGuidePage() {
         </ul>
         <p className="mt-4 text-sm text-gray-300 md:text-base">
           Call or text{" "}
-          <a
-            href={`tel:${PHONE.marketing}`}
+          <TrackedPhoneLink
+            phone={PHONE.marketing}
+            location="buying_guide"
             className="font-semibold text-amber-400 hover:text-amber-500 underline-offset-2 hover:underline"
           >
             {PHONE.marketing}
-          </a>{" "}
+          </TrackedPhoneLink>{" "}
           for current off-market and coming-soon opportunities.
         </p>
       </div>

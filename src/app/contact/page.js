@@ -1,6 +1,8 @@
 import { AGENT, PHONE, COMMUNITY } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 import ContactForm from "@/components/forms/ContactForm";
+import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
+import TrackedEmailLink from "@/components/ui/TrackedEmailLink";
 
 export const metadata = generatePageMetadata(PAGE_SEO.contact);
 

@@ -43,9 +43,9 @@ export default function RealScoutSimpleSearch({ className = "" }) {
   return (
     <div className={`w-full ${className}`}>
       {status === "loading" && (
-        <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-stone-700 bg-luxury-black/90 px-6 py-10 text-sm text-gray-200 shadow-soft">
+        <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-stone-700 bg-luxury-black/90 px-6 py-10 text-base text-gray-200 shadow-soft">
           <div className="relative h-8 w-8">
-            <div className="absolute inset-0 rounded-full border-2 border-stone-200" />
+            <div className="absolute inset-0 rounded-full border-2 border-stone-700" />
             <div className="absolute inset-0 rounded-full border-2 border-amber-500 border-t-transparent animate-spin" />
           </div>
           <p>Loading Regency at Summerlin home search…</p>
@@ -53,7 +53,7 @@ export default function RealScoutSimpleSearch({ className = "" }) {
       )}
 
       {status === "error" && (
-        <div className="rounded-2xl border border-stone-200 bg-stone-50 px-6 py-8 text-center text-sm text-gray-700 shadow-soft">
+        <div className="rounded-2xl border border-stone-700 bg-luxury-900 px-6 py-8 text-center text-base text-gray-200 shadow-soft">
           <p className="mb-2">
             We&apos;re having trouble loading the search widget right now.
           </p>

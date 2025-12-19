@@ -21,7 +21,7 @@ export default function Error({ error, reset }) {
           Something Went Wrong
         </h2>
         <p className="mb-8 text-lg text-gray-300 md:text-xl">
-          We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+          We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
         </p>
 
         <div className="mb-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
