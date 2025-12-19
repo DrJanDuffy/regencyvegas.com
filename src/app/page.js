@@ -124,7 +124,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-linear-to-r from-navy-900/85 via-navy-900/80 to-navy-800/70" />
         <div className="relative z-20">
-          <div className="mx-auto flex min-h-[420px] max-w-6xl flex-col items-center gap-10 px-4 py-16 text-center md:min-h-[520px] md:flex-row md:items-center md:justify-between md:py-20 md:text-left">
+          <div className="mx-auto flex min-h-[420px] max-w-6xl flex-col items-center justify-center gap-10 px-4 py-16 text-center md:min-h-[520px] md:py-20">
             <div className="max-w-xl rounded-2xl bg-black/55 px-6 py-6 text-white shadow-soft backdrop-blur-sm">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-300">
                 {COMMUNITY.name} · 55+ Luxury in {COMMUNITY.village}
@@ -137,7 +137,7 @@ export default function HomePage() {
                 guard-gated 55+ community with resort-style amenities, sweeping Red Rock and city
                 views, and lock-and-leave convenience in the heart of The Cliffs.
               </p>
-              <div className="flex flex-col items-center justify-start gap-4 sm:flex-row">
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="/homes-for-sale"
                   className="rounded-lg bg-amber-500 px-8 py-4 text-sm font-semibold text-navy-900 shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-600 hover:shadow-xl"
@@ -151,25 +151,6 @@ export default function HomePage() {
                   Call/Text {PHONE.marketing}
                 </a>
               </div>
-            </div>
-            <div className="w-full max-w-sm rounded-2xl border border-amber-700/30 bg-navy-900 p-7 text-left text-sm text-white shadow-soft">
-              <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-400">
-                Why buyers choose {COMMUNITY.name}
-              </h2>
-              <ul className="space-y-2 text-sm leading-relaxed text-gray-100">
-                <li>• {COMMUNITY.totalHomes} single-story homes across {COMMUNITY.acreage} acres</li>
-                <li>• 22,000 sq ft private clubhouse with resort-style amenities</li>
-                <li>• Desert contemporary architecture & lock-and-leave living</li>
-                <li>• Prime Summerlin location near shopping, golf & Red Rock</li>
-              </ul>
-              <p className="mt-4 text-xs text-gray-200">
-                <Link
-                  href="/buying-guide"
-                  className="font-semibold text-amber-400 underline-offset-2 hover:text-amber-300 hover:underline"
-                >
-                  Learn more about buying in {COMMUNITY.name} →
-                </Link>
-              </p>
             </div>
           </div>
         </div>
