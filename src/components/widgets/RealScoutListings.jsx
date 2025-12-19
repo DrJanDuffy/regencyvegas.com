@@ -56,116 +56,64 @@ export default function RealScoutListings({
       const widget = document.querySelector("realscout-office-listings");
       if (!widget) return;
 
-      // Use a MutationObserver to catch dynamically added content
-      const observer = new MutationObserver(() => {
-        // Find all text nodes containing GLVAR or disclaimer text
-        const walker = document.createTreeWalker(
-          widget.shadowRoot || widget,
-          NodeFilter.SHOW_TEXT,
-          null
-        );
+      // Try to access shadow root, fallback to widget itself
+      const root = widget.shadowRoot || widget;
 
-        let node;
-        while ((node = walker.nextNode())) {
-          const text = node.textContent || "";
+      // Find and style elements containing disclaimer text
+      const allElements = root.querySelectorAll
+        ? root.querySelectorAll("*")
+        : [];
+      allElements.forEach((el) => {
+        const text = el.textContent || "";
+        if (
+          text.includes("GLVAR") ||
+          text.includes("Greater Las Vegas Association") ||
+          text.includes("Information Deemed Reliable")
+        ) {
+          // Check if text is white
+          const computedStyle = window.getComputedStyle(el);
+          const color = computedStyle.color;
           if (
-            text.includes("GLVAR") ||
-            text.includes("Greater Las Vegas Association") ||
-            text.includes("Information Deemed Reliable")
+            color === "rgb(255, 255, 255)" ||
+            color.includes("255, 255, 255") ||
+            el.style.color === "white" ||
+            el.style.color === "#fff" ||
+            el.style.color === "#ffffff" ||
+            el.style.color === "rgb(255, 255, 255)"
           ) {
-            // Find parent element and style it
-            let parent = node.parentElement;
-            while (parent && parent !== widget && parent !== document.body) {
-              // Check if text is white
-              const computedStyle = window.getComputedStyle(parent);
-              const color = computedStyle.color;
-              if (
-                color === "rgb(255, 255, 255)" ||
-                color === "#ffffff" ||
-                color === "#fff" ||
-                parent.style.color === "white" ||
-                parent.style.color === "#fff" ||
-                parent.style.color === "#ffffff"
-              ) {
-                parent.style.color = "#4b5563"; // gray-600
-                parent.style.fontSize = "0.75rem";
-              }
-              parent = parent.parentElement;
-            }
-          }
-        }
-
-        // Also try to find and style common disclaimer elements
-        const allElements = (widget.shadowRoot || widget).querySelectorAll("*");
-        allElements.forEach((el) => {
-          const text = el.textContent || "";
-          if (
-            (text.includes("GLVAR") ||
-              text.includes("Greater Las Vegas Association") ||
-              text.includes("Information Deemed Reliable")) &&
-            (el.tagName === "P" ||
-              el.tagName === "SMALL" ||
-              el.tagName === "SPAN" ||
-              el.tagName === "DIV")
-          ) {
-            const computedStyle = window.getComputedStyle(el);
-            const color = computedStyle.color;
-            if (
-              color === "rgb(255, 255, 255)" ||
-              color === "#ffffff" ||
-              color === "#fff"
-            ) {
-              el.style.color = "#4b5563";
-              el.style.fontSize = "0.75rem";
-            }
-          }
-        });
-      });
-
-      // Observe changes to the widget
-      observer.observe(widget.shadowRoot || widget, {
-        childList: true,
-        subtree: true,
-        characterData: true,
-      });
-
-      // Run once immediately
-      observer.disconnect();
-      observer.observe(widget.shadowRoot || widget, {
-        childList: true,
-        subtree: true,
-        characterData: true,
-      });
-      setTimeout(() => {
-        // Give widget time to render, then fix
-        const allElements = (widget.shadowRoot || widget).querySelectorAll("*");
-        allElements.forEach((el) => {
-          const text = el.textContent || "";
-          if (
-            text.includes("GLVAR") ||
-            text.includes("Greater Las Vegas Association") ||
-            text.includes("Information Deemed Reliable")
-          ) {
-            el.style.color = "#4b5563";
+            el.style.color = "#4b5563"; // gray-600
             el.style.fontSize = "0.75rem";
           }
-        });
-      }, 1000);
-
-      return () => observer.disconnect();
+        }
+      });
     };
 
-    // Wait for widget to be in DOM, then fix
-    const timer = setTimeout(fixDisclaimerText, 500);
-    const interval = setInterval(() => {
-      const widget = document.querySelector("realscout-office-listings");
-      if (widget) {
-        fixDisclaimerText();
-      }
-    }, 1000);
+    // Use MutationObserver to watch for widget content changes
+    const widget = document.querySelector("realscout-office-listings");
+    if (!widget) return;
+
+    const root = widget.shadowRoot || widget;
+    const observer = new MutationObserver(() => {
+      fixDisclaimerText();
+    });
+
+    observer.observe(root, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+
+    // Run fixes at intervals to catch async content
+    const timer1 = setTimeout(fixDisclaimerText, 500);
+    const timer2 = setTimeout(fixDisclaimerText, 1500);
+    const timer3 = setTimeout(fixDisclaimerText, 3000);
+    const interval = setInterval(fixDisclaimerText, 2000);
 
     return () => {
-      clearTimeout(timer);
+      observer.disconnect();
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
       clearInterval(interval);
     };
   }, [status]);
