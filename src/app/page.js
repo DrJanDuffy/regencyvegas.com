@@ -227,7 +227,7 @@ export default function HomePage() {
           <h2 className="mb-2 font-playfair text-3xl text-navy-800 md:text-4xl">
             Search Regency at Summerlin Homes
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-sm text-gray-600 md:text-base">
+          <p className="mx-auto mb-8 max-w-2xl text-base text-gray-700 md:text-lg">
             Find resale homes Built by Toll Brothers in this guard-gated 55+ community. Use the
             search below to see what&apos;s currently available in {COMMUNITY.name}.
           </p>
@@ -484,7 +484,7 @@ export default function HomePage() {
                   <p className="mb-2 text-base font-medium text-white">
                     {col.sqftRange} sq ft
                   </p>
-                  <p className="mb-5 text-base text-gray-200">
+                  <p className="mb-5 text-base text-gray-100">
                     {col.beds} beds • {col.baths} baths • lots {col.lotSize}
                   </p>
                   <span className="inline-flex items-center justify-center text-base font-semibold text-amber-400 transition-colors group-hover:text-amber-300">
@@ -572,7 +572,7 @@ export default function HomePage() {
           <p className="mb-2 text-lg">
             {AGENT.name} · {AGENT.title}
           </p>
-          <p className="mx-auto mb-8 max-w-2xl text-sm text-stone-200 md:text-base">
+          <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-gray-100 md:text-lg">
             With a Ph.D. in Market Research, $127M+ in closed sales, and 500+ families served,
             {AGENT.name} provides data-driven guidance for buying or selling in {COMMUNITY.name}{" "}
             and across Las Vegas.
@@ -591,7 +591,7 @@ export default function HomePage() {
               Schedule a Private Tour
             </Link>
           </div>
-          <div className="mt-8 flex flex-col items-center justify-center gap-6 text-xs text-stone-200 sm:flex-row sm:gap-10">
+          <div className="mt-8 flex flex-col items-center justify-center gap-6 text-sm text-gray-100 sm:flex-row sm:gap-10">
             <div className="text-center">
               <div className="mb-1 font-semibold tracking-[0.18em] text-amber-200">
                 Phone
