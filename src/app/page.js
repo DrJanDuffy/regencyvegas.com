@@ -157,20 +157,18 @@ export default function HomePage() {
                 Why buyers choose {COMMUNITY.name}
               </h2>
               <ul className="space-y-2 text-sm leading-relaxed text-gray-200">
-                <li>• 457 single-story homes across {COMMUNITY.acreage} acres in The Cliffs</li>
-                <li>• 22,000 sq ft private clubhouse with pools, fitness, and pickleball</li>
-                <li>• Desert contemporary architecture and low-maintenance living</li>
-                <li>• Minutes to Downtown Summerlin, Red Rock, and the Las Vegas Strip</li>
+                <li>• {COMMUNITY.totalHomes} single-story homes across {COMMUNITY.acreage} acres</li>
+                <li>• 22,000 sq ft private clubhouse with resort-style amenities</li>
+                <li>• Desert contemporary architecture & lock-and-leave living</li>
+                <li>• Prime Summerlin location near shopping, golf & Red Rock</li>
               </ul>
-              <p className="mt-4 text-xs text-gray-400">
-                Call or text{" "}
-                <a
-                  href={`tel:${PHONE.marketing}`}
-                  className="font-semibold text-amber-700 underline-offset-2 hover:underline"
+              <p className="mt-4 text-xs text-gray-300">
+                <Link
+                  href="/buying-guide"
+                  className="font-semibold text-amber-400 underline-offset-2 hover:underline"
                 >
-                  {PHONE.marketing}
-                </a>{" "}
-                for current off-market and coming-soon opportunities.
+                  Learn more about buying in {COMMUNITY.name} →
+                </Link>
               </p>
             </div>
           </div>
