@@ -152,7 +152,7 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="w-full max-w-sm rounded-2xl border border-amber-700/30 bg-navy-900/98 backdrop-blur-md p-7 text-left text-sm text-white shadow-soft">
+            <div className="w-full max-w-sm rounded-2xl border border-amber-700/30 bg-navy-900 p-7 text-left text-sm text-white shadow-soft">
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-400">
                 Why buyers choose {COMMUNITY.name}
               </h2>
