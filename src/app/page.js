@@ -310,7 +310,7 @@ export default function HomePage() {
             <h2 className="mb-4 font-playfair text-3xl md:text-4xl">
               Resale Homes Built by Toll Brothers
             </h2>
-            <p className="text-sm text-stone-200 md:text-base">
+            <p className="text-base text-white md:text-lg">
               Whether you are searching for your ideal Regency at Summerlin home or preparing to
               sell, {AGENT.name} represents buyers and sellers of resale homes Built by Toll
               Brothers throughout the community.
