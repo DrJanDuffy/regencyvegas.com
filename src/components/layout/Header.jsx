@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navigation from "./Navigation";
 import { PHONE } from "@/lib/constants";
+import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
 
 export default function Header() {
   return (
@@ -16,12 +17,13 @@ export default function Header() {
         </Link>
         <div className="hidden md:flex items-center gap-6">
           <Navigation />
-          <a
-            href={`tel:${PHONE.marketing}`}
+          <TrackedPhoneLink
+            phone={PHONE.marketing}
+            location="header"
             className="rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-navy-900 hover:bg-amber-600 transition"
           >
             Call/Text {PHONE.marketing}
-          </a>
+          </TrackedPhoneLink>
         </div>
       </div>
     </header>

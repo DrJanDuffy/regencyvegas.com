@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
+import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
+import TrackedEmailLink from "@/components/ui/TrackedEmailLink";
 
 export default function Footer() {
   return (
@@ -31,20 +33,22 @@ export default function Footer() {
             <p className="text-sm">{AGENT.brokerage}</p>
             <p className="text-sm">Lic: {AGENT.license}</p>
             <div className="pt-2">
-              <a
-                href={`tel:${PHONE.marketing}`}
+              <TrackedPhoneLink
+                phone={PHONE.marketing}
+                location="footer"
                 className="font-semibold text-amber-600 hover:text-amber-700"
               >
                 {PHONE.marketing}
-              </a>
+              </TrackedPhoneLink>
             </div>
             <div>
-              <a
-                href={`mailto:${AGENT.email}`}
+              <TrackedEmailLink
+                email={AGENT.email}
+                location="footer"
                 className="text-amber-600 hover:text-amber-700"
               >
                 {AGENT.email}
-              </a>
+              </TrackedEmailLink>
             </div>
           </div>
         </div>

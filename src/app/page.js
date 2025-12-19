@@ -3,6 +3,8 @@ import Image from "next/image";
 import Script from "next/script";
 import RealScoutListings from "@/components/widgets/RealScoutListings";
 import RealScoutSimpleSearch from "@/components/widgets/RealScoutSimpleSearch";
+import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
+import TrackedEmailLink from "@/components/ui/TrackedEmailLink";
 import { PHONE, COMMUNITY, COLLECTIONS, AGENT } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -144,12 +146,13 @@ export default function HomePage() {
                 >
                   View Available Homes
                 </Link>
-                <a
-                  href={`tel:${PHONE.marketing}`}
+                <TrackedPhoneLink
+                  phone={PHONE.marketing}
+                  location="hero"
                   className="rounded-lg border-2 border-white/80 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20"
                 >
                   Call/Text {PHONE.marketing}
-                </a>
+                </TrackedPhoneLink>
               </div>
             </div>
           </div>
@@ -557,12 +560,13 @@ export default function HomePage() {
             and across Las Vegas.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href={`tel:${PHONE.marketing}`}
+            <TrackedPhoneLink
+              phone={PHONE.marketing}
+              location="agent_cta"
               className="inline-flex items-center rounded-full bg-amber-500 px-8 py-3 text-sm font-semibold text-navy-900 shadow-soft transition hover:-translate-y-0.5 hover:bg-amber-400"
             >
               Call/Text {PHONE.marketing}
-            </a>
+            </TrackedPhoneLink>
             <Link
               href="/contact"
               className="inline-flex items-center rounded-full border border-amber-300/70 px-8 py-3 text-sm font-semibold text-amber-100 transition hover:bg-amber-100 hover:text-navy-900"
@@ -575,21 +579,26 @@ export default function HomePage() {
               <div className="mb-1 font-semibold tracking-[0.18em] text-amber-200">
                 Phone
               </div>
-              <a href={`tel:${PHONE.marketing}`} className="text-sm font-semibold text-white">
+              <TrackedPhoneLink
+                phone={PHONE.marketing}
+                location="agent_cta_contact_row"
+                className="text-sm font-semibold text-white"
+              >
                 {PHONE.marketing}
-              </a>
+              </TrackedPhoneLink>
             </div>
             <div className="hidden h-10 w-px bg-white/30 sm:block" />
             <div className="text-center">
               <div className="mb-1 font-semibold tracking-[0.18em] text-amber-200">
                 Email
               </div>
-              <a
-                href={`mailto:${AGENT.email}`}
+              <TrackedEmailLink
+                email={AGENT.email}
+                location="agent_cta_contact_row"
                 className="text-sm font-semibold text-white underline-offset-2 hover:underline"
               >
                 {AGENT.email}
-              </a>
+              </TrackedEmailLink>
             </div>
             <div className="hidden h-10 w-px bg-white/30 sm:block" />
             <div className="text-center">
