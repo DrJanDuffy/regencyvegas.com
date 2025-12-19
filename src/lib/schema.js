@@ -42,8 +42,8 @@ export const businessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "36.0681", // Update with actual coordinates
-    longitude: "-115.3044", // Update with actual coordinates
+    latitude: "36.066444",
+    longitude: "-115.313180",
   },
   openingHoursSpecification: [
     {

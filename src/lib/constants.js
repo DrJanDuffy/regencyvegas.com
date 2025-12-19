@@ -34,7 +34,7 @@ export const BUSINESS = {
   reviews: {
     rating: 5.0,
     count: 0, // Update with actual review count
-    googleReviewsUrl: "https://www.google.com/maps/place/10126+Regency+Square+Ave,+Las+Vegas,+NV+89148", // Update with actual reviews URL
+    googleReviewsUrl: "https://www.google.com/maps/place/6739+Regency+Ridge+Ct,+Las+Vegas,+NV+89148", // Update with actual reviews URL
   },
 };
 
