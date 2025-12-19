@@ -310,14 +310,14 @@ export default function HomePage() {
             <h2 className="mb-5 font-playfair text-3xl text-white md:text-4xl">
               Resale Homes Built by Toll Brothers
             </h2>
-            <p className="text-base leading-relaxed text-gray-100 md:text-lg">
+            <p className="text-lg leading-relaxed text-white md:text-xl">
               Whether you are searching for your ideal Regency at Summerlin home or preparing to
               sell, {AGENT.name} represents buyers and sellers of resale homes Built by Toll
               Brothers throughout the community.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
-            <article className="rounded-2xl border border-amber-700/30 bg-white/8 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/12">
+            <article className="rounded-2xl border border-amber-700/30 bg-white/10 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/15">
               <div className="mb-5 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
                 <Image
                   src="/images/photos/regency-community.jpg"
@@ -335,22 +335,22 @@ export default function HomePage() {
               <h3 className="mb-4 font-playfair text-2xl font-semibold text-white md:text-3xl">
                 Find Your Regency at Summerlin Home
               </h3>
-              <p className="mb-5 text-base leading-relaxed text-gray-100 md:text-lg">
+              <p className="mb-5 text-lg leading-relaxed text-white md:text-xl">
                 Get access to current MLS listings, coming-soon opportunities, and off-market
                 homes in {COMMUNITY.name}. Benefit from detailed knowledge of every floor plan,
                 view lot, and upgrade that adds real value.
               </p>
-              <ul className="mb-5 grid grid-cols-2 gap-3 text-sm text-gray-100">
-                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
+              <ul className="mb-5 grid grid-cols-2 gap-3 text-base text-white">
+                <li className="rounded-lg bg-navy-800/80 px-4 py-3 text-center font-semibold">
                   MLS &amp; off-market access
                 </li>
-                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
+                <li className="rounded-lg bg-navy-800/80 px-4 py-3 text-center font-semibold">
                   Floor plan expertise
                 </li>
-                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
+                <li className="rounded-lg bg-navy-800/80 px-4 py-3 text-center font-semibold">
                   Private showings
                 </li>
-                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
+                <li className="rounded-lg bg-navy-800/80 px-4 py-3 text-center font-semibold">
                   55+ community guidance
                 </li>
               </ul>
@@ -375,7 +375,7 @@ export default function HomePage() {
               </Link>
             </article>
 
-            <article className="rounded-2xl border border-amber-700/30 bg-white/8 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/12">
+            <article className="rounded-2xl border border-amber-700/30 bg-white/10 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/15">
               <div className="mb-5 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
                 <Image
                   src="/images/photos/regency-community.jpg"
@@ -393,22 +393,22 @@ export default function HomePage() {
               <h3 className="mb-4 font-playfair text-2xl font-semibold text-white md:text-3xl">
                 Sell Your Regency at Summerlin Home
               </h3>
-              <p className="mb-5 text-base leading-relaxed text-gray-100 md:text-lg">
+              <p className="mb-5 text-lg leading-relaxed text-white md:text-xl">
                 Discover what your home Built by Toll Brothers is worth based on real Regency at
                 Summerlin resale data—not generic online estimates. Position your home to stand
                 out with targeted marketing to qualified 55+ buyers.
               </p>
-              <ul className="mb-5 grid grid-cols-2 gap-3 text-sm text-gray-100">
-                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
+              <ul className="mb-5 grid grid-cols-2 gap-3 text-base text-white">
+                <li className="rounded-lg bg-navy-800/80 px-4 py-3 text-center font-semibold">
                   Complimentary valuation
                 </li>
-                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
+                <li className="rounded-lg bg-navy-800/80 px-4 py-3 text-center font-semibold">
                   Data-driven pricing
                 </li>
-                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
+                <li className="rounded-lg bg-navy-800/80 px-4 py-3 text-center font-semibold">
                   55+ buyer marketing
                 </li>
-                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
+                <li className="rounded-lg bg-navy-800/80 px-4 py-3 text-center font-semibold">
                   Staging &amp; prep guidance
                 </li>
               </ul>
@@ -442,7 +442,7 @@ export default function HomePage() {
           <h2 className="mb-4 text-center font-playfair text-3xl text-white md:text-4xl">
             Three Distinct Home Collections
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-base leading-relaxed text-gray-100 md:text-lg">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-lg leading-relaxed text-white md:text-xl">
             Explore all nine single-story floor plans across the Summit, Palisades, and Pinnacle
             Collections—each crafted for lock-and-leave 55+ living in {COMMUNITY.name}.
           </p>
@@ -461,7 +461,7 @@ export default function HomePage() {
                     ? "/palisades-collection"
                     : "/pinnacle-collection"
                 }
-                className="group block rounded-2xl border border-amber-700/30 bg-white/8 p-6 text-center shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/12"
+                className="group block rounded-2xl border border-amber-700/30 bg-white/10 p-6 text-center shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/15"
               >
                 <div className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-amber-400">
                   Built by Toll Brothers
@@ -481,10 +481,10 @@ export default function HomePage() {
                   <h3 className="mb-3 font-playfair text-2xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
                     {col.name}
                   </h3>
-                  <p className="mb-2 text-base font-medium text-white">
+                  <p className="mb-2 text-lg font-semibold text-white">
                     {col.sqftRange} sq ft
                   </p>
-                  <p className="mb-5 text-base text-gray-100">
+                  <p className="mb-5 text-lg text-white">
                     {col.beds} beds • {col.baths} baths • lots {col.lotSize}
                   </p>
                   <span className="inline-flex items-center justify-center text-base font-semibold text-amber-400 transition-colors group-hover:text-amber-300">
