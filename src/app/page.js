@@ -516,7 +516,7 @@ export default function HomePage() {
           <h2 className="mb-3 text-center font-playfair text-3xl text-navy-800 md:text-4xl">
             Homes for Sale in Regency at Summerlin
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-gray-600 md:text-base">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-base text-gray-700 md:text-lg">
             Included below are homes for sale and real estate in {COMMUNITY.name}. Click
             any property for full details, photos, and the option to request a private
             tour.
