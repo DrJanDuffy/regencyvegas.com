@@ -10,7 +10,16 @@ const nextConfig = {
     } : false,
   },
   images: {
-    domains: ["em.realscout.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "em.realscout.com",
+      },
+      {
+        protocol: "https",
+        hostname: "d1buiexcd5gara.cloudfront.net",
+      },
+    ],
     formats: ["image/avif", "image/webp"], // Prefer AVIF over WebP
     // Increase cache lifetime for optimized images (seconds)
     minimumCacheTTL: 2678400, // 31 days
