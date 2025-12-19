@@ -152,20 +152,20 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="w-full max-w-sm rounded-2xl border border-amber-700/30 bg-luxury-900/95 p-7 text-left text-sm text-white shadow-soft">
+            <div className="w-full max-w-sm rounded-2xl border border-amber-700/30 bg-navy-900/95 backdrop-blur-sm p-7 text-left text-sm text-white shadow-soft">
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-400">
                 Why buyers choose {COMMUNITY.name}
               </h2>
-              <ul className="space-y-2 text-sm leading-relaxed text-gray-200">
+              <ul className="space-y-2 text-sm leading-relaxed text-gray-100">
                 <li>• {COMMUNITY.totalHomes} single-story homes across {COMMUNITY.acreage} acres</li>
                 <li>• 22,000 sq ft private clubhouse with resort-style amenities</li>
                 <li>• Desert contemporary architecture & lock-and-leave living</li>
                 <li>• Prime Summerlin location near shopping, golf & Red Rock</li>
               </ul>
-              <p className="mt-4 text-xs text-gray-300">
+              <p className="mt-4 text-xs text-gray-200">
                 <Link
                   href="/buying-guide"
-                  className="font-semibold text-amber-400 underline-offset-2 hover:underline"
+                  className="font-semibold text-amber-400 underline-offset-2 hover:text-amber-300 hover:underline"
                 >
                   Learn more about buying in {COMMUNITY.name} →
                 </Link>
