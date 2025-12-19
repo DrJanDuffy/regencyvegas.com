@@ -152,7 +152,7 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="w-full max-w-sm rounded-2xl border border-stone-200 bg-white/95 p-7 text-left text-sm text-navy-800 shadow-soft">
+            <div className="w-full max-w-sm rounded-2xl border border-amber-700/20 bg-cream-50/95 p-7 text-left text-sm text-navy-800 shadow-soft">
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-600">
                 Why buyers choose {COMMUNITY.name}
               </h2>
@@ -184,7 +184,7 @@ export default function HomePage() {
             Regency at Summerlin Snapshot
           </h2>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
-            <div className="rounded-2xl bg-white p-4 text-center shadow-soft">
+            <div className="rounded-2xl bg-cream-50 p-4 text-center shadow-soft">
               <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
                 {COMMUNITY.totalHomes}
               </div>
@@ -192,7 +192,7 @@ export default function HomePage() {
                 Luxury Homes
               </div>
             </div>
-            <div className="rounded-2xl bg-white p-4 text-center shadow-soft">
+            <div className="rounded-2xl bg-cream-50 p-4 text-center shadow-soft">
               <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
                 {COMMUNITY.acreage}
               </div>
@@ -200,7 +200,7 @@ export default function HomePage() {
                 Acres in The Cliffs
               </div>
             </div>
-            <div className="rounded-2xl bg-white p-4 text-center shadow-soft">
+            <div className="rounded-2xl bg-cream-50 p-4 text-center shadow-soft">
               <div className="mb-1 text-2xl font-bold text-navy-800 md:text-3xl">
                 ${COMMUNITY.price.min.toLocaleString()} - $
                 {COMMUNITY.price.max.toLocaleString()}+
@@ -209,7 +209,7 @@ export default function HomePage() {
                 Typical Price Range
               </div>
             </div>
-            <div className="rounded-2xl bg-white p-4 text-center shadow-soft">
+            <div className="rounded-2xl bg-cream-50 p-4 text-center shadow-soft">
               <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
                 ${COMMUNITY.hoa.total}/mo
               </div>
@@ -222,7 +222,7 @@ export default function HomePage() {
       </section>
 
       {/* Search section */}
-      <section className="bg-white py-12 md:py-16">
+      <section className="bg-cream-50 py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 className="mb-2 font-playfair text-3xl text-navy-800 md:text-4xl">
             Search Regency at Summerlin Homes
@@ -238,7 +238,7 @@ export default function HomePage() {
       </section>
 
       {/* Community overview */}
-      <section className="bg-white py-12 md:py-16">
+      <section className="bg-cream-50 py-12 md:py-16">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:items-start">
           <div>
             <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-amber-600">
@@ -263,7 +263,7 @@ export default function HomePage() {
               lock-and-leave living without sacrificing luxury or convenience.
             </p>
           </div>
-          <div className="rounded-2xl bg-stone-50 p-6 shadow-soft">
+          <div className="rounded-2xl bg-cream-100 p-6 shadow-soft">
             <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-navy-800">
               Regency at a Glance
             </h3>

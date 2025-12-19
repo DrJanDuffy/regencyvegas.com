@@ -23,7 +23,7 @@ export default function FloorPlansPage() {
         Floor Plan Collections at a Glance
       </h2>
       <div className="grid gap-6 md:grid-cols-3 text-sm text-gray-700 md:text-base">
-        <div className="rounded-lg border border-stone-200 bg-white p-4">
+        <div className="rounded-lg border border-stone-200 bg-cream-50 p-4">
           <h3 className="mb-1 text-lg font-semibold text-navy-800">
             {COLLECTIONS.summit.name}
           </h3>
@@ -33,7 +33,7 @@ export default function FloorPlansPage() {
             Plans: {COLLECTIONS.summit.plans.join(", ")}
           </p>
         </div>
-        <div className="rounded-lg border border-stone-200 bg-white p-4">
+        <div className="rounded-lg border border-stone-200 bg-cream-50 p-4">
           <h3 className="mb-1 text-lg font-semibold text-navy-800">
             {COLLECTIONS.palisades.name}
           </h3>
@@ -45,7 +45,7 @@ export default function FloorPlansPage() {
             Plans: {COLLECTIONS.palisades.plans.join(", ")}
           </p>
         </div>
-        <div className="rounded-lg border border-stone-200 bg-white p-4">
+        <div className="rounded-lg border border-stone-200 bg-cream-50 p-4">
           <h3 className="mb-1 text-lg font-semibold text-navy-800">
             {COLLECTIONS.pinnacle.name}
           </h3>

@@ -4,7 +4,7 @@ import { PHONE } from "@/lib/constants";
 
 export default function Header() {
   return (
-    <header className="w-full border-b border-stone-200 bg-white/90 backdrop-blur">
+    <header className="w-full border-b border-stone-200 bg-cream-50/95 backdrop-blur">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
         <Link href="/" className="flex flex-col leading-tight">
           <span className="font-playfair text-xl md:text-2xl font-bold text-navy-800">

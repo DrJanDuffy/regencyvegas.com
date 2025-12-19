@@ -25,6 +25,11 @@ module.exports = {
           200: "#e7e5e4",
           300: "#d6d3d1",
         },
+        cream: {
+          50: "#faf9f7",
+          100: "#f5f3f0",
+          200: "#e8e5df",
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
