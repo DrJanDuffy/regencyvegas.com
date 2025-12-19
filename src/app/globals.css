@@ -90,6 +90,22 @@ realscout-office-listings [style*="font-size: 0.75rem"] {
 
 .realscout-container {
   min-height: 400px;
+  /* Ensure dark text color for widget content */
+  color: #111827;
+}
+
+/* Global override for any white text in RealScout widget that should be dark */
+.realscout-container realscout-office-listings,
+.realscout-container realscout-office-listings *,
+realscout-office-listings * {
+  /* Override white text colors */
+}
+
+.realscout-container realscout-office-listings [style*="color: white"],
+.realscout-container realscout-office-listings [style*="color: #fff"],
+.realscout-container realscout-office-listings [style*="color: #ffffff"],
+.realscout-container realscout-office-listings [style*="color: rgb(255, 255, 255)"] {
+  color: #4b5563 !important; /* gray-600 */
 }
 
 /* RealScout simple search styling */
