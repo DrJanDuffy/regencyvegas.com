@@ -10,13 +10,13 @@ export default function Navigation() {
             {item.label}
           </Link>
           {item.children && (
-            <div className="absolute left-0 top-full mt-2 hidden min-w-[220px] rounded-md border border-stone-200 bg-white shadow-lg group-hover:block">
-              <ul className="py-2 text-sm text-gray-700">
+            <div className="absolute left-0 top-full mt-2 hidden min-w-[220px] rounded-md border border-stone-700 bg-luxury-black shadow-lg group-hover:block">
+              <ul className="py-2 text-sm text-gray-200">
                 {item.children.map((child) => (
                   <li key={child.href}>
                     <Link
                       href={child.href}
-                      className="block px-4 py-2 hover:bg-stone-100"
+                      className="block px-4 py-2 hover:bg-luxury-800 text-gray-200"
                     >
                       {child.label}
                     </Link>

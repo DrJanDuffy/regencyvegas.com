@@ -4,13 +4,13 @@ import { PHONE } from "@/lib/constants";
 
 export default function Header() {
   return (
-    <header className="w-full border-b border-stone-200 bg-cream-50/95 backdrop-blur">
+    <header className="w-full border-b border-stone-700 bg-luxury-black/95 backdrop-blur">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
         <Link href="/" className="flex flex-col leading-tight">
-          <span className="font-playfair text-xl md:text-2xl font-bold text-navy-800">
+          <span className="font-playfair text-xl md:text-2xl font-bold text-white">
             Regency at Summerlin
           </span>
-          <span className="text-xs md:text-sm text-gray-600">
+          <span className="text-xs md:text-sm text-gray-300">
             by Dr. Jan Duffy, Las Vegas Real Estate Expert
           </span>
         </Link>

@@ -152,17 +152,17 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="w-full max-w-sm rounded-2xl border border-amber-700/20 bg-cream-50/95 p-7 text-left text-sm text-navy-800 shadow-soft">
-              <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-600">
+            <div className="w-full max-w-sm rounded-2xl border border-amber-700/30 bg-luxury-900/95 p-7 text-left text-sm text-white shadow-soft">
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-400">
                 Why buyers choose {COMMUNITY.name}
               </h2>
-              <ul className="space-y-2 text-sm leading-relaxed text-gray-700">
+              <ul className="space-y-2 text-sm leading-relaxed text-gray-200">
                 <li>• 457 single-story homes across {COMMUNITY.acreage} acres in The Cliffs</li>
                 <li>• 22,000 sq ft private clubhouse with pools, fitness, and pickleball</li>
                 <li>• Desert contemporary architecture and low-maintenance living</li>
                 <li>• Minutes to Downtown Summerlin, Red Rock, and the Las Vegas Strip</li>
               </ul>
-              <p className="mt-4 text-xs text-gray-600">
+              <p className="mt-4 text-xs text-gray-400">
                 Call or text{" "}
                 <a
                   href={`tel:${PHONE.marketing}`}
@@ -178,42 +178,42 @@ export default function HomePage() {
       </section>
 
       {/* Quick stats */}
-      <section className="bg-stone-50 py-8 md:py-10">
+      <section className="bg-luxury-black py-8 md:py-10">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.25em] text-navy-700 md:mb-6">
-            Regency at Summerlin Snapshot
-          </h2>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
-            <div className="rounded-2xl bg-cream-50 p-4 text-center shadow-soft">
-              <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
+            <h2 className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.25em] text-gray-200 md:mb-6">
+              Regency at Summerlin Snapshot
+            </h2>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+            <div className="rounded-2xl bg-luxury-900 p-4 text-center shadow-soft border border-stone-700">
+              <div className="mb-1 text-3xl font-bold text-white md:text-4xl">
                 {COMMUNITY.totalHomes}
               </div>
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 md:text-sm">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
                 Luxury Homes
               </div>
             </div>
-            <div className="rounded-2xl bg-cream-50 p-4 text-center shadow-soft">
-              <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
+            <div className="rounded-2xl bg-luxury-900 p-4 text-center shadow-soft border border-stone-700">
+              <div className="mb-1 text-3xl font-bold text-white md:text-4xl">
                 {COMMUNITY.acreage}
               </div>
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 md:text-sm">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
                 Acres in The Cliffs
               </div>
             </div>
-            <div className="rounded-2xl bg-cream-50 p-4 text-center shadow-soft">
-              <div className="mb-1 text-2xl font-bold text-navy-800 md:text-3xl">
+            <div className="rounded-2xl bg-luxury-900 p-4 text-center shadow-soft border border-stone-700">
+              <div className="mb-1 text-2xl font-bold text-white md:text-3xl">
                 ${COMMUNITY.price.min.toLocaleString()} - $
                 {COMMUNITY.price.max.toLocaleString()}+
               </div>
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 md:text-sm">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
                 Typical Price Range
               </div>
             </div>
-            <div className="rounded-2xl bg-cream-50 p-4 text-center shadow-soft">
-              <div className="mb-1 text-3xl font-bold text-navy-800 md:text-4xl">
+            <div className="rounded-2xl bg-luxury-900 p-4 text-center shadow-soft border border-stone-700">
+              <div className="mb-1 text-3xl font-bold text-white md:text-4xl">
                 ${COMMUNITY.hoa.total}/mo
               </div>
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 md:text-sm">
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-300 md:text-sm">
                 All-In HOA
               </div>
             </div>
@@ -222,12 +222,12 @@ export default function HomePage() {
       </section>
 
       {/* Search section */}
-      <section className="bg-cream-50 py-12 md:py-16">
+      <section className="bg-luxury-black py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <h2 className="mb-2 font-playfair text-3xl text-navy-800 md:text-4xl">
+          <h2 className="mb-2 font-playfair text-3xl text-white md:text-4xl">
             Search Regency at Summerlin Homes
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-base text-gray-700 md:text-lg">
+          <p className="mx-auto mb-8 max-w-2xl text-base text-gray-200 md:text-lg">
             Find resale homes Built by Toll Brothers in this guard-gated 55+ community. Use the
             search below to see what&apos;s currently available in {COMMUNITY.name}.
           </p>
@@ -238,23 +238,23 @@ export default function HomePage() {
       </section>
 
       {/* Community overview */}
-      <section className="bg-cream-50 py-12 md:py-16">
+      <section className="bg-luxury-black py-12 md:py-16">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:items-start">
           <div>
-            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-amber-600">
+            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-amber-500">
               Homes Built by Toll Brothers
             </span>
-            <h2 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
+            <h2 className="mb-4 font-playfair text-3xl text-white md:text-4xl">
               Where Luxury Meets Lock-and-Leave Living
             </h2>
-            <p className="text-base leading-relaxed text-gray-700 md:text-lg">
+            <p className="text-base leading-relaxed text-gray-200 md:text-lg">
               {COMMUNITY.name} is a luxury 55+ active adult community Built by Toll Brothers in{" "}
               {COMMUNITY.village} of Summerlin, {COMMUNITY.city}, {COMMUNITY.state}. Spanning
               over {COMMUNITY.acreage} acres of elevated desert terrain, the neighborhood is
               known for its single-story homes Built by Toll Brothers, dramatic Red Rock and city
               views, and a 22,000 sq ft resort-style clubhouse at the heart of the community.
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-gray-700 md:text-base">
+            <p className="mt-4 text-sm leading-relaxed text-gray-200 md:text-base">
               Homeowners enjoy guard-gated security, front-yard maintenance, indoor and outdoor
               pools, fitness and wellness programming, tennis and pickleball, and a full
               calendar of clubs and events curated by an on-site lifestyle director. With quick
@@ -263,11 +263,11 @@ export default function HomePage() {
               lock-and-leave living without sacrificing luxury or convenience.
             </p>
           </div>
-          <div className="rounded-2xl bg-cream-100 p-6 shadow-soft">
-            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-navy-800">
+          <div className="rounded-2xl bg-luxury-900 p-6 shadow-soft border border-stone-700">
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-white">
               Regency at a Glance
             </h3>
-            <dl className="space-y-3 text-sm text-gray-700">
+            <dl className="space-y-3 text-sm text-gray-200">
               <div className="flex items-center justify-between">
                 <dt className="font-medium">Total homes</dt>
                 <dd>{COMMUNITY.totalHomes.toLocaleString()}</dd>
@@ -292,7 +292,7 @@ export default function HomePage() {
                 <dd>${COMMUNITY.hoa.total}/mo</dd>
               </div>
             </dl>
-            <p className="mt-4 text-sm text-gray-600">
+            <p className="mt-4 text-sm text-gray-400">
               Market stats are approximate and change as new homes list and sell. For the most
               current numbers and a custom market update, call {PHONE.marketing}.
             </p>
@@ -511,12 +511,12 @@ export default function HomePage() {
       </section>
 
       {/* Listings */}
-      <section className="py-16 md:py-20">
+      <section className="bg-luxury-black py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-3 text-center font-playfair text-3xl text-navy-800 md:text-4xl">
+          <h2 className="mb-3 text-center font-playfair text-3xl text-white md:text-4xl">
             Homes for Sale in Regency at Summerlin
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-base text-gray-700 md:text-lg">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-base text-gray-200 md:text-lg">
             Included below are homes for sale and real estate in {COMMUNITY.name}. Click
             any property for full details, photos, and the option to request a private
             tour.

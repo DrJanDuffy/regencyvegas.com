@@ -30,6 +30,11 @@ module.exports = {
           100: "#f5f3f0",
           200: "#e8e5df",
         },
+        luxury: {
+          black: "#0a0a0a",
+          900: "#111827",
+          800: "#1f2937",
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

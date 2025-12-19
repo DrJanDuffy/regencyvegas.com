@@ -3,10 +3,10 @@ import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-stone-200 bg-cream-100">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 text-base text-gray-700 md:grid-cols-3 md:gap-12 md:py-16">
+    <footer className="w-full border-t border-stone-700 bg-luxury-black">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 text-base text-gray-200 md:grid-cols-3 md:gap-12 md:py-16">
         <div>
-          <h2 className="mb-4 font-playfair text-xl font-semibold text-navy-800">
+          <h2 className="mb-4 font-playfair text-xl font-semibold text-white">
             {COMMUNITY.name}
           </h2>
           <p className="mb-3">
@@ -22,11 +22,11 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-navy-800">
+          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
             Contact
           </h3>
           <div className="space-y-1">
-            <p className="font-semibold text-navy-800">{AGENT.name}</p>
+            <p className="font-semibold text-white">{AGENT.name}</p>
             <p>{AGENT.title}</p>
             <p className="text-sm">{AGENT.brokerage}</p>
             <p className="text-sm">Lic: {AGENT.license}</p>
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-navy-800">
+          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
             Quick Links
           </h3>
           <ul className="space-y-2">
@@ -63,7 +63,7 @@ export default function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-gray-700 transition-colors hover:text-amber-600"
+                  className="text-gray-200 transition-colors hover:text-amber-400"
                 >
                   {link.label}
                 </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-stone-200 bg-cream-50 py-4 text-center text-sm text-gray-600">
+      <div className="border-t border-stone-700 bg-luxury-900 py-4 text-center text-sm text-gray-300">
         © {new Date().getFullYear()} RegencyVegas.com · All Rights Reserved.
       </div>
     </footer>

@@ -43,7 +43,7 @@ export default function RealScoutSimpleSearch({ className = "" }) {
   return (
     <div className={`w-full ${className}`}>
       {status === "loading" && (
-        <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-stone-200 bg-white/80 px-6 py-10 text-sm text-gray-600 shadow-soft">
+        <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-stone-700 bg-luxury-black/90 px-6 py-10 text-sm text-gray-200 shadow-soft">
           <div className="relative h-8 w-8">
             <div className="absolute inset-0 rounded-full border-2 border-stone-200" />
             <div className="absolute inset-0 rounded-full border-2 border-amber-500 border-t-transparent animate-spin" />
@@ -65,7 +65,7 @@ export default function RealScoutSimpleSearch({ className = "" }) {
       )}
 
       {status === "ready" && (
-        <div className="rounded-2xl border border-stone-200 bg-white px-4 py-6 shadow-soft md:px-6 md:py-8">
+        <div className="rounded-2xl border border-stone-700 bg-luxury-black px-4 py-6 shadow-soft md:px-6 md:py-8">
           <realscout-simple-search agent-encoded-id={AGENT.realscoutId} />
         </div>
       )}
