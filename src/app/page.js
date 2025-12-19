@@ -118,7 +118,8 @@ export default function HomePage() {
           fill
           className="object-cover"
           priority
-          quality={60}
+          fetchPriority="high"
+          quality={50}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-linear-to-r from-navy-900/85 via-navy-900/80 to-navy-800/70" />
@@ -316,48 +317,50 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
-            <article className="rounded-2xl border border-amber-700/30 bg-white/5 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10">
-              <div className="mb-4 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+            <article className="rounded-2xl border border-amber-700/30 bg-white/8 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/12">
+              <div className="mb-5 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
                 <Image
                   src="/images/photos/regency-community.jpg"
                   alt="Couple touring a Regency at Summerlin home"
                   width={640}
                   height={360}
                   className="h-40 w-full object-cover md:h-48"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-amber-400">
                 For Buyers
               </p>
-              <h3 className="mb-3 font-playfair text-2xl font-semibold">
+              <h3 className="mb-4 font-playfair text-2xl font-semibold text-white md:text-3xl">
                 Find Your Regency at Summerlin Home
               </h3>
-              <p className="mb-4 text-sm text-stone-200">
+              <p className="mb-5 text-base leading-relaxed text-gray-100 md:text-lg">
                 Get access to current MLS listings, coming-soon opportunities, and off-market
                 homes in {COMMUNITY.name}. Benefit from detailed knowledge of every floor plan,
                 view lot, and upgrade that adds real value.
               </p>
-              <ul className="mb-4 grid grid-cols-2 gap-2 text-xs text-stone-200 md:text-sm">
-                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+              <ul className="mb-5 grid grid-cols-2 gap-3 text-sm text-gray-100">
+                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
                   MLS &amp; off-market access
                 </li>
-                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
                   Floor plan expertise
                 </li>
-                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
                   Private showings
                 </li>
-                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
                   55+ community guidance
                 </li>
               </ul>
               <Link
                 href="/homes-for-sale"
-                className="inline-flex items-center text-sm font-semibold text-amber-300 hover:text-amber-200"
+                className="inline-flex items-center text-base font-semibold text-amber-300 hover:text-amber-200"
               >
                 Browse homes for sale
                 <svg
-                  className="ml-2 h-4 w-4"
+                  className="ml-2 h-5 w-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -372,48 +375,50 @@ export default function HomePage() {
               </Link>
             </article>
 
-            <article className="rounded-2xl border border-amber-700/30 bg-white/5 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10">
-              <div className="mb-4 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+            <article className="rounded-2xl border border-amber-700/30 bg-white/8 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/12">
+              <div className="mb-5 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
                 <Image
                   src="/images/photos/regency-community.jpg"
                   alt="Regency at Summerlin home prepared for sale"
                   width={640}
                   height={360}
                   className="h-40 w-full object-cover md:h-48"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-amber-400">
                 For Sellers
               </p>
-              <h3 className="mb-3 font-playfair text-2xl font-semibold">
+              <h3 className="mb-4 font-playfair text-2xl font-semibold text-white md:text-3xl">
                 Sell Your Regency at Summerlin Home
               </h3>
-              <p className="mb-4 text-sm text-stone-200">
+              <p className="mb-5 text-base leading-relaxed text-gray-100 md:text-lg">
                 Discover what your home Built by Toll Brothers is worth based on real Regency at
                 Summerlin resale data—not generic online estimates. Position your home to stand
                 out with targeted marketing to qualified 55+ buyers.
               </p>
-              <ul className="mb-4 grid grid-cols-2 gap-2 text-xs text-stone-200 md:text-sm">
-                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+              <ul className="mb-5 grid grid-cols-2 gap-3 text-sm text-gray-100">
+                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
                   Complimentary valuation
                 </li>
-                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
                   Data-driven pricing
                 </li>
-                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
                   55+ buyer marketing
                 </li>
-                <li className="rounded-full bg-navy-800/60 px-3 py-2">
+                <li className="rounded-lg bg-navy-800/70 px-4 py-2.5 text-center font-medium">
                   Staging &amp; prep guidance
                 </li>
               </ul>
               <Link
                 href="/selling"
-                className="inline-flex items-center text-sm font-semibold text-amber-300 hover:text-amber-200"
+                className="inline-flex items-center text-base font-semibold text-amber-300 hover:text-amber-200"
               >
                 Learn about selling in Regency
                 <svg
-                  className="ml-2 h-4 w-4"
+                  className="ml-2 h-5 w-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -456,34 +461,36 @@ export default function HomePage() {
                     ? "/palisades-collection"
                     : "/pinnacle-collection"
                 }
-                className="group block rounded-2xl border border-amber-700/30 bg-white/5 p-6 text-center shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10"
+                className="group block rounded-2xl border border-amber-700/30 bg-white/8 p-6 text-center shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/12"
               >
-                <div className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+                <div className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-amber-400">
                   Built by Toll Brothers
                 </div>
-                <div className="mb-4 overflow-hidden rounded-2xl border border-amber-700/40 bg-black/30">
+                <div className="mb-5 overflow-hidden rounded-2xl border border-amber-700/40 bg-black/30">
                   <Image
                     src="/images/photos/regency-community.jpg"
                     alt={`${col.name} homes in Regency at Summerlin`}
                     width={640}
                     height={360}
                     className="h-40 w-full object-cover md:h-48"
+                    quality={75}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-1">
-                  <h3 className="mb-2 font-playfair text-xl font-semibold text-amber-400 transition-colors group-hover:text-amber-300">
+                  <h3 className="mb-3 font-playfair text-2xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
                     {col.name}
                   </h3>
-                  <p className="mb-1 text-sm text-stone-200">
+                  <p className="mb-2 text-base font-medium text-white">
                     {col.sqftRange} sq ft
                   </p>
-                  <p className="mb-4 text-sm text-stone-300">
+                  <p className="mb-5 text-base text-gray-200">
                     {col.beds} beds • {col.baths} baths • lots {col.lotSize}
                   </p>
-                  <span className="inline-flex items-center justify-center text-sm font-semibold text-amber-400 transition-colors group-hover:text-amber-200">
+                  <span className="inline-flex items-center justify-center text-base font-semibold text-amber-400 transition-colors group-hover:text-amber-300">
                     View Collection
                     <svg
-                      className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                      className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

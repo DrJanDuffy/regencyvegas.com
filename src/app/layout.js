@@ -23,11 +23,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        <link
-          rel="preconnect"
-          href="https://em.realscout.com"
-          crossOrigin=""
-        />
+        {/* Preconnect to external resources for faster loading */}
+        <link rel="preconnect" href="https://em.realscout.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://d1buiexcd5gara.cloudfront.net" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(agentSchema) }}
