@@ -67,7 +67,7 @@ export function generateBreadcrumbSchema(items) {
 }
 
 export function generateFloorPlanSchema(plan) {
-  return {
+  const base = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: `${plan.name} - ${COMMUNITY.name}`,
@@ -76,14 +76,20 @@ export function generateFloorPlanSchema(plan) {
       "@type": "Brand",
       name: "Toll Brothers",
     },
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "USD",
-      lowPrice: plan.priceMin,
-      highPrice: plan.priceMax,
-      offerCount: plan.available || "Multiple",
-    },
   };
+  if (plan.priceMin && plan.priceMax) {
+    return {
+      ...base,
+      offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "USD",
+        lowPrice: plan.priceMin,
+        highPrice: plan.priceMax,
+        offerCount: plan.available || "Multiple",
+      },
+    };
+  }
+  return base;
 }
 
 

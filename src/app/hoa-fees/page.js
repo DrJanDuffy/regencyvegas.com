@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -31,11 +32,22 @@ export default function HoaFeesPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Request Up-to-Date HOA Information
       </h3>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        The HOA fees cover access to{" "}
+        <Link href="/amenities" className="font-semibold text-amber-600 hover:underline">
+          resort-style amenities and the 22,000 sq ft clubhouse
+        </Link>{" "}
+        as well as the guard-gated security and maintenance that support the{" "}
+        <Link href="/lifestyle" className="font-semibold text-amber-600 hover:underline">
+          55+ active adult lifestyle
+        </Link>{" "}
+        at {COMMUNITY.name}.
+      </p>
       <p className="text-sm text-gray-600 md:text-base">
-        HOA structures and dues can change over time. For the most accurate,
-        current information for a specific home or collection in {COMMUNITY.name},
-        call or text <span className="font-semibold">{PHONE.marketing}</span> and we
-        will provide a detailed breakdown.
+        HOA structures and dues can change over time. For the most accurate, current
+        information for a specific home or collection in {COMMUNITY.name}, call or text{" "}
+        <span className="font-semibold">{PHONE.marketing}</span> and we will provide a
+        detailed breakdown.
       </p>
     </main>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Script from "next/script";
 import RealScoutListings from "@/components/widgets/RealScoutListings";
 import { COMMUNITY, PHONE } from "@/lib/constants";
@@ -26,6 +27,24 @@ export default function HomesForSalePage() {
           latest opportunities in this luxury 55+ guard-gated community in Summerlin.
           Explore single-story floor plans, premium lots, and lock-and-leave homes
           designed for upscale active adult living.
+        </p>
+        <p className="mb-4 text-sm text-gray-600 md:text-base">
+          You can also review{" "}
+          <Link
+            href="/recently-sold"
+            className="font-semibold text-amber-600 hover:underline"
+          >
+            recently sold homes in {COMMUNITY.name}
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="/floor-plans"
+            className="font-semibold text-amber-600 hover:underline"
+          >
+            explore all 9 floor plans
+          </Link>{" "}
+          to better understand pricing, layouts, and options in this premier 55+
+          community.
         </p>
         <h2 className="mb-3 text-xl font-semibold text-navy-800">
           Request Details or Schedule a Private Tour

@@ -1,12 +1,21 @@
 import { COLLECTIONS, COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
+import { generateFloorPlanSchema } from "@/lib/schema";
 
 export const metadata = generatePageMetadata(PAGE_SEO.palisades);
 
 export default function PalisadesCollectionPage() {
   const col = COLLECTIONS.palisades;
+  const schema = generateFloorPlanSchema({
+    name: col.name,
+    description: `Larger single-story homes in the ${col.name} at ${COMMUNITY.name}, offering ${col.sqftRange} with ${col.beds} bedrooms plus den and ${col.baths} baths in a luxury 55+ community.`,
+  });
   return (
     <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <h1 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
         {col.name} Homes in Regency at Summerlin
       </h1>

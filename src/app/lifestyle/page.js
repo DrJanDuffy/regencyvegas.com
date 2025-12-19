@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -34,11 +35,21 @@ export default function LifestylePage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Create the Retirement Lifestyle You Want
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
         Whether you prefer a full social calendar or a more relaxed pace,{" "}
-        {COMMUNITY.name} gives you the flexibility to shape your days. To learn more
-        about current lifestyle programming or to talk about whether this community
-        fits your goals, call or text{" "}
+        {COMMUNITY.name} gives you the flexibility to shape your days. Learn more about{" "}
+        <Link href="/amenities" className="font-semibold text-amber-600 hover:underline">
+          the amenities and clubhouse facilities
+        </Link>{" "}
+        and{" "}
+        <Link href="/location" className="font-semibold text-amber-600 hover:underline">
+          the community location
+        </Link>{" "}
+        that support this active 55+ lifestyle.
+      </p>
+      <p className="text-sm text-gray-600 md:text-base">
+        To learn more about current lifestyle programming or to talk about whether this
+        community fits your goals, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
       </p>
     </main>

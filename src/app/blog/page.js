@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -21,9 +22,23 @@ export default function BlogPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Have a Topic You&apos;d Like Covered?
       </h3>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        Stay informed with the{" "}
+        <Link
+          href="/market-report"
+          className="font-semibold text-amber-600 hover:underline"
+        >
+          latest {COMMUNITY.name} market report
+        </Link>{" "}
+        and explore{" "}
+        <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
+          current homes for sale
+        </Link>{" "}
+        to see what&apos;s available in the community.
+      </p>
       <p className="text-sm text-gray-600 md:text-base">
-        If you have questions you&apos;d like to see answered on the blog—or if
-        you&apos;d like a one-on-one conversation about your plans—call or text{" "}
+        If you have questions you&apos;d like to see answered on the blog—or if you&apos;d
+        like a one-on-one conversation about your plans—call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
       </p>
     </main>

@@ -132,9 +132,9 @@ export default function HomePage() {
                 Regency at Summerlin Homes for Sale
               </h1>
               <p className="mb-8 text-base text-gray-100 md:text-lg">
-                Discover low-maintenance, single-story Toll Brothers homes in a guard-gated 55+
-                community with resort-style amenities, sweeping Red Rock and city views, and
-                lock-and-leave convenience in the heart of The Cliffs.
+                Discover low-maintenance, single-story homes Built by Toll Brothers in a
+                guard-gated 55+ community with resort-style amenities, sweeping Red Rock and city
+                views, and lock-and-leave convenience in the heart of The Cliffs.
               </p>
               <div className="flex flex-col items-center justify-start gap-4 sm:flex-row">
                 <Link
@@ -227,7 +227,7 @@ export default function HomePage() {
             Search Regency at Summerlin Homes
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-sm text-gray-600 md:text-base">
-            Find resale homes built by Toll Brothers in this guard-gated 55+ community. Use the
+            Find resale homes Built by Toll Brothers in this guard-gated 55+ community. Use the
             search below to see what&apos;s currently available in {COMMUNITY.name}.
           </p>
         </div>
@@ -241,17 +241,17 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:items-start">
           <div>
             <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-amber-600">
-              Homes built by Toll Brothers
+              Homes Built by Toll Brothers
             </span>
             <h2 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
               Where Luxury Meets Lock-and-Leave Living
             </h2>
             <p className="text-base leading-relaxed text-gray-700 md:text-lg">
-              {COMMUNITY.name} is a luxury 55+ active adult community by {COMMUNITY.builder} in{" "}
+              {COMMUNITY.name} is a luxury 55+ active adult community Built by Toll Brothers in{" "}
               {COMMUNITY.village} of Summerlin, {COMMUNITY.city}, {COMMUNITY.state}. Spanning
               over {COMMUNITY.acreage} acres of elevated desert terrain, the neighborhood is
-              known for its single-story Toll Brothers homes, dramatic Red Rock and city views,
-              and a 22,000 sq ft resort-style clubhouse at the heart of the community.
+              known for its single-story homes Built by Toll Brothers, dramatic Red Rock and city
+              views, and a 22,000 sq ft resort-style clubhouse at the heart of the community.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-gray-700 md:text-base">
               Homeowners enjoy guard-gated security, front-yard maintenance, indoor and outdoor
@@ -311,12 +311,21 @@ export default function HomePage() {
             </h2>
             <p className="text-sm text-stone-200 md:text-base">
               Whether you are searching for your ideal Regency at Summerlin home or preparing to
-              sell, {AGENT.name} represents buyers and sellers of resale Toll Brothers homes
-              throughout the community.
+              sell, {AGENT.name} represents buyers and sellers of resale homes Built by Toll
+              Brothers throughout the community.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             <article className="rounded-2xl border border-amber-700/30 bg-white/5 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10">
+              <div className="mb-4 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+                <Image
+                  src="/images/photos/regency-community.jpg"
+                  alt="Couple touring a Regency at Summerlin home"
+                  width={640}
+                  height={360}
+                  className="h-40 w-full object-cover md:h-48"
+                />
+              </div>
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
                 For Buyers
               </p>
@@ -364,6 +373,15 @@ export default function HomePage() {
             </article>
 
             <article className="rounded-2xl border border-amber-700/30 bg-white/5 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10">
+              <div className="mb-4 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+                <Image
+                  src="/images/photos/regency-community.jpg"
+                  alt="Regency at Summerlin home prepared for sale"
+                  width={640}
+                  height={360}
+                  className="h-40 w-full object-cover md:h-48"
+                />
+              </div>
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
                 For Sellers
               </p>
@@ -371,9 +389,9 @@ export default function HomePage() {
                 Sell Your Regency at Summerlin Home
               </h3>
               <p className="mb-4 text-sm text-stone-200">
-                Discover what your Toll Brothers home is worth based on real Regency at Summerlin
-                resale data—not generic online estimates. Position your home to stand out with
-                targeted marketing to qualified 55+ buyers.
+                Discover what your home Built by Toll Brothers is worth based on real Regency at
+                Summerlin resale data—not generic online estimates. Position your home to stand
+                out with targeted marketing to qualified 55+ buyers.
               </p>
               <ul className="mb-4 grid grid-cols-2 gap-2 text-xs text-stone-200 md:text-sm">
                 <li className="rounded-full bg-navy-800/60 px-3 py-2">
@@ -441,7 +459,16 @@ export default function HomePage() {
                 className="group block rounded-2xl border border-amber-700/30 bg-white/5 p-6 text-center shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:bg-white/10"
               >
                 <div className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
-                  Toll Brothers Collection
+                  Built by Toll Brothers
+                </div>
+                <div className="mb-4 overflow-hidden rounded-2xl border border-amber-700/40 bg-black/30">
+                  <Image
+                    src="/images/photos/regency-community.jpg"
+                    alt={`${col.name} homes in Regency at Summerlin`}
+                    width={640}
+                    height={360}
+                    className="h-40 w-full object-cover md:h-48"
+                  />
                 </div>
                 <div className="p-1">
                   <h3 className="mb-2 font-playfair text-xl font-semibold text-amber-400 transition-colors group-hover:text-amber-300">
@@ -583,12 +610,12 @@ export default function HomePage() {
               <div className="mb-1 font-semibold tracking-[0.18em] text-amber-200">
                 Website
               </div>
-              <a
-                href="https://regencyvegas.com"
+              <Link
+                href="/"
                 className="text-sm font-semibold text-white underline-offset-2 hover:underline"
               >
                 RegencyVegas.com
-              </a>
+              </Link>
             </div>
           </div>
         </div>

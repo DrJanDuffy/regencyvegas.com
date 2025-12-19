@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -32,9 +33,20 @@ export default function AboutPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Connect with {AGENT.name}
       </h3>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        Explore{" "}
+        <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
+          current {COMMUNITY.name} homes for sale
+        </Link>{" "}
+        or{" "}
+        <Link href="/contact" className="font-semibold text-amber-600 hover:underline">
+          schedule a consultation
+        </Link>{" "}
+        to discuss your real estate goals.
+      </p>
       <p className="text-sm text-gray-600 md:text-base">
-        To learn more about working with {AGENT.name}, schedule a consultation, or
-        ask questions about {COMMUNITY.name}, call or text{" "}
+        To learn more about working with {AGENT.name}, schedule a consultation, or ask
+        questions about {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
       </p>
     </main>

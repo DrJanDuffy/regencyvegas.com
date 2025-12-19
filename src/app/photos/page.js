@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -21,10 +22,24 @@ export default function PhotosPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Schedule an In-Person Visit
       </h3>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        For out-of-state buyers or those who prefer a preview before visiting, explore{" "}
+        <Link
+          href="/virtual-tours"
+          className="font-semibold text-amber-600 hover:underline"
+        >
+          virtual tours of {COMMUNITY.name} homes
+        </Link>{" "}
+        or browse{" "}
+        <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
+          current listings
+        </Link>{" "}
+        to see what&apos;s available.
+      </p>
       <p className="text-sm text-gray-600 md:text-base">
-        Photos are a great starting point, but seeing the community in person brings
-        the lifestyle into focus. To arrange a private tour of homes and amenities
-        in {COMMUNITY.name}, call or text{" "}
+        Photos are a great starting point, but seeing the community in person brings the
+        lifestyle into focus. To arrange a private tour of homes and amenities in{" "}
+        {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
       </p>
     </main>

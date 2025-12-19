@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -34,7 +35,15 @@ export default function CompareCommunitiesPage() {
         For a detailed, side-by-side comparison of {COMMUNITY.name} and other 55+
         communities you&apos;re considering, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>. We&apos;ll help you
-        understand which neighborhood best matches your priorities.
+        understand which neighborhood best matches your priorities. You can also{" "}
+        <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
+          browse current Regency at Summerlin homes for sale
+        </Link>{" "}
+        and review the{" "}
+        <Link href="/market-report" className="font-semibold text-amber-600 hover:underline">
+          latest Regency at Summerlin market report
+        </Link>{" "}
+        to see how it compares to other Las Vegas 55+ communities.
       </p>
     </main>
   );

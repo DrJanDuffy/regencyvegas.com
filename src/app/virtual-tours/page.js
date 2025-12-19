@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -21,11 +22,22 @@ export default function VirtualToursPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Request Virtual Tours and Custom Walkthroughs
       </h3>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        Browse{" "}
+        <Link href="/photos" className="font-semibold text-amber-600 hover:underline">
+          the photo gallery of {COMMUNITY.name} homes and amenities
+        </Link>{" "}
+        and{" "}
+        <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
+          view current listings
+        </Link>{" "}
+        to identify which homes you&apos;d like to tour virtually.
+      </p>
       <p className="text-sm text-gray-600 md:text-base">
         To receive links to existing tours or schedule a live video walkthrough of
         specific homes in {COMMUNITY.name}, call or text{" "}
-        <span className="font-semibold">{PHONE.marketing}</span>. We&apos;ll tailor
-        the experience to the plans and features that matter most to you.
+        <span className="font-semibold">{PHONE.marketing}</span>. We&apos;ll tailor the
+        experience to the plans and features that matter most to you.
       </p>
     </main>
   );

@@ -4,10 +4,9 @@ export const baseMetadata = {
   metadataBase: new URL("https://regencyvegas.com"),
   title: {
     template: "%s | Regency at Summerlin | Dr. Jan Duffy",
-    default:
-      "Regency at Summerlin Homes for Sale | 55+ Luxury Community Las Vegas",
+    default: "Regency at Summerlin 55+ Homes for Sale in Las Vegas",
   },
-  description: `Browse ${COMMUNITY.name} homes for sale in Las Vegas. Toll Brothers luxury 55+ guard-gated community with resort amenities, mountain views, and single-story homes from $700K-$1M+. Call ${PHONE.marketing}.`,
+  description: `Browse ${COMMUNITY.name} homes for sale in Las Vegas. Toll Brothers 55+ guard-gated community with resort amenities, mountain views, and single-story homes from $700K-$1.1M+. Call ${PHONE.marketing}.`,
   keywords: [
     "Regency at Summerlin",
     "Regency at Summerlin homes for sale",
@@ -81,14 +80,13 @@ export function generatePageMetadata({ title, description, path, image }) {
 
 export const PAGE_SEO = {
   home: {
-    title:
-      "Regency at Summerlin Homes for Sale | 55+ Luxury Community Las Vegas",
-    description: `Browse ${COMMUNITY.name} homes for sale. Toll Brothers luxury 55+ guard-gated community with resort amenities, mountain views. $700K-$1.1M. Call ${PHONE.marketing}.`,
+    title: "Regency at Summerlin 55+ Homes for Sale in Las Vegas",
+    description: `Browse ${COMMUNITY.name} homes for sale in The Cliffs village of Summerlin. Toll Brothers 55+ guard-gated community with resort amenities, Red Rock views, and single-story homes from $700K-$1.1M+. Call ${PHONE.marketing}.`,
     path: "/",
   },
   homesForSale: {
     title: "Homes for Sale in Regency at Summerlin",
-    description: `View all current listings in ${COMMUNITY.name}. ${COMMUNITY.totalHomes} luxury single-story homes by Toll Brothers. Updated daily. Call ${PHONE.marketing}.`,
+    description: `View all current listings in ${COMMUNITY.name}, a Toll Brothers 55+ guard-gated community with ${COMMUNITY.totalHomes} single-story homes. Updated frequently from the Las Vegas MLS. Call ${PHONE.marketing}.`,
     path: "/homes-for-sale",
   },
   recentlySold: {
@@ -167,7 +165,7 @@ export const PAGE_SEO = {
   },
   photos: {
     title: "Photo Gallery | Regency at Summerlin Homes & Amenities",
-    description: `Browse photos of ${COMMUNITY.name} homes, clubhouse, pools, mountain views. Desert contemporary architecture by Toll Brothers. Call ${PHONE.marketing}.`,
+    description: `Browse photos of ${COMMUNITY.name} homes, clubhouse, pools, and mountain views. Desert contemporary architecture by Toll Brothers. Call ${PHONE.marketing}.`,
     path: "/photos",
   },
   virtualTours: {

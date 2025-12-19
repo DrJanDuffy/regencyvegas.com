@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -17,6 +18,23 @@ export default function MarketReportPage() {
         values, days on market, and inventory levels can shift quickly in this
         limited-supply 55+ community, and having accurate data helps you make
         confident decisions as a buyer or seller.
+      </p>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        For added context, you can also review{" "}
+        <Link
+          href="/recently-sold"
+          className="font-semibold text-amber-600 hover:underline"
+        >
+          recently sold homes in {COMMUNITY.name}
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="/homes-for-sale"
+          className="font-semibold text-amber-600 hover:underline"
+        >
+          current homes for sale
+        </Link>{" "}
+        to see how individual properties fit into the broader market.
       </p>
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         What&apos;s Included in a Custom Market Report

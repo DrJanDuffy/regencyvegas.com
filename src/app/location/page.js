@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -30,6 +31,20 @@ export default function LocationPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Get Directions or Schedule a Tour
       </h3>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        Learn more about{" "}
+        <Link
+          href="/nearby-amenities"
+          className="font-semibold text-amber-600 hover:underline"
+        >
+          shopping, dining, and services near {COMMUNITY.name}
+        </Link>{" "}
+        and{" "}
+        <Link href="/amenities" className="font-semibold text-amber-600 hover:underline">
+          the resort-style amenities within the community
+        </Link>
+        .
+      </p>
       <p className="text-sm text-gray-600 md:text-base">
         For exact directions, a tour map, or to coordinate a guided visit to{" "}
         {COMMUNITY.name}, call or text{" "}

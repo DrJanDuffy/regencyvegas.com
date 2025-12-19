@@ -1,12 +1,21 @@
 import { COLLECTIONS, COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
+import { generateFloorPlanSchema } from "@/lib/schema";
 
 export const metadata = generatePageMetadata(PAGE_SEO.summit);
 
 export default function SummitCollectionPage() {
   const col = COLLECTIONS.summit;
+  const schema = generateFloorPlanSchema({
+    name: col.name,
+    description: `Single-story homes in the ${col.name} at ${COMMUNITY.name}, offering ${col.sqftRange} with ${col.beds} bedrooms and ${col.baths} baths in a Toll Brothers 55+ guard-gated community in Las Vegas.`,
+  });
   return (
     <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <h1 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
         {col.name} Homes in Regency at Summerlin
       </h1>

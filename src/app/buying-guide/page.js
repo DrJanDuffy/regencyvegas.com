@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -32,6 +33,24 @@ export default function BuyingGuidePage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Talk Through Your Plan with an Expert
       </h3>
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
+        Start by reviewing{" "}
+        <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
+          current homes for sale in {COMMUNITY.name}
+        </Link>
+        ,{" "}
+        <Link href="/floor-plans" className="font-semibold text-amber-600 hover:underline">
+          comparing all 9 floor plans
+        </Link>
+        , and{" "}
+        <Link
+          href="/compare-55-communities"
+          className="font-semibold text-amber-600 hover:underline"
+        >
+          seeing how Regency compares to other Las Vegas 55+ communities
+        </Link>
+        .
+      </p>
       <p className="text-sm text-gray-600 md:text-base">
         To discuss timing, availability, and strategy for buying in{" "}
         {COMMUNITY.name}, call or text{" "}

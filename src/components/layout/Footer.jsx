@@ -10,7 +10,7 @@ export default function Footer() {
             {COMMUNITY.name}
           </h2>
           <p className="mb-3">
-            Toll Brothers luxury 55+ guard-gated community in The Cliffs village of Summerlin,
+            55+ guard-gated community Built by Toll Brothers in The Cliffs village of Summerlin,
             Las Vegas, NV.
           </p>
           <p>

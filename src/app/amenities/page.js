@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -35,12 +36,18 @@ export default function AmenitiesPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Social Events and Clubs
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-sm text-gray-600 md:text-base">
         A dedicated lifestyle team and active resident committees help coordinate
         events, clubs, and activities throughout the year. From fitness classes and
         educational seminars to holiday parties and hobby groups, there is always
-        something happening at {COMMUNITY.name}. For a detailed amenities overview or
-        current activity calendar, call or text{" "}
+        something happening at {COMMUNITY.name}. Explore{" "}
+        <Link href="/lifestyle" className="font-semibold text-amber-600 hover:underline">
+          more about the active adult lifestyle at {COMMUNITY.name}
+        </Link>{" "}
+        and the full range of programming available to residents.
+      </p>
+      <p className="text-sm text-gray-600 md:text-base">
+        For a detailed amenities overview or current activity calendar, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
       </p>
     </main>
