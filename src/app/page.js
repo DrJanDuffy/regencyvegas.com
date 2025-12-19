@@ -531,7 +531,7 @@ export default function HomePage() {
           <h2 className="mb-4 text-center font-playfair text-3xl text-white md:text-4xl">
             Resort-Style 55+ Amenities
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-base leading-relaxed text-gray-100 md:text-lg">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-lg leading-relaxed text-white md:text-xl">
             Enjoy a private clubhouse, indoor and outdoor pools, fitness center, tennis
             and pickleball, and a full calendar of social events curated by an on-site
             lifestyle director.

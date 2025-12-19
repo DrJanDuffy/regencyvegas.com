@@ -37,6 +37,22 @@ realscout-office-listings {
   display: block;
 }
 
+/* Style GLVAR disclaimer text in RealScout widgets */
+realscout-office-listings,
+realscout-office-listings * {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* Ensure disclaimer text is readable */
+realscout-office-listings .rs-disclaimer,
+realscout-office-listings [class*="disclaimer"],
+realscout-office-listings [class*="mls"],
+realscout-office-listings [class*="GLVAR"] {
+  color: #4b5563 !important; /* gray-600 for readability */
+  font-size: 0.75rem !important; /* text-xs */
+  line-height: 1.5 !important;
+}
+
 .realscout-container {
   min-height: 400px;
 }
