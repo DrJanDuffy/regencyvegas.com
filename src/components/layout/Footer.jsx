@@ -4,7 +4,7 @@ import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
 export default function Footer() {
   return (
     <footer className="w-full border-t border-stone-200 bg-stone-100">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 text-sm text-gray-600 md:grid-cols-3 md:gap-12 md:py-16">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 text-base text-gray-700 md:grid-cols-3 md:gap-12 md:py-16">
         <div>
           <h2 className="mb-4 font-playfair text-xl font-semibold text-navy-800">
             {COMMUNITY.name}
@@ -28,8 +28,8 @@ export default function Footer() {
           <div className="space-y-1">
             <p className="font-semibold text-navy-800">{AGENT.name}</p>
             <p>{AGENT.title}</p>
-            <p className="text-xs">{AGENT.brokerage}</p>
-            <p className="text-xs">Lic: {AGENT.license}</p>
+            <p className="text-sm">{AGENT.brokerage}</p>
+            <p className="text-sm">Lic: {AGENT.license}</p>
             <div className="pt-2">
               <a
                 href={`tel:${PHONE.marketing}`}
@@ -63,7 +63,7 @@ export default function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-gray-600 transition-colors hover:text-amber-600"
+                  className="text-gray-700 transition-colors hover:text-amber-600"
                 >
                   {link.label}
                 </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-stone-200 bg-stone-50 py-4 text-center text-xs text-gray-500">
+      <div className="border-t border-stone-200 bg-stone-50 py-4 text-center text-sm text-gray-600">
         © {new Date().getFullYear()} RegencyVegas.com · All Rights Reserved.
       </div>
     </footer>

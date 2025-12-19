@@ -13,7 +13,7 @@ export default function CompareCommunitiesPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         How Regency at Summerlin Compares
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Las Vegas offers a variety of 55+ options—including Sun City communities,
         Siena, Trilogy, and others—but {COMMUNITY.name} stands out for its Toll
         Brothers construction, guard-gated privacy, and elevated Summerlin location.
@@ -31,7 +31,7 @@ export default function CompareCommunitiesPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Request a Side-by-Side Comparison
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         For a detailed, side-by-side comparison of {COMMUNITY.name} and other 55+
         communities you&apos;re considering, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>. We&apos;ll help you

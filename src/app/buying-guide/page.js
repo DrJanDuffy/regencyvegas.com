@@ -13,7 +13,7 @@ export default function BuyingGuidePage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Step-by-Step Guide to Purchasing in a 55+ Community
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Buying in {COMMUNITY.name} is a bit different from purchasing in a
         traditional neighborhood. Age-qualification rules, HOA structures, and the
         limited number of resale homes mean it pays to have a clear plan and a local
@@ -33,7 +33,7 @@ export default function BuyingGuidePage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Talk Through Your Plan with an Expert
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Start by reviewing{" "}
         <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
           current homes for sale in {COMMUNITY.name}
@@ -51,7 +51,7 @@ export default function BuyingGuidePage() {
         </Link>
         .
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         To discuss timing, availability, and strategy for buying in{" "}
         {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span> today.

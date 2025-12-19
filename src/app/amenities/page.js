@@ -13,7 +13,7 @@ export default function AmenitiesPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Resort-Style Clubhouse and Lifestyle
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         {COMMUNITY.name} offers amenities that rival high-end resorts, anchored by a
         private clubhouse where neighbors gather to work out, relax, and socialize.
         Residents enjoy indoor and outdoor pools, a state-of-the-art fitness center,
@@ -23,7 +23,7 @@ export default function AmenitiesPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Fitness, Sports, and Wellness
       </h2>
-      <p className="mb-2 text-sm text-gray-600 md:text-base">
+      <p className="mb-2 text-base text-gray-700 md:text-lg">
         Wellness is a core part of life at {COMMUNITY.name}. Outdoor amenities may
         include:
       </p>
@@ -36,7 +36,7 @@ export default function AmenitiesPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Social Events and Clubs
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         A dedicated lifestyle team and active resident committees help coordinate
         events, clubs, and activities throughout the year. From fitness classes and
         educational seminars to holiday parties and hobby groups, there is always
@@ -46,7 +46,7 @@ export default function AmenitiesPage() {
         </Link>{" "}
         and the full range of programming available to residents.
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         For a detailed amenities overview or current activity calendar, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
       </p>

@@ -292,7 +292,7 @@ export default function HomePage() {
                 <dd>${COMMUNITY.hoa.total}/mo</dd>
               </div>
             </dl>
-            <p className="mt-4 text-xs text-gray-500">
+            <p className="mt-4 text-sm text-gray-600">
               Market stats are approximate and change as new homes list and sell. For the most
               current numbers and a custom market update, call {PHONE.marketing}.
             </p>

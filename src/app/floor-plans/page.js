@@ -29,7 +29,7 @@ export default function FloorPlansPage() {
           </h3>
           <p>{COLLECTIONS.summit.sqftRange}</p>
           <p>{COLLECTIONS.summit.beds} beds • {COLLECTIONS.summit.baths} baths</p>
-          <p className="mt-2 text-xs text-gray-500">
+          <p className="mt-2 text-sm text-gray-600">
             Plans: {COLLECTIONS.summit.plans.join(", ")}
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function FloorPlansPage() {
           <p>
             {COLLECTIONS.palisades.beds} beds + den • {COLLECTIONS.palisades.baths} baths
           </p>
-          <p className="mt-2 text-xs text-gray-500">
+          <p className="mt-2 text-sm text-gray-600">
             Plans: {COLLECTIONS.palisades.plans.join(", ")}
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function FloorPlansPage() {
           </h3>
           <p>{COLLECTIONS.pinnacle.sqftRange}</p>
           <p>{COLLECTIONS.pinnacle.beds} beds • {COLLECTIONS.pinnacle.baths} baths</p>
-          <p className="mt-2 text-xs text-gray-500">
+          <p className="mt-2 text-sm text-gray-600">
             Plans: {COLLECTIONS.pinnacle.plans.join(", ")}
           </p>
         </div>

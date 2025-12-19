@@ -13,13 +13,13 @@ export default function MarketReportPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Prices, Trends, and Inventory Overview
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Stay informed about current pricing and trends in {COMMUNITY.name}. Median
         values, days on market, and inventory levels can shift quickly in this
         limited-supply 55+ community, and having accurate data helps you make
         confident decisions as a buyer or seller.
       </p>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         For added context, you can also review{" "}
         <Link
           href="/recently-sold"
@@ -48,7 +48,7 @@ export default function MarketReportPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Request Your Personalized Report
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         For a custom {COMMUNITY.name} market report tailored to your specific
         situation—whether you&apos;re planning to buy, sell, or simply monitor your
         home&apos;s value—call or text{" "}

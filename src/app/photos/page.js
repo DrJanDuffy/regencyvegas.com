@@ -13,7 +13,7 @@ export default function PhotosPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Explore Homes, Amenities, and Surroundings
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         This gallery highlights the architecture, amenities, and setting that make{" "}
         {COMMUNITY.name} one of Las Vegas&apos; premier 55+ communities. From
         desert-contemporary elevations and designer kitchens to resort-style pools
@@ -22,7 +22,7 @@ export default function PhotosPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Schedule an In-Person Visit
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         For out-of-state buyers or those who prefer a preview before visiting, explore{" "}
         <Link
           href="/virtual-tours"
@@ -36,7 +36,7 @@ export default function PhotosPage() {
         </Link>{" "}
         to see what&apos;s available.
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         Photos are a great starting point, but seeing the community in person brings the
         lifestyle into focus. To arrange a private tour of homes and amenities in{" "}
         {COMMUNITY.name}, call or text{" "}

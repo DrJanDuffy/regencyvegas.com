@@ -10,7 +10,7 @@ export default function Header() {
           <span className="font-playfair text-xl md:text-2xl font-bold text-navy-800">
             Regency at Summerlin
           </span>
-          <span className="text-xs md:text-sm text-gray-500">
+          <span className="text-xs md:text-sm text-gray-600">
             by Dr. Jan Duffy, Las Vegas Real Estate Expert
           </span>
         </Link>

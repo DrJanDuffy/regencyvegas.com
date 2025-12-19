@@ -12,7 +12,7 @@ export default function ContactPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Schedule a Tour or Ask a Question
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Whether you&apos;re just beginning to explore {COMMUNITY.name} or are ready
         to schedule a private tour, {AGENT.name} is here to help. Share your goals,
         timeline, and any questions you have about homes, amenities, or the buying
@@ -38,7 +38,7 @@ export default function ContactPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         How Can We Help?
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         Let us know if you&apos;d like listing updates, a custom home search, a
         market valuation, or simply an introduction to life at {COMMUNITY.name}. We
         look forward to connecting.

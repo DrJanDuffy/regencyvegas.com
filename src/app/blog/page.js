@@ -13,7 +13,7 @@ export default function BlogPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         News, Updates, and Tips for 55+ Living in Las Vegas
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         The {COMMUNITY.name} blog will feature market updates, community news, and
         practical tips for buying, selling, and living in Las Vegas 55+ communities.
         Check back for articles on pricing trends, new listings, amenity spotlights,
@@ -22,7 +22,7 @@ export default function BlogPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Have a Topic You&apos;d Like Covered?
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Stay informed with the{" "}
         <Link
           href="/market-report"
@@ -36,7 +36,7 @@ export default function BlogPage() {
         </Link>{" "}
         to see what&apos;s available in the community.
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         If you have questions you&apos;d like to see answered on the blog—or if you&apos;d
         like a one-on-one conversation about your plans—call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.

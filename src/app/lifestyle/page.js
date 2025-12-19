@@ -13,7 +13,7 @@ export default function LifestylePage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         A Community Designed for 55+ Living
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Life at {COMMUNITY.name} is about more than beautiful homes. It&apos;s about
         connection, wellness, and enjoying a thoughtfully curated 55+ lifestyle.
         Residents can choose from an array of social events, fitness options, and
@@ -23,7 +23,7 @@ export default function LifestylePage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Social Events, Clubs, and Activities
       </h2>
-      <p className="mb-2 text-sm text-gray-600 md:text-base">
+      <p className="mb-2 text-base text-gray-700 md:text-lg">
         Typical offerings in a Regency community may include:
       </p>
       <ul className="mb-4 list-disc pl-5 text-sm text-gray-700 md:text-base">
@@ -35,7 +35,7 @@ export default function LifestylePage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Create the Retirement Lifestyle You Want
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Whether you prefer a full social calendar or a more relaxed pace,{" "}
         {COMMUNITY.name} gives you the flexibility to shape your days. Learn more about{" "}
         <Link href="/amenities" className="font-semibold text-amber-600 hover:underline">
@@ -47,7 +47,7 @@ export default function LifestylePage() {
         </Link>{" "}
         that support this active 55+ lifestyle.
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         To learn more about current lifestyle programming or to talk about whether this
         community fits your goals, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.

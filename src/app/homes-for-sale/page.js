@@ -21,14 +21,14 @@ export default function HomesForSalePage() {
         <h2 className="mb-3 text-xl font-semibold text-navy-800">
           Browse Available Homes in Regency at Summerlin
         </h2>
-        <p className="mb-4 text-sm text-gray-600 md:text-base">
+        <p className="mb-4 text-base text-gray-700 md:text-lg">
           Included below are homes for sale and real estate listings in{" "}
           {COMMUNITY.name}. Listings are updated frequently, allowing you to see the
           latest opportunities in this luxury 55+ guard-gated community in Summerlin.
           Explore single-story floor plans, premium lots, and lock-and-leave homes
           designed for upscale active adult living.
         </p>
-        <p className="mb-4 text-sm text-gray-600 md:text-base">
+        <p className="mb-4 text-base text-gray-700 md:text-lg">
           You can also review{" "}
           <Link
             href="/recently-sold"
@@ -49,7 +49,7 @@ export default function HomesForSalePage() {
         <h2 className="mb-3 text-xl font-semibold text-navy-800">
           Request Details or Schedule a Private Tour
         </h2>
-        <p className="mb-4 text-sm text-gray-600 md:text-base">
+        <p className="mb-4 text-base text-gray-700 md:text-lg">
           If you would like more information on any of these {COMMUNITY.name} homes,
           just click on a property to view full details. From there you can request
           additional information, ask questions about HOA fees or recent sales, or
@@ -60,7 +60,7 @@ export default function HomesForSalePage() {
         <h3 className="mb-2 text-lg font-semibold text-navy-800">
           Work with a Local Regency at Summerlin Specialist
         </h3>
-        <p className="text-sm text-gray-600 md:text-base">
+        <p className="text-base text-gray-700 md:text-lg">
           When you&apos;re ready to take the next step, call or text{" "}
           <span className="font-semibold">{PHONE.marketing}</span> to connect with a
           {` ${COMMUNITY.name}`} expert who understands the nuances of this Toll

@@ -13,7 +13,7 @@ export default function HoaFeesPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Understanding Monthly Costs
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Homeowners in {COMMUNITY.name} pay both a community-specific HOA and a
         master-planned Summerlin fee. Together, these typically total around $
         {COMMUNITY.hoa.total}/month, covering amenities, common-area maintenance,
@@ -32,7 +32,7 @@ export default function HoaFeesPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Request Up-to-Date HOA Information
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         The HOA fees cover access to{" "}
         <Link href="/amenities" className="font-semibold text-amber-600 hover:underline">
           resort-style amenities and the 22,000 sq ft clubhouse
@@ -43,7 +43,7 @@ export default function HoaFeesPage() {
         </Link>{" "}
         at {COMMUNITY.name}.
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         HOA structures and dues can change over time. For the most accurate, current
         information for a specific home or collection in {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span> and we will provide a

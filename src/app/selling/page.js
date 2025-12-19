@@ -12,7 +12,7 @@ export default function SellingPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Maximize Your Return in a High-Demand 55+ Community
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Homes in {COMMUNITY.name} are highly sought after, and the right pricing and
         marketing strategy can make a meaningful difference in your final sale price.
         We combine hyper-local knowledge, data-driven market analysis, and targeted
@@ -30,7 +30,7 @@ export default function SellingPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Request a Free Home Valuation
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         To receive a personalized valuation and strategy session for your{" "}
         {COMMUNITY.name} home, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>. We&apos;ll

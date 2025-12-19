@@ -22,7 +22,7 @@ export default function PalisadesCollectionPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Spacious 55+ Homes with Flexible Living
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         The {col.name} at {COMMUNITY.name} features larger single-story homes from{" "}
         {col.sqftRange}, offering {col.beds} bedrooms plus den and {col.baths} baths.
         These plans are ideal for those who want additional space for guests, hobbies,
@@ -40,7 +40,7 @@ export default function PalisadesCollectionPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Discuss Your Options with a Local Expert
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         Curious which {col.name} plan is right for you? Call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span> for a personalized
         consultation and current availability in {COMMUNITY.name}.

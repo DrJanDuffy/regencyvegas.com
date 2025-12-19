@@ -22,7 +22,7 @@ export default function SummitCollectionPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Entry-Level Luxury in a Premier 55+ Community
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         The {col.name} offers thoughtfully designed single-story homes in{" "}
         {COMMUNITY.name}, ideal for buyers seeking lock-and-leave convenience without
         sacrificing style. Floor plans range from {col.sqftRange} and feature{" "}
@@ -40,7 +40,7 @@ export default function SummitCollectionPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Learn More or Schedule a Tour
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         To learn which {col.name} floor plan best fits your lifestyle, or to see
         current availability, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span> for personalized

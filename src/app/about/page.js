@@ -13,7 +13,7 @@ export default function AboutPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Las Vegas Real Estate Expert &amp; {COMMUNITY.name} Specialist
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         {AGENT.name} is a top-producing Las Vegas real estate professional with a
         Ph.D. in Market Research, more than $127M in closed sales, and over 500
         families served. As a dedicated {COMMUNITY.name} specialist, she combines
@@ -23,7 +23,7 @@ export default function AboutPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         A Focus on 55+ and Luxury Communities
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         From pricing analysis and marketing strategy to contract negotiation and
         relocation support, {AGENT.name} offers full-service representation tailored
         to the needs of luxury and active adult buyers and sellers. Her expertise in
@@ -33,7 +33,7 @@ export default function AboutPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Connect with {AGENT.name}
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Explore{" "}
         <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
           current {COMMUNITY.name} homes for sale
@@ -44,7 +44,7 @@ export default function AboutPage() {
         </Link>{" "}
         to discuss your real estate goals.
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         To learn more about working with {AGENT.name}, schedule a consultation, or ask
         questions about {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.

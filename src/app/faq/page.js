@@ -37,7 +37,7 @@ export default function FaqPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Common Questions About Living in Regency at Summerlin
       </h2>
-      <p className="mb-6 text-sm text-gray-600 md:text-base">
+      <p className="mb-6 text-base text-gray-700 md:text-lg">
         Below are answers to some of the most frequently asked questions about{" "}
         {COMMUNITY.name}. If you don&apos;t see your question here, reach out
         anytime—our goal is to make your decision as clear and confident as
@@ -52,7 +52,7 @@ export default function FaqPage() {
             <summary className="cursor-pointer text-sm font-semibold text-navy-800 md:text-base">
               {item.question}
             </summary>
-            <p className="mt-2 text-sm text-gray-600 md:text-base">
+            <p className="mt-2 text-base text-gray-700 md:text-lg">
               {item.answer}
             </p>
           </details>
@@ -61,7 +61,7 @@ export default function FaqPage() {
       <h3 className="mt-8 mb-2 text-lg font-semibold text-navy-800">
         Have More Questions?
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         For detailed, up-to-date answers tailored to your situation, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>. We&apos;re here
         to help you navigate every aspect of buying or selling in {COMMUNITY.name}.

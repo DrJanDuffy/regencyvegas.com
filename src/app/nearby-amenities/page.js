@@ -12,7 +12,7 @@ export default function NearbyAmenitiesPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Everyday Convenience Minutes from Home
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Living in {COMMUNITY.name} means enjoying a quiet, guard-gated 55+ community
         while staying close to everything you need. From grocery stores and
         restaurants to healthcare and entertainment, most daily errands can be
@@ -30,7 +30,7 @@ export default function NearbyAmenitiesPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Learn More About the Area
       </h3>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         For a curated list of nearby restaurants, golf courses, shopping centers,
         and healthcare providers that best match your lifestyle, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.

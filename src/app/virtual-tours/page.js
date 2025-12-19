@@ -13,7 +13,7 @@ export default function VirtualToursPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         Tour Regency Homes from Wherever You Are
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Whether you&apos;re out of state, still planning your move, or prefer to
         preview homes before visiting in person, virtual tours are a convenient way
         to experience floor plans and finishes in {COMMUNITY.name}. We offer video
@@ -22,7 +22,7 @@ export default function VirtualToursPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Request Virtual Tours and Custom Walkthroughs
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Browse{" "}
         <Link href="/photos" className="font-semibold text-amber-600 hover:underline">
           the photo gallery of {COMMUNITY.name} homes and amenities
@@ -33,7 +33,7 @@ export default function VirtualToursPage() {
         </Link>{" "}
         to identify which homes you&apos;d like to tour virtually.
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         To receive links to existing tours or schedule a live video walkthrough of
         specific homes in {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>. We&apos;ll tailor the

@@ -13,7 +13,7 @@ export default function LocationPage() {
       <h2 className="mb-3 text-xl font-semibold text-navy-800">
         In the Heart of The Cliffs Village, Summerlin South
       </h2>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         {COMMUNITY.name} is located in The Cliffs village of Summerlin South, zip{" "}
         {COMMUNITY.zipCode}. The elevated desert terrain and views of surrounding
         ridges create a dramatic backdrop, while nearby roadways provide convenient
@@ -31,7 +31,7 @@ export default function LocationPage() {
       <h3 className="mb-2 text-lg font-semibold text-navy-800">
         Get Directions or Schedule a Tour
       </h3>
-      <p className="mb-4 text-sm text-gray-600 md:text-base">
+      <p className="mb-4 text-base text-gray-700 md:text-lg">
         Learn more about{" "}
         <Link
           href="/nearby-amenities"
@@ -45,7 +45,7 @@ export default function LocationPage() {
         </Link>
         .
       </p>
-      <p className="text-sm text-gray-600 md:text-base">
+      <p className="text-base text-gray-700 md:text-lg">
         For exact directions, a tour map, or to coordinate a guided visit to{" "}
         {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
