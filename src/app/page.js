@@ -528,10 +528,10 @@ export default function HomePage() {
       {/* Amenities preview */}
       <section className="bg-navy-800 py-16 text-white md:py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-3 text-center font-playfair text-3xl md:text-4xl">
+          <h2 className="mb-4 text-center font-playfair text-3xl text-white md:text-4xl">
             Resort-Style 55+ Amenities
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-gray-200 md:text-base">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-base leading-relaxed text-gray-100 md:text-lg">
             Enjoy a private clubhouse, indoor and outdoor pools, fitness center, tennis
             and pickleball, and a full calendar of social events curated by an on-site
             lifestyle director.
@@ -542,7 +542,7 @@ export default function HomePage() {
                 <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/10 text-amber-400 transition-colors group-hover:bg-white/20">
                   {item.icon}
                 </div>
-                <p className="text-sm font-semibold">{item.title}</p>
+                <p className="text-base font-semibold text-white">{item.title}</p>
               </div>
             ))}
           </div>
