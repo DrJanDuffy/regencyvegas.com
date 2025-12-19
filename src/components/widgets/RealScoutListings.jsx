@@ -75,14 +75,32 @@ export default function RealScoutListings({
       )}
 
       {status === "ready" && (
-        <realscout-office-listings
-          agent-encoded-id={AGENT.realscoutId}
-          sort-order={sortOrder}
-          listing-status={listingStatus}
-          property-types={propertyTypes}
-          price-min={priceMin.toString()}
-          price-max={priceMax.toString()}
-        />
+        <div
+          className="realscout-widget-wrapper"
+          style={{
+            // Ensure dark text for disclaimer
+            color: '#111827',
+          }}
+        >
+          <style jsx global>{`
+            .realscout-widget-wrapper realscout-office-listings small,
+            .realscout-widget-wrapper realscout-office-listings p:last-child,
+            .realscout-widget-wrapper realscout-office-listings div:last-child p,
+            .realscout-widget-wrapper realscout-office-listings [class*="disclaimer"],
+            .realscout-widget-wrapper realscout-office-listings [class*="copyright"] {
+              color: #4b5563 !important;
+              font-size: 0.75rem !important;
+            }
+          `}</style>
+          <realscout-office-listings
+            agent-encoded-id={AGENT.realscoutId}
+            sort-order={sortOrder}
+            listing-status={listingStatus}
+            property-types={propertyTypes}
+            price-min={priceMin.toString()}
+            price-max={priceMax.toString()}
+          />
+        </div>
       )}
     </div>
   );
