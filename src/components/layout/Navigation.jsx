@@ -3,7 +3,7 @@ import { NAV_LINKS } from "@/lib/constants";
 
 export default function Navigation() {
   return (
-    <nav className="hidden md:flex items-center gap-4 text-sm text-navy-800">
+    <nav className="hidden md:flex items-center gap-4 text-sm text-white">
       {NAV_LINKS.map((item) => (
         <div key={item.href} className="relative group">
           <Link href={item.href} className="hover:text-amber-500 transition">
