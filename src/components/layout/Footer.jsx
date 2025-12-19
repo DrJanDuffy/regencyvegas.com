@@ -72,7 +72,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-stone-200 bg-stone-50 py-4 text-center text-sm text-gray-600">
+      <div className="border-t border-stone-200 bg-cream-50 py-4 text-center text-sm text-gray-600">
         © {new Date().getFullYear()} RegencyVegas.com · All Rights Reserved.
       </div>
     </footer>
