@@ -108,6 +108,21 @@ realscout-office-listings * {
   color: #4b5563 !important; /* gray-600 */
 }
 
+/* Target disclaimer in widget wrapper */
+.realscout-widget-wrapper realscout-office-listings small,
+.realscout-widget-wrapper realscout-office-listings p:last-child,
+.realscout-widget-wrapper realscout-office-listings p:last-of-type,
+.realscout-widget-wrapper realscout-office-listings div:last-child,
+.realscout-widget-wrapper realscout-office-listings div:last-child p,
+.realscout-widget-wrapper realscout-office-listings [class*="disclaimer"],
+.realscout-widget-wrapper realscout-office-listings [class*="copyright"],
+.realscout-widget-wrapper realscout-office-listings [class*="attribution"],
+.realscout-widget-wrapper realscout-office-listings footer {
+  color: #4b5563 !important;
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+}
+
 /* RealScout simple search styling */
 realscout-simple-search {
   --rs-ss-font-primary-color: #1a365d;
