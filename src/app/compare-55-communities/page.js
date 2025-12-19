@@ -6,41 +6,41 @@ export const metadata = generatePageMetadata(PAGE_SEO.compare);
 
 export default function CompareCommunitiesPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <h1 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
+    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16 bg-luxury-black">
+      <h1 className="mb-4 font-playfair text-3xl text-white md:text-4xl">
         Regency at Summerlin vs Other Las Vegas 55+ Communities
       </h1>
-      <h2 className="mb-3 text-xl font-semibold text-navy-800">
+      <h2 className="mb-3 text-xl font-semibold text-white">
         How Regency at Summerlin Compares
       </h2>
-      <p className="mb-4 text-base text-gray-700 md:text-lg">
+      <p className="mb-4 text-base text-gray-200 md:text-lg">
         Las Vegas offers a variety of 55+ options—including Sun City communities,
         Siena, Trilogy, and others—but {COMMUNITY.name} stands out for its Toll
         Brothers construction, guard-gated privacy, and elevated Summerlin location.
         Understanding the differences can help you decide if this is the right fit.
       </p>
-      <h2 className="mb-3 text-xl font-semibold text-navy-800">
+      <h2 className="mb-3 text-xl font-semibold text-white">
         Key Comparison Points
       </h2>
-      <ul className="mb-4 list-disc pl-5 text-sm text-gray-700 md:text-base">
+      <ul className="mb-4 list-disc pl-5 text-base text-gray-200 md:text-lg">
         <li>Home age and architectural style</li>
         <li>Amenities, clubhouse quality, and programming</li>
         <li>HOA fees and what they include</li>
         <li>Location, views, and surrounding development</li>
       </ul>
-      <h3 className="mb-2 text-lg font-semibold text-navy-800">
+      <h3 className="mb-2 text-lg font-semibold text-white">
         Request a Side-by-Side Comparison
       </h3>
-      <p className="text-base text-gray-700 md:text-lg">
+      <p className="text-base text-gray-200 md:text-lg">
         For a detailed, side-by-side comparison of {COMMUNITY.name} and other 55+
         communities you&apos;re considering, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>. We&apos;ll help you
         understand which neighborhood best matches your priorities. You can also{" "}
-        <Link href="/homes-for-sale" className="font-semibold text-amber-600 hover:underline">
+        <Link href="/homes-for-sale" className="font-semibold text-amber-400 hover:text-amber-500 hover:underline">
           browse current Regency at Summerlin homes for sale
         </Link>{" "}
         and review the{" "}
-        <Link href="/market-report" className="font-semibold text-amber-600 hover:underline">
+        <Link href="/market-report" className="font-semibold text-amber-400 hover:text-amber-500 hover:underline">
           latest Regency at Summerlin market report
         </Link>{" "}
         to see how it compares to other Las Vegas 55+ communities.

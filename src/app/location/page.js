@@ -6,46 +6,46 @@ export const metadata = generatePageMetadata(PAGE_SEO.location);
 
 export default function LocationPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <h1 className="mb-4 font-playfair text-3xl text-navy-800 md:text-4xl">
+    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16 bg-luxury-black">
+      <h1 className="mb-4 font-playfair text-3xl text-white md:text-4xl">
         Regency at Summerlin Location
       </h1>
-      <h2 className="mb-3 text-xl font-semibold text-navy-800">
+      <h2 className="mb-3 text-xl font-semibold text-white">
         In the Heart of The Cliffs Village, Summerlin South
       </h2>
-      <p className="mb-4 text-base text-gray-700 md:text-lg">
+      <p className="mb-4 text-base text-gray-200 md:text-lg">
         {COMMUNITY.name} is located in The Cliffs village of Summerlin South, zip{" "}
         {COMMUNITY.zipCode}. The elevated desert terrain and views of surrounding
         ridges create a dramatic backdrop, while nearby roadways provide convenient
         access to Downtown Summerlin, Red Rock Canyon, and the Las Vegas Strip.
       </p>
-      <h2 className="mb-3 text-xl font-semibold text-navy-800">
+      <h2 className="mb-3 text-xl font-semibold text-white">
         Nearby Destinations
       </h2>
-      <ul className="mb-4 list-disc pl-5 text-sm text-gray-700 md:text-base">
+      <ul className="mb-4 list-disc pl-5 text-base text-gray-200 md:text-lg">
         <li>Downtown Summerlin shopping, dining, and entertainment</li>
         <li>Red Rock Casino Resort &amp; Spa</li>
         <li>Red Rock Canyon National Conservation Area</li>
         <li>Medical centers and professional services in Summerlin</li>
       </ul>
-      <h3 className="mb-2 text-lg font-semibold text-navy-800">
+      <h3 className="mb-2 text-lg font-semibold text-white">
         Get Directions or Schedule a Tour
       </h3>
-      <p className="mb-4 text-base text-gray-700 md:text-lg">
+      <p className="mb-4 text-base text-gray-200 md:text-lg">
         Learn more about{" "}
         <Link
           href="/nearby-amenities"
-          className="font-semibold text-amber-600 hover:underline"
+          className="font-semibold text-amber-400 hover:text-amber-500 hover:underline"
         >
           shopping, dining, and services near {COMMUNITY.name}
         </Link>{" "}
         and{" "}
-        <Link href="/amenities" className="font-semibold text-amber-600 hover:underline">
+        <Link href="/amenities" className="font-semibold text-amber-400 hover:text-amber-500 hover:underline">
           the resort-style amenities within the community
         </Link>
         .
       </p>
-      <p className="text-base text-gray-700 md:text-lg">
+      <p className="text-base text-gray-200 md:text-lg">
         For exact directions, a tour map, or to coordinate a guided visit to{" "}
         {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
