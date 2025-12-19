@@ -9,7 +9,7 @@ export const AGENT = {
   license: "S.0197614.LLC",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
   realscoutId: "QWdlbnQtMjI1MDUw",
-  email: "jan@drjanduffy.com",
+  email: "DrDuffySells@RegencyVegas.com",
 };
 
 export const COMMUNITY = {
