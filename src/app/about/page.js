@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AGENT, COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
+import FiftyPlusCommunities from "@/components/SeoLinks/FiftyPlusCommunities";
 
 export const metadata = generatePageMetadata(PAGE_SEO.about);
 
@@ -49,6 +50,11 @@ export default function AboutPage() {
         questions about {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span>.
       </p>
+
+      {/* Related Communities Section */}
+      <div className="mt-12">
+        <FiftyPlusCommunities title="Dr. Jan Duffy Serves All Las Vegas 55+ Communities" />
+      </div>
     </main>
   );
 }

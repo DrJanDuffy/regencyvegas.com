@@ -68,6 +68,58 @@ export default function LocationPage() {
         </p>
         <GoogleMapEmbed />
       </div>
+
+      {/* Contextual Links Section */}
+      <section className="mt-12 p-6 bg-luxury-900 rounded-lg border border-stone-700">
+        <h2 className="text-xl font-playfair font-bold text-white mb-4">
+          Explore Other Summerlin Communities
+        </h2>
+        <p className="text-gray-200 mb-4 text-base md:text-lg">
+          Dr. Jan Duffy specializes in all Summerlin neighborhoods. If you&apos;re considering other communities in the area:
+        </p>
+        <ul className="space-y-2 text-base text-gray-200 md:text-lg">
+          <li>
+            <a
+              href="https://summerlinwestrealestate.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Summerlin West homes →
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://thevistassummerlin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              The Vistas Summerlin →
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://shawoodhomes.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Shawood luxury homes →
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://searchforhomesinsummerlin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors font-medium"
+            >
+              Search all Summerlin homes →
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
   );
 }

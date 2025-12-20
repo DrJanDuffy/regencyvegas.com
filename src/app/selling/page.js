@@ -37,6 +37,48 @@ export default function SellingPage() {
         discuss timing, preparation, and what today&apos;s buyers are looking for in
         this community.
       </p>
+
+      {/* Contextual Links Section */}
+      <section className="mt-12 p-6 bg-navy-900 rounded-lg border border-stone-700">
+        <h2 className="text-xl font-playfair font-bold text-white mb-4">
+          Need to Sell Quickly?
+        </h2>
+        <p className="text-gray-200 mb-4 text-base md:text-lg">
+          If you need a fast, hassle-free sale, Dr. Jan Duffy also offers:
+        </p>
+        <ul className="space-y-2 text-base text-gray-200 md:text-lg">
+          <li>
+            <a
+              href="https://speedycashhomeoffers.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Cash offers in 24-48 hours →
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://wealthtransitionplanning.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Estate & probate property sales →
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://probaterealestatesales.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Probate real estate services →
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
   );
 }

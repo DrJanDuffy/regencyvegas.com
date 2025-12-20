@@ -159,9 +159,14 @@ export const PAGE_SEO = {
     path: "/market-report",
   },
   compare: {
-    title: "Regency at Summerlin vs Other Las Vegas 55+ Communities",
-    description: `Compare ${COMMUNITY.name} to Sun City, Siena, Trilogy. Side-by-side: prices, amenities, HOA fees, home styles. Call ${PHONE.marketing}.`,
+    title: "Compare 55+ Communities in Las Vegas | Regency vs Sun City vs Heritage",
+    description: `Compare ${COMMUNITY.name} to Sun City, Heritage at Stonebridge, Reverence, and other Las Vegas 55+ communities. Expert guidance from Dr. Jan Duffy. Call ${PHONE.marketing}.`,
     path: "/compare-55-communities",
+  },
+  exploreLasVegas: {
+    title: "Explore Las Vegas Real Estate | Dr. Jan Duffy Network",
+    description: `Search homes across Las Vegas, Henderson, Summerlin, and North Las Vegas. Dr. Jan Duffy serves all communities. Call ${PHONE.marketing}.`,
+    path: "/explore-las-vegas",
   },
   photos: {
     title: "Photo Gallery | Regency at Summerlin Homes & Amenities",

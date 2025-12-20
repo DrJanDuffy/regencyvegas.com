@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { AGENT, BUSINESS, COMMUNITY, PHONE } from "@/lib/constants";
-import TrackedPhoneLink from "@/components/ui/TrackedPhoneLink";
-import TrackedEmailLink from "@/components/ui/TrackedEmailLink";
+import Link from 'next/link';
+import { AGENT, PHONE, BUSINESS } from '@/lib/constants';
+import TrackedPhoneLink from '@/components/ui/TrackedPhoneLink';
+import TrackedEmailLink from '@/components/ui/TrackedEmailLink';
 
-export default function Footer() {
+export default function NetworkFooter() {
   return (
     <footer className="w-full border-t border-stone-700 bg-luxury-black">
       <div className="mx-auto max-w-7xl px-4 py-12 text-base text-gray-200">
@@ -31,9 +31,6 @@ export default function Footer() {
             >
               {AGENT.email}
             </TrackedEmailLink>
-          </div>
-          <div className="mt-2">
-            <p className="text-sm text-gray-400">{BUSINESS.fullAddress}</p>
           </div>
         </div>
 
@@ -484,9 +481,9 @@ export default function Footer() {
         <p className="mt-2 text-xs text-gray-400">
           &quot;Let Me Help You!&quot; — Empower, Protect, Stress-Free Home Buying & Selling
         </p>
+        <p className="mt-1 text-xs text-gray-500">{BUSINESS.fullAddress}</p>
       </div>
     </footer>
   );
 }
-
 

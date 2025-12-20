@@ -295,3 +295,4 @@ Bot: "I understand you need quick answers! While I can help with general Regency
 ---
 
 Created for Dr. Jan Duffy | RegencyVegas.com | December 2025
+

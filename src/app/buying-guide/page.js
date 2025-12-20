@@ -99,6 +99,42 @@ export default function BuyingGuidePage() {
         {COMMUNITY.name}, call or text{" "}
         <span className="font-semibold">{PHONE.marketing}</span> today.
       </p>
+
+      {/* Contextual Links Section */}
+      <section className="mt-12 p-6 bg-luxury-900 rounded-lg border border-stone-700">
+        <h2 className="text-xl font-playfair font-bold text-white mb-4">
+          Moving from Out of State?
+        </h2>
+        <p className="text-gray-200 mb-4 text-base md:text-lg">
+          Dr. Jan Duffy specializes in California-to-Las Vegas relocations and can help with:
+        </p>
+        <ul className="space-y-2 text-base text-gray-200 md:text-lg mb-4">
+          <li>
+            <a
+              href="https://lasvegasrelocationservices.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Complete relocation services →
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://lasvegasmultigenhomes.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Multi-generational home options →
+            </a>
+          </li>
+        </ul>
+        <p className="text-gray-200 text-base md:text-lg">
+          Planning to buy and sell simultaneously? Dr. Jan Duffy coordinates both transactions 
+          to ensure a smooth transition.
+        </p>
+      </section>
     </main>
   );
 }

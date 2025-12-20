@@ -13,13 +13,13 @@ export const AGENT = {
 };
 
 export const BUSINESS = {
-  streetAddress: "10126 Regency Square Ave",
+  streetAddress: "6739 Regency Ridge Ct",
   city: "Las Vegas",
   state: "NV",
   zipCode: "89148",
-  fullAddress: "10126 Regency Square Ave, Las Vegas, NV 89148",
-  // Google Business Profile URL - update with actual GBP URL
-  googleBusinessUrl: "https://www.google.com/maps/place/10126+Regency+Square+Ave,+Las+Vegas,+NV+89148",
+  fullAddress: "6739 Regency Ridge Ct, Las Vegas, NV 89148",
+  // Google Business Profile URL
+  googleBusinessUrl: "https://www.google.com/maps/place/6739+Regency+Ridge+Ct,+Las+Vegas,+NV+89148",
   // Business hours (24-hour format for schema, display format for UI)
   hours: {
     monday: { open: "09:00", close: "18:00", display: "9:00 AM - 6:00 PM" },
@@ -200,6 +200,10 @@ export const NAV_LINKS = [
       {
         label: "Compare 55+ Communities",
         href: "/compare-55-communities",
+      },
+      {
+        label: "Explore Las Vegas",
+        href: "/explore-las-vegas",
       },
     ],
   },

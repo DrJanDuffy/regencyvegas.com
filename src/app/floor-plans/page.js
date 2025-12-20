@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { COLLECTIONS, COMMUNITY, PHONE } from "@/lib/constants";
 import { PAGE_SEO, generatePageMetadata } from "@/lib/seo";
 
@@ -74,6 +75,59 @@ export default function FloorPlansPage() {
         see example layouts, and match plans to current resale opportunities in{" "}
         {COMMUNITY.name}.
       </p>
+
+      {/* Contextual Links Section */}
+      <section className="mt-12 p-6 bg-luxury-900 rounded-lg border border-stone-700">
+        <h2 className="text-xl font-playfair font-bold text-white mb-4">
+          Comparing Floor Plans Across Communities?
+        </h2>
+        <p className="text-gray-200 mb-4 text-base md:text-lg">
+          See how Regency&apos;s Toll Brothers floor plans compare to other 55+ communities:
+        </p>
+        <ul className="space-y-2 text-base text-gray-200 md:text-lg">
+          <li>
+            <a
+              href="https://suncitysummerlinhomesforsale.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Sun City Summerlin
+            </a>
+            {' '}— Del Webb floor plans from 1,200-2,800 SF
+          </li>
+          <li>
+            <a
+              href="https://heritagestonebridge.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Heritage at Stonebridge
+            </a>
+            {' '}— Lennar floor plans from 1,500-2,500 SF
+          </li>
+          <li>
+            <a
+              href="https://reverencesummerlinhomes.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-500 hover:underline transition-colors"
+            >
+              Reverence
+            </a>
+            {' '}— Pulte floor plans from 1,800-2,600 SF
+          </li>
+        </ul>
+        <div className="mt-4">
+          <Link
+            href="/compare-55-communities"
+            className="text-amber-400 hover:text-amber-500 font-medium transition-colors"
+          >
+            View full 55+ community comparison →
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

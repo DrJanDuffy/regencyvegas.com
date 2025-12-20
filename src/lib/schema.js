@@ -21,6 +21,15 @@ export const agentSchema = {
   priceRange: `$${(COMMUNITY.price.min / 1000).toFixed(0)}K - $${(
     COMMUNITY.price.max / 1000000
   ).toFixed(1)}M+`,
+  sameAs: [
+    "https://drjanduffy.com",
+    "https://lasvegashomeexpert.com",
+    "https://summerlinwestrealestate.com",
+    "https://lasvegas55plushomes.com",
+    "https://suncitysummerlinhomesforsale.com",
+    "https://heritagestonebridge.com",
+    "https://reverencesummerlinhomes.com",
+  ],
 };
 
 export const businessSchema = {
@@ -45,6 +54,12 @@ export const businessSchema = {
     latitude: "36.066444",
     longitude: "-115.313180",
   },
+  sameAs: [
+    "https://drjanduffy.com",
+    "https://lasvegashomeexpert.com",
+    "https://drjanduffyreviews.com",
+    "https://askdrjanduffy.com",
+  ],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
